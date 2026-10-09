@@ -81,6 +81,7 @@ footer p{margin:0 0 6px}
 .place:hover b{color:var(--glow)}
 .place b{font-family:var(--display);font-weight:400;font-size:1.1rem}
 .place span{color:var(--muted);font-size:.9rem}
+.leaflet-tile-pane{filter:invert(1) hue-rotate(205deg) saturate(.55) brightness(.95) contrast(.92)}
 .leaflet-container{font-family:var(--body);font-size:.95rem}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--room);color:var(--text);box-shadow:0 0 0 1px var(--wall);border-radius:2px}
 .leaflet-popup-content{margin:14px 16px;line-height:1.45}
@@ -184,8 +185,8 @@ function drawMap(){
   list.innerHTML=PLACES.map((p,i)=>`<li><button class="place" type="button" data-i="${i}"><b>${esc(p.name)}</b><span>${esc(p.addr)} · ${line(p)}</span></button></li>`).join("");
   if(!window.L){el.hidden=true;list.addEventListener("click",e=>{const b=e.target.closest(".place");if(b)showMuseum(PLACES[b.dataset.i].k)});return}
   const map=L.map(el,{scrollWheelZoom:false,dragging:!L.Browser.mobile});
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd",
-    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
   const marks=PLACES.map((p,i)=>L.circleMarker(p.ll,{radius:10,color:"#14122b",weight:2,fillColor:"#f2c14e",fillOpacity:1}).addTo(map)
     .bindPopup(`<b>${esc(p.name)}</b>${esc(p.addr)}<br>${line(p)}<div class="acts"><button type="button" data-show="${i}">See its shows</button><a href="https://www.google.com/maps/dir/?api=1&destination=${p.ll[0]},${p.ll[1]}" target="_blank" rel="noopener">Directions</a></div>`));
   map.fitBounds(L.latLngBounds(PLACES.map(p=>p.ll)),{padding:[36,36]});
