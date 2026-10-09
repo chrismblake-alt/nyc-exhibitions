@@ -19,6 +19,7 @@
   --night:#14122b; --room:#1b1938; --wall:#6f69b8; --glow:#c3beff; --text:#f1efff; --muted:#aaa6cf;
   --gold:#f2c14e; --gold-ink:#1d1603;
   --date:#ff9dbb; --blue:#93bcff; --kids:#a3e495; --fun:#f2c14e; --deep:#cfaeff;
+  --quick:#7de3ff; --quiet:#b9c9a6; --guests:#ff8a70;
   --display:"Young Serif",Georgia,"Times New Roman",serif;
   --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
   color-scheme:dark;
@@ -27,7 +28,7 @@
 [hidden]{display:none!important}
 body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.5;
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-.wrap{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:40px 72px;display:flex;flex-direction:column;gap:44px}
+.wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:40px 72px;display:flex;flex-direction:column;gap:44px}
 
 header{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
 .here{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
@@ -44,8 +45,27 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6re
 .chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:transparent;color:var(--text);cursor:pointer}
 .chip:hover{border-color:var(--glow)}
 .chip[aria-pressed="true"]{background:var(--glow);border-color:var(--glow);color:var(--night)}
-.dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--c,var(--glow))}
-.chip[aria-pressed="true"] .dot{box-shadow:0 0 0 2px var(--night)}
+.ico{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:var(--c,var(--glow))}
+.chip.mchip[aria-pressed="true"]{background:var(--c);border-color:var(--c)}
+.chip[aria-pressed="true"] .ico{color:var(--night)}
+/* the dream: when a mood is picked, its color drifts behind the plan like light through fog */
+.dream{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;opacity:0;transition:opacity 1.4s ease}
+body[data-mood] .dream{opacity:1}
+.dream i{position:absolute;width:70vmax;height:70vmax;border-radius:50%;background:radial-gradient(circle,var(--mc,transparent) 0%,transparent 62%);opacity:.3;animation:drift 28s ease-in-out infinite alternate}
+.dream i:nth-child(1){left:-26vmax;top:-24vmax}
+.dream i:nth-child(2){right:-30vmax;top:22vh;opacity:.22;animation-duration:37s;animation-direction:alternate-reverse}
+.dream i:nth-child(3){left:12vw;bottom:-38vmax;opacity:.2;animation-duration:46s}
+@keyframes drift{to{transform:translate(7vmax,5vmax) scale(1.18)}}
+@keyframes bob{50%{transform:translateY(-5px) rotate(-3deg)}}
+body[data-mood] h1{text-shadow:0 0 34px color-mix(in srgb,var(--mc) 65%,transparent)}
+body[data-mood] .room{background:rgba(27,25,56,.8)}
+body[data-mood] .room:hover{background:rgba(40,36,84,.86)}
+.dreamline{display:flex;align-items:center;gap:18px;padding:18px 20px;border:1px solid var(--mc);background:color-mix(in srgb,var(--mc) 9%,transparent)}
+.dreamline .ico{width:46px;height:46px;stroke-width:1.3;color:var(--mc);animation:bob 6s ease-in-out infinite}
+.dreamline b{display:block;font-family:var(--display);font-weight:400;font-size:1.45rem;line-height:1.15}
+.dreamline span{font-style:italic;color:var(--text)}
+.dreamline em{margin-left:auto;font-style:normal;color:var(--muted);font-size:.95rem;white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.dream i,.dreamline .ico{animation:none}}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
 #out{display:flex;flex-direction:column;gap:56px}
@@ -69,10 +89,16 @@ h2{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;m
 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:4px;font-size:.92rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .tag{font-weight:700;font-size:.82rem;padding:2px 8px;border-radius:2px}
 .tag.u{background:var(--gold);color:var(--gold-ink)} .tag.s{border:1px solid var(--glow);color:var(--glow)}
-.mood{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted)}
+.moods{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:2px}
+.mood{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+.mood .ico{width:16px;height:16px}
 .empty{margin:0;padding:22px;border:1px solid var(--wall);color:var(--muted)}
 footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--wall);padding-top:18px}
 footer p{margin:0 0 6px}
+.by{margin:6px 0 22px;max-width:60ch}
+footer .by-name{font-family:var(--display);font-size:1.5rem;color:var(--text);margin:0 0 8px}
+.by-name b{font-weight:400;color:var(--glow);text-shadow:0 0 18px rgba(195,190,255,.5)}
+footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
 .where{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1px}
 #map{height:460px;background:var(--room);box-shadow:0 0 0 1px var(--wall);z-index:0}
 .places{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
@@ -96,6 +122,7 @@ footer p{margin:0 0 6px}
 </style>
 </head>
 <body>
+<div class="dream" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="wrap">
   <header>
     <div>
@@ -109,12 +136,17 @@ footer p{margin:0 0 6px}
       <div class="key"><b>Museums</b><div class="chips" id="chips"></div></div>
     </div>
   </header>
+  <div class="dreamline" id="dreamline" hidden></div>
   <div id="out"><p class="empty">Loading listings…</p></div>
   <section class="gal" id="where">
     <div class="gal-head"><div><small>Map</small><h2>Where They Are</h2></div><span class="count">Tap a museum for directions</span></div>
     <div class="where"><div id="map" role="region" aria-label="Map of the museums"></div><ul class="places" id="places"></ul></div>
   </section>
   <footer>
+    <div class="by">
+      <p class="by-name">Created by <b>Blakespeare</b></p>
+      <p class="by-bio">Made for anyone who has walked into a museum for twenty minutes and come out three hours later. For the bench sitters and the gift shop regulars. For people who read every wall label and people who read none. Go see something.</p>
+    </div>
     <p id="stamp"></p>
     <p>Listings and images come from each museum's website. Confirm dates before you go.</p>
   </footer>
@@ -137,7 +169,27 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",
 const far=new Date(9999,0,1);
 const G=[["end","Ending Soon",(a,b)=>a.E-b.E],["now","On Now",(a,b)=>(a.E||far)-(b.E||far)],["open","Opening Soon",(a,b)=>a.S-b.S],["later","Later",(a,b)=>a.S-b.S]];
 const ROMAN=["I","II","III","IV"];
-const MOODS={date:"Date night",blue:"Feeling melancholy",kids:"With kids",fun:"Need a laugh",deep:"Want to think"};
+const MOODS={
+  date:{n:"Date night",line:"Rooms for two, lights low."},
+  blue:{n:"Feeling melancholy",line:"Somewhere to sit with it for a while."},
+  kids:{n:"With kids",line:"Dragons first, questions later."},
+  fun:{n:"Need a laugh",line:"Nothing in here takes itself too seriously."},
+  deep:{n:"Want to think",line:"Bring your biggest questions."},
+  quick:{n:"Short on time",line:"In and out before your coffee gets cold."},
+  quiet:{n:"Need some quiet",line:"Soft rooms and slow looking."},
+  guests:{n:"Out-of-town guests",line:"The ones they came to New York for."}
+};
+// one small drawing per mood: two moons, a crescent, a kite, a spiral, an eye, a shooting star, ripples, a skyline
+const ICONS={
+  date:'<circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/>',
+  blue:'<path d="M16 4a8 8 0 1 0 4 11 6.500 6.500 0 0 1-4-11z"/>',
+  kids:'<path d="M12 2.500l6 7-6 9-6-9z"/><path d="M12 18.500c0 2 2 1.500 2 3.500"/>',
+  fun:'<path d="M12 12c0-1.500 2-1.500 2 0 0 2.500-4 2.500-4 0 0-4 6.500-4 6.500 0 0 5.500-9.500 5.500-9.500 0 0-7 12.500-7 12.500 0"/>',
+  deep:'<path d="M2.500 12S6 6 12 6s9.500 6 9.500 6-3.500 6-9.500 6-9.500-6-9.500-6z"/><circle cx="12" cy="12" r="2.500"/>',
+  quick:'<path d="M3.500 20.500L13 11"/><path d="M8.500 21l3.500-3.500"/><path d="M17 3l1.200 2.800L21 7l-2.800 1.200L17 11l-1.200-2.800L13 7l2.800-1.200z"/>',
+  quiet:'<path d="M3 8.500c3-2 6 2 9 0s6-2 9 0"/><path d="M3 13.500c3-2 6 2 9 0s6-2 9 0"/><path d="M6 18.500c2-1.300 4 1.300 6 0s4-1.300 6 0"/>',
+  guests:'<path d="M2 20h20"/><path d="M4 20v-8h4v8"/><path d="M10 20V5h5v15"/><path d="M17 20v-6h3v6"/>'
+};
 const chips=document.getElementById("chips"),moodsEl=document.getElementById("moods"),out=document.getElementById("out"),q=document.getElementById("q");
 let items=[],museums={},pick="all",mood="";
 try{pick=localStorage.getItem("museum")||"all"}catch(e){}
@@ -152,16 +204,20 @@ function prep(x){
   let d;
   if(g==="open"||g==="later")d=E?fmt(S)+" – "+fmt(E,1):"Opens "+fmt(S)+(x.note?" · "+x.note:"");
   else d=E?"Through "+fmt(E):(x.note||"Ongoing");
-  return{...x,S,E,g,tag,cls,d};
+  return{...x,S,E,g,tag,cls,d,moods:(x.moods&&x.moods.length?x.moods:[x.mood]).filter(k=>MOODS[k])};
 }
-const dot=k=>`<i class="dot" style="--c:var(--${k})"></i>`;
+const ico=k=>`<svg class="ico" viewBox="0 0 24 24" style="--c:var(--${k})" aria-hidden="true">${ICONS[k]}</svg>`;
 function draw(){
   if(pick!=="all"&&!museums[pick])pick="all";
-  moodsEl.innerHTML=Object.entries(MOODS).map(([k,n])=>`<button class="chip" type="button" data-k="${k}" aria-pressed="${k===mood}">${dot(k)}${n}</button>`).join("");
+  moodsEl.innerHTML=Object.entries(MOODS).map(([k,m])=>`<button class="chip mchip" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}${m.n}</button>`).join("");
   chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)}</button>`).join("");
   const term=q.value.trim().toLowerCase();
-  const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.mood===mood)&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
+  const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.moods.includes(mood))&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
   let n=0;
+  const dl=document.getElementById("dreamline");
+  if(mood){document.body.dataset.mood=mood;document.body.style.setProperty("--mc",`var(--${mood})`);dl.hidden=false;
+    dl.innerHTML=`${ico(mood)}<div><b>${MOODS[mood].n}</b><span>${MOODS[mood].line}</span></div><em>${list.length} ${list.length===1?"show":"shows"}</em>`}
+  else{delete document.body.dataset.mood;document.body.style.removeProperty("--mc");dl.hidden=true}
   out.innerHTML=G.map(([k,name,sort])=>{
     const rows=list.filter(x=>x.g===k).sort(sort);
     if(!rows.length)return"";
@@ -169,7 +225,7 @@ function draw(){
       const m=esc(museums[x.museum]||"");
       return `<a class="room" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="pic">${x.image?`<img src="${esc(x.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(this.dataset.n))" data-n="${m}">`:m}</span>`+
       `<span class="txt"><span class="m">${esc(x.venue)}</span><span class="t">${esc(x.title)}</span>${x.hook?`<span class="h">${esc(x.hook)}</span>`:""}`+
-      `<span class="meta">${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}<span>${x.d}</span>${MOODS[x.mood]?`<span class="mood">${dot(x.mood)}${MOODS[x.mood]}</span>`:""}</span></span></a>`;
+      `<span class="meta">${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}<span>${x.d}</span></span>${x.moods.length?`<span class="moods">${x.moods.map(k=>`<span class="mood">${ico(k)}${MOODS[k].n}</span>`).join("")}</span>`:""}</span></a>`;
     }).join("")+"</div></section>";
   }).join("")||'<p class="empty">No exhibitions match. Clear the search or pick another museum or mood.</p>';
 }
