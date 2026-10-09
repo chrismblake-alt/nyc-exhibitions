@@ -40,10 +40,11 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6re
 #q{width:100%;font:inherit;padding:13px 16px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text)}
 #q::placeholder{color:var(--muted)}
 .key{display:flex;flex-direction:column;gap:8px}
-.key b{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.key b{font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--text)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:transparent;color:var(--text);cursor:pointer}
-.chip:hover{border-color:var(--glow)}
+.chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text);cursor:pointer;box-shadow:0 2px 0 var(--wall)}
+.chip:hover{border-color:var(--glow);box-shadow:0 2px 0 var(--glow)}
+.chip:active{transform:translateY(2px);box-shadow:none}
 .chip[aria-pressed="true"]{background:var(--glow);border-color:var(--glow);color:var(--night)}
 .ico{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;color:var(--c,var(--glow))}
 .chip.mchip[aria-pressed="true"]{background:var(--c);border-color:var(--c)}
@@ -135,12 +136,12 @@ footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
     <div>
       <p class="here"><i></i><span id="today">You are here</span></p>
       <h1>NYC Museum Exhibitions</h1>
-      <p class="sub">A floor plan of what's showing across the city. Pick a mood from the legend, then step into a room.</p>
+      <p class="sub">A floor plan of what's showing across the city. Choose a mood or a museum, then step into a room.</p>
     </div>
     <div class="panel">
       <input id="q" type="search" placeholder="Search exhibitions" aria-label="Search exhibitions">
-      <div class="key"><b>Legend: pick a mood</b><div class="chips" id="moods"></div></div>
-      <div class="key"><b>Museums</b><div class="chips" id="chips"></div></div>
+      <div class="key"><b>Choose a mood</b><div class="chips" id="moods"></div></div>
+      <div class="key"><b>Choose a museum</b><div class="chips" id="chips"></div></div>
     </div>
   </header>
   <div class="dreamline" id="dreamline" hidden></div>
