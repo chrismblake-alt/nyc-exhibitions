@@ -10,6 +10,7 @@
 <meta name="theme-color" content="#14122b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
 /* Direction: the museum after hours, drawn as a floor plan. Shows are rooms that share walls,
    sections are numbered galleries, moods are the map legend, and the light is the pale violet
@@ -72,6 +73,24 @@ h2{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;m
 .empty{margin:0;padding:22px;border:1px solid var(--wall);color:var(--muted)}
 footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--wall);padding-top:18px}
 footer p{margin:0 0 6px}
+.where{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:1px}
+#map{height:460px;background:var(--room);box-shadow:0 0 0 1px var(--wall);z-index:0}
+.places{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.places li{background:var(--room);box-shadow:0 0 0 1px var(--wall);flex:1;display:flex}
+.place{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:12px 16px;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer}
+.place:hover b{color:var(--glow)}
+.place b{font-family:var(--display);font-weight:400;font-size:1.1rem}
+.place span{color:var(--muted);font-size:.9rem}
+.leaflet-container{font-family:var(--body);font-size:.95rem}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--room);color:var(--text);box-shadow:0 0 0 1px var(--wall);border-radius:2px}
+.leaflet-popup-content{margin:14px 16px;line-height:1.45}
+.leaflet-popup-content b{font-family:var(--display);font-weight:400;font-size:1.15rem;display:block}
+.leaflet-popup-content .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.leaflet-popup-content .acts a,.leaflet-popup-content .acts button{font:600 .88rem var(--body);padding:6px 10px;border:1px solid var(--wall);border-radius:2px;background:transparent;color:var(--text);text-decoration:none;cursor:pointer}
+.leaflet-container a.leaflet-popup-close-button{color:var(--muted)}
+.leaflet-control-attribution{background:rgba(20,18,43,.8)!important;color:var(--muted)!important}
+.leaflet-control-attribution a{color:var(--glow)!important}
+@media (max-width:820px){.where{grid-template-columns:minmax(0,1fr)}#map{height:380px}}
 @media (max-width:820px){header{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
@@ -90,12 +109,25 @@ footer p{margin:0 0 6px}
     </div>
   </header>
   <div id="out"><p class="empty">Loading listings…</p></div>
+  <section class="gal" id="where">
+    <div class="gal-head"><div><small>Map</small><h2>Where They Are</h2></div><span class="count">Tap a museum for directions</span></div>
+    <div class="where"><div id="map" role="region" aria-label="Map of the museums"></div><ul class="places" id="places"></ul></div>
+  </section>
   <footer>
     <p id="stamp"></p>
     <p>Listings and images come from each museum's website. Confirm dates before you go.</p>
   </footer>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
+const PLACES=[
+  {k:"met",venue:"The Met",name:"The Met Fifth Avenue",addr:"1000 Fifth Avenue",ll:[40.7794,-73.9632]},
+  {k:"met",venue:"The Met Cloisters",name:"The Met Cloisters",addr:"99 Margaret Corbin Drive",ll:[40.8649,-73.9319]},
+  {k:"moma",venue:"MoMA",name:"MoMA",addr:"11 West 53rd Street",ll:[40.7614,-73.9776]},
+  {k:"gug",venue:"Guggenheim",name:"Guggenheim",addr:"1071 Fifth Avenue",ll:[40.7830,-73.9590]},
+  {k:"whit",venue:"Whitney",name:"Whitney",addr:"99 Gansevoort Street",ll:[40.7396,-74.0089]},
+  {k:"frick",venue:"The Frick",name:"The Frick Collection",addr:"1 East 70th Street",ll:[40.7712,-73.9674]}
+];
 const DAY=864e5, now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
 const pd=s=>{if(!s)return null;const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
 const fmt=(d,yr)=>d.toLocaleDateString("en-US",{month:"short",day:"numeric",...(yr||d.getFullYear()!==today.getFullYear()?{year:"numeric"}:{})});
@@ -143,11 +175,29 @@ function draw(){
 chips.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;pick=b.dataset.k;try{localStorage.setItem("museum",pick)}catch(e){}draw()});
 moodsEl.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;mood=mood===b.dataset.k?"":b.dataset.k;draw()});
 q.addEventListener("input",draw);
+function showMuseum(k){pick=k;mood="";q.value="";draw();out.scrollIntoView({behavior:"smooth",block:"start"})}
+function drawMap(){
+  const live=items.filter(x=>x.g==="end"||x.g==="now");
+  const count=p=>live.filter(x=>x.museum===p.k&&(p.venue==="The Met Cloisters"?x.venue===p.venue:x.venue!=="The Met Cloisters")).length;
+  const line=p=>{const n=count(p);return n===1?"1 show on now":n+" shows on now"};
+  const list=document.getElementById("places"),el=document.getElementById("map");
+  list.innerHTML=PLACES.map((p,i)=>`<li><button class="place" type="button" data-i="${i}"><b>${esc(p.name)}</b><span>${esc(p.addr)} · ${line(p)}</span></button></li>`).join("");
+  if(!window.L){el.hidden=true;list.addEventListener("click",e=>{const b=e.target.closest(".place");if(b)showMuseum(PLACES[b.dataset.i].k)});return}
+  const map=L.map(el,{scrollWheelZoom:false,dragging:!L.Browser.mobile});
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{maxZoom:19,subdomains:"abcd",
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+  const marks=PLACES.map((p,i)=>L.circleMarker(p.ll,{radius:10,color:"#14122b",weight:2,fillColor:"#f2c14e",fillOpacity:1}).addTo(map)
+    .bindPopup(`<b>${esc(p.name)}</b>${esc(p.addr)}<br>${line(p)}<div class="acts"><button type="button" data-show="${i}">See its shows</button><a href="https://www.google.com/maps/dir/?api=1&destination=${p.ll[0]},${p.ll[1]}" target="_blank" rel="noopener">Directions</a></div>`));
+  map.fitBounds(L.latLngBounds(PLACES.map(p=>p.ll)),{padding:[36,36]});
+  el.addEventListener("click",e=>{const b=e.target.closest("[data-show]");if(b)showMuseum(PLACES[b.dataset.show].k)});
+  list.addEventListener("click",e=>{const b=e.target.closest(".place");if(!b)return;const i=+b.dataset.i;map.setView(PLACES[i].ll,14);marks[i].openPopup();el.scrollIntoView({behavior:"smooth",block:"nearest"})});
+}
 fetch("data/exhibitions.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{
   museums=data.museums||{};
   items=(data.items||[]).map(prep).filter(Boolean);
   if(data.updated)document.getElementById("stamp").textContent="Last updated "+new Date(data.updated).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+".";
   draw();
+  drawMap();
 }).catch(()=>{out.innerHTML='<p class="empty">The listings could not be loaded. Reload the page to try again.</p>'});
 </script>
 </body>
