@@ -95,8 +95,8 @@ h2{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;m
 .empty{margin:0;padding:22px;border:1px solid var(--wall);color:var(--muted)}
 footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--wall);padding-top:18px}
 footer p{margin:0 0 6px}
-.coffee{display:inline-flex;align-items:center;gap:10px;background:#ffdd00;color:#000;font:700 1rem var(--body);padding:11px 18px;border:1px solid #000;border-radius:8px;text-decoration:none}
-.coffee:hover{background:#ffe84d}
+.coffee{display:inline-block;line-height:0;border-radius:8px}
+.coffee img{height:50px;width:auto;display:block}
 .tip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;color:var(--muted);font-style:italic}
 .by .coffee{margin-top:16px}
 .by{margin:6px 0 22px;max-width:60ch}
@@ -150,7 +150,7 @@ footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
     <div class="by">
       <p class="by-name">Created by <b>Blakespeare</b></p>
       <p class="by-bio">Made for anyone who has walked into a museum for twenty minutes and come out three hours later. For the bench sitters and the gift shop regulars. For people who read every wall label and people who read none. Go see something.</p>
-      <a class="coffee" href="https://buymeacoffee.com/blakespeare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.500a2.500 2.500 0 0 1 0 5H16"/><path d="M8 3v3M12 3v3"/></svg>Buy me a coffee</a>
+      <a class="coffee" href="https://www.buymeacoffee.com/blakespeare" target="_blank" rel="noopener"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=blakespeare&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff" alt="Buy me a coffee" height="50"></a>
     </div>
     <p id="stamp"></p>
     <p>Listings and images come from each museum's website. Confirm dates before you go.</p>
@@ -173,7 +173,7 @@ const days=d=>Math.round((d-today)/DAY);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const far=new Date(9999,0,1);
 const G=[["end","Ending Soon",(a,b)=>a.E-b.E],["now","On Now",(a,b)=>(a.E||far)-(b.E||far)],["open","Opening Soon",(a,b)=>a.S-b.S],["later","Later",(a,b)=>a.S-b.S]];
-const TIP='<div class="tip"><span>Enjoying the tour?</span><a class="coffee" href="https://buymeacoffee.com/blakespeare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10h1.500a2.500 2.500 0 0 1 0 5H16"/><path d="M8 3v3M12 3v3"/></svg>Buy me a coffee</a></div>';
+const TIP='<div class="tip"><span>Enjoying the tour?</span><a class="coffee" href="https://www.buymeacoffee.com/blakespeare" target="_blank" rel="noopener"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=blakespeare&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff" alt="Buy me a coffee" height="50"></a></div>';
 const ROMAN=["I","II","III","IV"];
 const MOODS={
   date:{n:"Date night",line:"Rooms for two, lights low."},
