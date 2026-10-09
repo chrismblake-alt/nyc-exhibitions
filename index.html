@@ -99,7 +99,10 @@ footer p{margin:0 0 6px}
 .coffee img{height:50px;width:auto;display:block}
 .tip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 18px;color:var(--muted);font-style:italic}
 .by .coffee{margin-top:16px}
-.by{margin:6px 0 22px;max-width:60ch}
+.by{margin:6px 0 22px;max-width:74ch;display:flex;gap:22px;align-items:flex-start}
+.by-txt{min-width:0}
+.by-pic{width:112px;height:112px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 1px var(--wall),0 0 26px rgba(195,190,255,.4)}
+@media (max-width:520px){.by{gap:16px}.by-pic{width:76px;height:76px}}
 footer .by-name{font-family:var(--display);font-size:1.5rem;color:var(--text);margin:0 0 8px}
 .by-name b{font-weight:400;color:var(--glow);text-shadow:0 0 18px rgba(195,190,255,.5)}
 footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
@@ -148,9 +151,12 @@ footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
   </section>
   <footer>
     <div class="by">
+      <img class="by-pic" src="blakespeare.jpg" alt="Photo of Blakespeare" width="112" height="112">
+      <div class="by-txt">
       <p class="by-name">Created by <b>Blakespeare</b></p>
       <p class="by-bio">Made for anyone who has walked into a museum for twenty minutes and come out three hours later. For the bench sitters and the gift shop regulars. For people who read every wall label and people who read none. Go see something.</p>
       <a class="coffee" href="https://www.buymeacoffee.com/blakespeare" target="_blank" rel="noopener"><img src="https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&amp;emoji=&amp;slug=blakespeare&amp;button_colour=FFDD00&amp;font_colour=000000&amp;font_family=Cookie&amp;outline_colour=000000&amp;coffee_colour=ffffff" alt="Buy me a coffee" height="50"></a>
+    </div>
     </div>
     <p id="stamp"></p>
     <p>Listings and images come from each museum's website. Confirm dates before you go.</p>
