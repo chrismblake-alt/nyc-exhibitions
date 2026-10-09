@@ -7,78 +7,86 @@
 <meta name="description" content="What's on now, opening soon and ending soon at New York City museums.">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="NYC Exhibitions">
-<meta name="theme-color" content="#8a1fa3">
+<meta name="theme-color" content="#14122b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Major+Mono+Display&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;0,600;0,700;1,400&family=Young+Serif&display=swap">
 <style>
-/* Every choice here was drawn at random: mono display type, typewriter body, saturated purple ground (hue 289),
-   orange (25) and blue (241) accents, masonry columns, blob photos, dashed borders, full-round corners,
-   centered hero, rotated section labels, slow color cycle. */
+/* Direction: the museum after hours, drawn as a floor plan. Shows are rooms that share walls,
+   sections are numbered galleries, moods are the map legend, and the light is the pale violet
+   of a gas-discharge tube with one gold marker. */
 :root{
-  --ground:hsl(289 70% 34%); --ground-a:hsl(262 68% 36%); --ground-b:hsl(316 68% 34%);
-  --paper:hsl(289 70% 96%); --ink:hsl(289 60% 12%); --soft:hsl(289 22% 34%);
-  --cream:hsl(40 100% 96%); --orange:hsl(25 100% 56%); --orange-ink:hsl(25 100% 33%);
-  --blue:hsl(241 78% 52%); --blue-pale:hsl(241 90% 90%);
-  --display:"Major Mono Display","Courier New",monospace;
-  --body:"Courier Prime","Courier New",Courier,monospace;
-  color-scheme:light;
+  --night:#14122b; --room:#1b1938; --wall:#6f69b8; --glow:#c3beff; --text:#f1efff; --muted:#aaa6cf;
+  --gold:#f2c14e; --gold-ink:#1d1603;
+  --date:#ff9dbb; --blue:#93bcff; --kids:#a3e495; --fun:#f2c14e; --deep:#cfaeff;
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-body{margin:0;background:var(--ground);color:var(--cream);font-family:var(--body);font-size:16px;line-height:1.45;
-  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);animation:cycle 48s ease-in-out infinite}
-@keyframes cycle{0%,100%{background:var(--ground)}33%{background:var(--ground-a)}66%{background:var(--ground-b)}}
-@media (prefers-reduced-motion:reduce){body{animation:none}}
-.wrap{max-width:1180px;margin:0 auto;padding-inline:16px;padding-block:36px 64px;display:flex;flex-direction:column;gap:34px}
-header{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
-h1{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,7.4vw,4.2rem);line-height:1.02;margin:0;text-wrap:balance;max-width:14ch}
-h1 em{font-style:normal;color:var(--orange)}
-.sub{margin:0;max-width:46ch}
-.bar{display:flex;flex-direction:column;align-items:center;gap:12px;width:100%}
-#q{width:100%;max-width:520px;font:inherit;padding:12px 20px;border:2px dashed var(--cream);border-radius:999px;background:transparent;color:var(--cream);text-align:center}
-#q::placeholder{color:var(--cream);opacity:.75}
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
-.chip{font:700 .85rem var(--body);padding:8px 14px;border:2px dashed var(--cream);border-radius:999px;background:transparent;color:var(--cream);cursor:pointer}
-.chip.mood{font-style:italic;font-weight:400;border-color:var(--orange)}
-.chip[aria-pressed="true"]{background:var(--cream);color:var(--ink);border-style:solid;border-color:var(--cream)}
-.chip.mood[aria-pressed="true"]{background:var(--orange);border-color:var(--orange);color:var(--ink)}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
-#out{display:flex;flex-direction:column;gap:44px}
-section{display:grid;grid-template-columns:2.4rem minmax(0,1fr);gap:10px}
-h2{font-family:var(--display);font-weight:400;font-size:1.5rem;line-height:1;margin:0;writing-mode:vertical-rl;transform:rotate(180deg);
-  justify-self:center;align-self:start;position:sticky;top:calc(env(safe-area-inset-top,0px) + 14px);white-space:nowrap}
-h2 span{font-family:var(--body);font-size:.9rem;color:var(--orange);margin-top:.6em}
-.cols{columns:270px;column-gap:18px}
-.card{display:flex;flex-direction:column;gap:6px;break-inside:avoid;margin:0 0 18px;padding:22px 22px 24px;background:var(--paper);color:var(--ink);
-  border:2px dashed var(--ink);border-radius:40px;text-decoration:none}
-.card:hover{border-style:solid;border-color:var(--blue)}
-.pic{position:relative;width:100%;aspect-ratio:5/4;margin-bottom:8px;overflow:hidden;background:var(--blue);color:var(--blue-pale);
-  display:grid;place-items:center;font:400 1rem var(--display);text-align:center;padding:12px;
-  border-radius:58% 42% 63% 37% / 45% 60% 40% 55%}
-.card:nth-child(3n+2) .pic{border-radius:37% 63% 44% 56% / 62% 38% 62% 38%}
-.card:nth-child(3n) .pic{border-radius:66% 34% 52% 48% / 38% 55% 45% 62%}
-.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.4) saturate(1.25)}
-.m{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
-.t{font-family:var(--body);font-weight:700;font-size:1.2rem;line-height:1.25;overflow-wrap:anywhere}
-.h{font-style:italic;color:var(--orange-ink);line-height:1.35}
-.d{color:var(--soft);font-size:.92rem}
-.tag{align-self:flex-start;margin-top:4px;font-size:.8rem;font-weight:700;padding:4px 12px;border-radius:999px;border:2px dashed currentColor}
-.tag.u{color:var(--orange-ink)} .tag.s{color:var(--blue)}
-.empty{margin:0;text-align:center;padding:24px;border:2px dashed var(--cream);border-radius:999px}
-footer{text-align:center;font-size:.88rem;opacity:.9}
+body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.5;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:40px 72px;display:flex;flex-direction:column;gap:44px}
+
+header{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
+.here{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
+.here i{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(242,193,78,.22)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6rem);line-height:1.02;margin:0;text-wrap:balance;
+  text-shadow:0 0 28px rgba(195,190,255,.45)}
+.sub{margin:16px 0 0;color:var(--muted);max-width:44ch;font-size:1.05rem}
+.panel{display:flex;flex-direction:column;gap:18px;min-width:0}
+#q{width:100%;font:inherit;padding:13px 16px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text)}
+#q::placeholder{color:var(--muted)}
+.key{display:flex;flex-direction:column;gap:8px}
+.key b{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:transparent;color:var(--text);cursor:pointer}
+.chip:hover{border-color:var(--glow)}
+.chip[aria-pressed="true"]{background:var(--glow);border-color:var(--glow);color:var(--night)}
+.dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--c,var(--glow))}
+.chip[aria-pressed="true"] .dot{box-shadow:0 0 0 2px var(--night)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+#out{display:flex;flex-direction:column;gap:56px}
+.gal{display:flex;flex-direction:column;gap:18px}
+.gal-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--wall);padding-bottom:12px}
+.num{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--glow);min-width:1.6ch;text-shadow:0 0 18px rgba(195,190,255,.5)}
+.gal-head small{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block}
+h2{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;margin:0}
+.count{margin-left:auto;color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
+.plan{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1px}
+.room{position:relative;display:flex;flex-direction:column;background:var(--room);box-shadow:0 0 0 1px var(--wall);color:inherit;text-decoration:none;min-width:0}
+.room:hover{background:#221f47}
+.room::after{content:"";position:absolute;right:0;bottom:0;width:26px;height:26px;border-top:1px solid var(--wall);border-left:1px solid var(--wall);border-top-left-radius:26px;opacity:.8}
+.pic{position:relative;aspect-ratio:16/10;background:#262354;display:grid;place-items:center;color:var(--muted);font-family:var(--display);font-size:1.15rem;text-align:center;padding:10px;overflow:hidden}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.txt{display:flex;flex-direction:column;gap:7px;padding:16px 18px 30px;min-width:0}
+.m{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.t{font-family:var(--display);font-size:1.3rem;line-height:1.2;overflow-wrap:anywhere}
+.room:hover .t{color:var(--glow)}
+.h{font-style:italic;color:var(--glow);line-height:1.4}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:4px;font-size:.92rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tag{font-weight:700;font-size:.82rem;padding:2px 8px;border-radius:2px}
+.tag.u{background:var(--gold);color:var(--gold-ink)} .tag.s{border:1px solid var(--glow);color:var(--glow)}
+.mood{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted)}
+.empty{margin:0;padding:22px;border:1px solid var(--wall);color:var(--muted)}
+footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--wall);padding-top:18px}
 footer p{margin:0 0 6px}
-@media (max-width:520px){section{grid-template-columns:1.9rem minmax(0,1fr);gap:8px}h2{font-size:1.2rem}.card{border-radius:32px;padding:18px 18px 20px}}
+@media (max-width:820px){header{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>NYC Museum <em>Exhibitions</em></h1>
-    <p class="sub">What's on at New York City museums. Pick a mood or a museum, then tap a show to open its page.</p>
-    <div class="bar">
+    <div>
+      <p class="here"><i></i><span id="today">You are here</span></p>
+      <h1>NYC Museum Exhibitions</h1>
+      <p class="sub">A floor plan of what's showing across the city. Pick a mood from the legend, then step into a room.</p>
+    </div>
+    <div class="panel">
       <input id="q" type="search" placeholder="Search exhibitions" aria-label="Search exhibitions">
-      <div class="chips" id="moods" aria-label="Pick a mood"></div>
-      <div class="chips" id="chips" aria-label="Pick a museum"></div>
+      <div class="key"><b>Legend: pick a mood</b><div class="chips" id="moods"></div></div>
+      <div class="key"><b>Museums</b><div class="chips" id="chips"></div></div>
     </div>
   </header>
   <div id="out"><p class="empty">Loading listings…</p></div>
@@ -95,10 +103,12 @@ const days=d=>Math.round((d-today)/DAY);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const far=new Date(9999,0,1);
 const G=[["end","Ending Soon",(a,b)=>a.E-b.E],["now","On Now",(a,b)=>(a.E||far)-(b.E||far)],["open","Opening Soon",(a,b)=>a.S-b.S],["later","Later",(a,b)=>a.S-b.S]];
+const ROMAN=["I","II","III","IV"];
 const MOODS={date:"Date night",blue:"Feeling melancholy",kids:"With kids",fun:"Need a laugh",deep:"Want to think"};
 const chips=document.getElementById("chips"),moodsEl=document.getElementById("moods"),out=document.getElementById("out"),q=document.getElementById("q");
 let items=[],museums={},pick="all",mood="";
 try{pick=localStorage.getItem("museum")||"all"}catch(e){}
+document.getElementById("today").textContent="You are here · "+today.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
 
 function prep(x){
   const S=pd(x.start),E=pd(x.end);let g,tag="",cls="";
@@ -111,19 +121,22 @@ function prep(x){
   else d=E?"Through "+fmt(E):(x.note||"Ongoing");
   return{...x,S,E,g,tag,cls,d};
 }
+const dot=k=>`<i class="dot" style="--c:var(--${k})"></i>`;
 function draw(){
   if(pick!=="all"&&!museums[pick])pick="all";
-  moodsEl.innerHTML=Object.entries(MOODS).map(([k,n])=>`<button class="chip mood" type="button" data-k="${k}" aria-pressed="${k===mood}">${n}</button>`).join("");
-  chips.innerHTML=[["all","All museums"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)}</button>`).join("");
+  moodsEl.innerHTML=Object.entries(MOODS).map(([k,n])=>`<button class="chip" type="button" data-k="${k}" aria-pressed="${k===mood}">${dot(k)}${n}</button>`).join("");
+  chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)}</button>`).join("");
   const term=q.value.trim().toLowerCase();
   const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.mood===mood)&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
+  let n=0;
   out.innerHTML=G.map(([k,name,sort])=>{
     const rows=list.filter(x=>x.g===k).sort(sort);
     if(!rows.length)return"";
-    return`<section><h2>${name} <span>${rows.length}</span></h2><div class="cols">`+rows.map(x=>{
-      const n=esc(museums[x.museum]||"");
-      return `<a class="card" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="pic">${x.image?`<img src="${esc(x.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(this.dataset.n))" data-n="${n}">`:n}</span>`+
-      `<span class="m">${esc(x.venue)}</span><span class="t">${esc(x.title)}</span>${x.hook?`<span class="h">${esc(x.hook)}</span>`:""}<span class="d">${x.d}</span>${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}</a>`;
+    return`<section class="gal"><div class="gal-head"><span class="num" aria-hidden="true">${ROMAN[n++]}</span><div><small>Gallery</small><h2>${name}</h2></div><span class="count">${rows.length} ${rows.length===1?"show":"shows"}</span></div><div class="plan">`+rows.map(x=>{
+      const m=esc(museums[x.museum]||"");
+      return `<a class="room" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="pic">${x.image?`<img src="${esc(x.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(this.dataset.n))" data-n="${m}">`:m}</span>`+
+      `<span class="txt"><span class="m">${esc(x.venue)}</span><span class="t">${esc(x.title)}</span>${x.hook?`<span class="h">${esc(x.hook)}</span>`:""}`+
+      `<span class="meta">${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}<span>${x.d}</span>${MOODS[x.mood]?`<span class="mood">${dot(x.mood)}${MOODS[x.mood]}</span>`:""}</span></span></a>`;
     }).join("")+"</div></section>";
   }).join("")||'<p class="empty">No exhibitions match. Clear the search or pick another museum or mood.</p>';
 }
