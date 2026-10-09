@@ -42,18 +42,28 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6re
 .pick{display:flex;flex-direction:column;gap:26px}
 .key{display:flex;flex-direction:column;gap:10px}
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px}
-.tile{display:flex;flex-direction:column;align-items:flex-start;gap:4px;text-align:left;padding:16px 16px 14px;background:var(--room);box-shadow:0 0 0 1px var(--wall);border:0;border-radius:0;color:var(--text);font:inherit;cursor:pointer;min-width:0}
+.tile{display:flex;align-items:center;gap:9px;text-align:left;padding:10px 12px;background:var(--room);box-shadow:0 0 0 1px var(--wall);border:0;border-radius:0;color:var(--text);font:inherit;cursor:pointer;min-width:0}
 .tile:hover{background:#221f47}
-.tile .ico{width:30px;height:30px;stroke-width:1.5;margin-bottom:6px}
-.tn{font-family:var(--display);font-size:1.15rem;line-height:1.2}
-.tl{color:var(--muted);font-size:.9rem;line-height:1.35}
-.tc{margin-top:6px;font-size:.88rem;font-weight:700;color:var(--c);font-variant-numeric:tabular-nums}
+.tile .ico{width:20px;height:20px}
+.tn{flex:1;min-width:0;font-weight:600;font-size:.95rem;line-height:1.2}
+.tl{display:none}
+.tc{flex:none;font-size:.85rem;font-weight:700;color:var(--c);font-variant-numeric:tabular-nums;white-space:nowrap}
 .tile[aria-pressed="true"]{background:var(--c);color:var(--night)}
-.tile[aria-pressed="true"] .ico,.tile[aria-pressed="true"] .tl,.tile[aria-pressed="true"] .tc{color:var(--night)}
+.tile[aria-pressed="true"] .ico,.tile[aria-pressed="true"] .tc{color:var(--night)}
 .chip .n{color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
 .chip[aria-pressed="true"] .n{color:var(--night)}
 @media (max-width:820px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:520px){.tl{display:none}.tile{padding:13px 13px 12px}.tile .ico{width:26px;height:26px}}
+@media (max-width:820px){.tc .w{display:none}}
+@media (max-width:520px){
+  .wrap{padding-block:20px 56px;gap:24px}
+  .sub{display:none}
+  .here{margin-bottom:8px}
+  .pick{gap:18px}
+  .key{gap:7px}
+  .key b{font-size:1.05rem}
+  #chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+  #chips .chip{flex:none}
+}
 .key b{font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--text)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text);cursor:pointer;box-shadow:0 2px 0 var(--wall)}
@@ -241,7 +251,7 @@ function draw(){
   const cM=k=>items.filter(x=>(pick==="all"||x.museum===pick)&&x.moods.includes(k)).length;
   const cV=k=>items.filter(x=>(k==="all"||x.museum===k)&&(!mood||x.moods.includes(mood))).length;
   const shows=n=>n===1?"1 show":n+" shows";
-  moodsEl.innerHTML=Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${shows(cM(k))} →</span></button>`).join("");
+  moodsEl.innerHTML=Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${cM(k)}<span class="w">${cM(k)===1?" show":" shows"}</span> →</span></button>`).join("");
   chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)} <span class="n">${cV(k)}</span></button>`).join("");
   const term=q.value.trim().toLowerCase();
   const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.moods.includes(mood))&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
