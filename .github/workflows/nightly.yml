@@ -1,0 +1,42 @@
+name: Update listings
+
+on:
+  schedule:
+    - cron: "17 9 * * *"   # every day around 5 a.m. New York time
+  workflow_dispatch:        # lets you press "Run workflow" by hand
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Collect exhibitions
+        id: collect
+        continue-on-error: true
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: node collector/collect.mjs
+
+      - name: Save new listings
+        run: |
+          git config user.name "listings-bot"
+          git config user.email "listings-bot@users.noreply.github.com"
+          git add data/exhibitions.json
+          git diff --cached --quiet || git commit -m "Update listings"
+          git push
+
+      - name: Report problems
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "A museum could not be read. Open the 'Collect exhibitions' step above for details."
+          exit 1

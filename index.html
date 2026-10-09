@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NYC Museum Exhibitions</title>
+<meta name="description" content="What's on now, opening soon and ending soon at New York City museums.">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NYC Exhibitions">
+<meta name="theme-color" content="#f3f5f4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --wall:#f3f5f4; --panel:#ffffff; --ink:#15191c; --muted:#5d666b; --line:#d6dcda;
+  --accent:#1d3fc4; --accent-ink:#ffffff; --urgent:#b3261e; --soon:#0b6b4f;
+  --display:"Bricolage Grotesque","Arial Narrow",Arial,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --wall:#121517; --panel:#1b2023; --ink:#eef1f0; --muted:#9aa5a9; --line:#30383c;
+  --accent:#8fa6ff; --accent-ink:#0d1330; --urgent:#ff8a80; --soon:#6fd3ae; color-scheme:dark}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--wall);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.45;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:780px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:flex;flex-direction:column;gap:22px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2rem,7vw,3.1rem);line-height:1;margin:0;letter-spacing:-.02em;text-wrap:balance}
+.sub{color:var(--muted);margin:8px 0 0;max-width:52ch}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--wall);padding-block:10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid var(--line);z-index:2}
+#q{width:100%;font:inherit;padding:11px 14px;border:1px solid var(--line);border-radius:4px;background:var(--panel);color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 .875rem var(--body);padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--panel);color:var(--ink);cursor:pointer}
+.chip.mood{font-style:italic;border-style:dashed}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#out{display:flex;flex-direction:column;gap:30px}
+h2{font-family:var(--display);font-weight:700;font-size:1.35rem;margin:0 0 4px;display:flex;align-items:baseline;gap:10px}
+h2 span{font:500 .8rem var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.row{display:grid;grid-template-columns:112px minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid var(--line);text-decoration:none;color:inherit;align-items:start}
+.pic{width:112px;aspect-ratio:4/3;background:var(--line);border-radius:3px;overflow:hidden;display:grid;place-items:center;
+  font:600 .7rem var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:center;padding:4px}
+.pic{position:relative}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.txt{display:flex;flex-direction:column;gap:3px;min-width:0}
+.m{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.h{font-style:italic;color:var(--accent);font-size:.95rem;line-height:1.3}
+.t{font-weight:600;font-size:1.05rem;line-height:1.25;overflow-wrap:anywhere}
+.row:hover .t{color:var(--accent)}
+.d{color:var(--muted);font-size:.9rem;font-variant-numeric:tabular-nums}
+.tag{font-size:.8rem;font-weight:600;font-variant-numeric:tabular-nums}
+.tag.u{color:var(--urgent)} .tag.s{color:var(--soon)}
+.empty{color:var(--muted);padding:13px 0;border-top:1px solid var(--line);margin:0}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:16px}
+footer p{margin:0 0 6px}
+@media (min-width:600px){.row{grid-template-columns:168px minmax(0,1fr)}.pic{width:168px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>NYC Museum Exhibitions</h1>
+    <p class="sub">What's on at New York City museums. Tap a listing to open the museum's page.</p>
+  </header>
+  <div class="bar">
+    <input id="q" type="search" placeholder="Search exhibitions" aria-label="Search exhibitions">
+    <div class="chips" id="chips"></div>
+    <div class="chips" id="moods" aria-label="Pick a mood"></div>
+  </div>
+  <div id="out"><p class="empty">Loading listings…</p></div>
+  <footer>
+    <p id="stamp"></p>
+    <p>Listings and images come from each museum's website. Confirm dates before you go.</p>
+  </footer>
+</div>
+<script>
+const DAY=864e5, now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+const pd=s=>{if(!s)return null;const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const fmt=(d,yr)=>d.toLocaleDateString("en-US",{month:"short",day:"numeric",...(yr||d.getFullYear()!==today.getFullYear()?{year:"numeric"}:{})});
+const days=d=>Math.round((d-today)/DAY);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const far=new Date(9999,0,1);
+const G=[["end","Ending soon",(a,b)=>a.E-b.E],["open","Opening soon",(a,b)=>a.S-b.S],["now","On now",(a,b)=>(a.E||far)-(b.E||far)],["later","Later",(a,b)=>a.S-b.S]];
+const chips=document.getElementById("chips"),out=document.getElementById("out"),q=document.getElementById("q");
+let items=[],museums={},pick="all";
+try{pick=localStorage.getItem("museum")||"all"}catch(e){}
+
+function prep(x){
+  const S=pd(x.start),E=pd(x.end);let g,tag="",cls="";
+  if(E&&E<today)return null;
+  if(S&&S>today){const n=days(S);g=n<=45?"open":"later";if(n<=45){tag=n===1?"Opens tomorrow":"Opens in "+n+" days";cls="s"}}
+  else if(E&&days(E)<=30){const n=days(E);g="end";tag=n===0?"Closes today":n===1?"1 day left":n+" days left";cls="u"}
+  else g="now";
+  let d;
+  if(g==="open"||g==="later")d=E?fmt(S)+" – "+fmt(E,1):"Opens "+fmt(S)+(x.note?" · "+x.note:"");
+  else d=E?"Through "+fmt(E):(x.note||"Ongoing");
+  return{...x,S,E,g,tag,cls,d};
+}
+const MOODS={date:"Date night",blue:"Feeling melancholy",kids:"With kids",fun:"Need a laugh",deep:"Want to think"};let mood="";const moodsEl=document.getElementById("moods");
+function draw(){
+  moodsEl.innerHTML=Object.entries(MOODS).map(([k,n])=>`<button class="chip mood" type="button" data-k="${k}" aria-pressed="${k===mood}">${n}</button>`).join("");
+  if(pick!=="all"&&!museums[pick])pick="all";
+  chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)}</button>`).join("");
+  const term=q.value.trim().toLowerCase();
+  const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.mood===mood)&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
+  out.innerHTML=G.map(([k,name,sort])=>{
+    const rows=list.filter(x=>x.g===k).sort(sort);
+    if(!rows.length)return"";
+    return`<section><h2>${name} <span>${rows.length}</span></h2>`+rows.map(x=>
+      `<a class="row" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="pic">${x.image?`<img src="${esc(x.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(this.dataset.n))" data-n="${esc(museums[x.museum]||"")}">`:esc(museums[x.museum]||"")}</span>`+
+      `<span class="txt"><span class="m">${esc(x.venue)}</span>${x.hook?`<span class="h">${esc(x.hook)}</span>`:""}<span class="t">${esc(x.title)}</span><span class="d">${x.d}</span>${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}</span></a>`).join("")+"</section>";
+  }).join("")||'<p class="empty">No exhibitions match. Clear the search or pick another museum or mood.</p>';
+}
+chips.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;pick=b.dataset.k;try{localStorage.setItem("museum",pick)}catch(e){}draw()});
+moodsEl.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;mood=mood===b.dataset.k?"":b.dataset.k;draw()});
+q.addEventListener("input",draw);
+fetch("data/exhibitions.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw new Error(r.status);return r.json()}).then(data=>{
+  museums=data.museums||{};
+  items=(data.items||[]).map(prep).filter(Boolean);
+  if(data.updated)document.getElementById("stamp").textContent="Last updated "+pd(data.updated.slice(0,10)).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+".";
+  draw();
+}).catch(()=>{out.innerHTML='<p class="empty">The listings could not be loaded. Reload the page to try again.</p>'});
+</script>
+</body>
+</html>

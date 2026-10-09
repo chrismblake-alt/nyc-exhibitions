@@ -1,0 +1,8 @@
+[
+  { "key": "met",   "name": "The Met",    "page": "https://www.metmuseum.org/exhibitions" },
+  { "key": "moma",  "name": "MoMA",       "page": "https://www.moma.org/calendar/exhibitions" },
+  { "key": "gug",   "name": "Guggenheim", "page": "https://www.guggenheim.org/exhibitions",
+    "wpApi": "https://www.guggenheim.org/wp-json/wp/v2/exhibition?per_page=20&_embed=wp:featuredmedia" },
+  { "key": "whit",  "name": "Whitney",    "page": "https://whitney.org/exhibitions" },
+  { "key": "frick", "name": "The Frick",  "page": "https://www.frick.org/exhibitions" }
+]
