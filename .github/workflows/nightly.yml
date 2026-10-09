@@ -12,8 +12,8 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -33,6 +33,7 @@ jobs:
           git config user.email "listings-bot@users.noreply.github.com"
           git add data/exhibitions.json
           git diff --cached --quiet || git commit -m "Update listings"
+          git pull --rebase
           git push
 
       - name: Report problems
