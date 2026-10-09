@@ -94,7 +94,7 @@ const fmt=(d,yr)=>d.toLocaleDateString("en-US",{month:"short",day:"numeric",...(
 const days=d=>Math.round((d-today)/DAY);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const far=new Date(9999,0,1);
-const G=[["end","Ending Soon",(a,b)=>a.E-b.E],["open","Opening Soon",(a,b)=>a.S-b.S],["now","On Now",(a,b)=>(a.E||far)-(b.E||far)],["later","Later",(a,b)=>a.S-b.S]];
+const G=[["end","Ending Soon",(a,b)=>a.E-b.E],["now","On Now",(a,b)=>(a.E||far)-(b.E||far)],["open","Opening Soon",(a,b)=>a.S-b.S],["later","Later",(a,b)=>a.S-b.S]];
 const MOODS={date:"Date night",blue:"Feeling melancholy",kids:"With kids",fun:"Need a laugh",deep:"Want to think"};
 const chips=document.getElementById("chips"),moodsEl=document.getElementById("moods"),out=document.getElementById("out"),q=document.getElementById("q");
 let items=[],museums={},pick="all",mood="";
