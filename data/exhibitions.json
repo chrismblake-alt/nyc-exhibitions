@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T00:12:48.449Z",
+ "updated": "2026-10-10T00:16:46.462Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -15,7 +15,7 @@
   },
   "moma": {
    "ok": true,
-   "count": 14
+   "count": 19
   },
   "gug": {
    "ok": true,
@@ -27,7 +27,7 @@
   },
   "frick": {
    "ok": true,
-   "count": 5
+   "count": 4
   },
   "morgan": {
    "ok": false,
@@ -154,7 +154,7 @@
     "deep",
     "quiet"
    ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/231ebed7e026f51713ebfe2c5e20df6eb3be5c20.jpg?w=640&q=70&fit=clip&auto=format"
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/231ebed7e026f51713ebfe2c5e20df6eb3dabab8.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -476,7 +476,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": null,
+   "note": "Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -566,7 +566,7 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": null,
    "end": "2027-01-02",
-   "note": "Through Jan 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
@@ -580,7 +580,7 @@
    "title": "Brancusi: The Artist and His Studio",
    "start": "2026-10-25",
    "end": "2027-02-27",
-   "note": "Member Previews, Oct 22–24",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5910",
    "hook": "Want to impress your partner with something deep? Smooth shapes you'll want to touch (don't).",
    "moods": [
@@ -589,6 +589,22 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMjkvN2p2OHVscnRnaV9CcmFuY3VzaV9QSF84NTRfbGVhZF9oaWdoX3Jlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Brancusi_PH-854_lead_high-res.jpg?sha=141b7a0d8bb59e00"
+  },
+  {
+   "museum": "moma",
+   "venue": "MoMA",
+   "title": "Creativity Lab: Art of the Book",
+   "start": "2026-10-14",
+   "end": "2027-03-14",
+   "note": null,
+   "url": "https://www.moma.org/calendar/exhibitions/5943",
+   "hook": "Bringing kids who love making things? This hands-on exploration of books as art is pure creative possibility.",
+   "moods": [
+    "kids",
+    "fun",
+    "quick"
+   ],
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMTUvN2dtNWcwYzV3bF95dWNoZW5fZm9yX01vTUFfaW5fYV9kcmVhbV9jb3B5X01DLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/yuchen-for-MoMA_in-a-dream-copy_MC.jpg?sha=9b5fbe3c675a2e91"
   },
   {
    "museum": "moma",
@@ -611,7 +627,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -622,10 +638,42 @@
   {
    "museum": "moma",
    "venue": "MoMA",
+   "title": "Hyundai Card First Look: Joan Snyder",
+   "start": null,
+   "end": "2026-11-08",
+   "note": null,
+   "url": "https://www.moma.org/calendar/exhibitions/5907",
+   "hook": "If you appreciate gestural abstraction mixed with natural materials, Snyder's paintings breathe and pulse.",
+   "moods": [
+    "deep",
+    "quick",
+    "quiet"
+   ],
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNWl4OTc4N2N2dF8yMTFfMjAyNF9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/211_2024_CCCR-Full-size-JPEG.jpg?sha=22260ead2a69bf46"
+  },
+  {
+   "museum": "moma",
+   "venue": "MoMA",
+   "title": "Hyundai Card First Look: Sheree Hovsepian",
+   "start": null,
+   "end": "2026-11-18",
+   "note": null,
+   "url": "https://www.moma.org/calendar/exhibitions/5908",
+   "hook": "Want to explore how photographs become sculpture? Hovsepian's elegant works invite close, intimate looking.",
+   "moods": [
+    "quiet",
+    "quick",
+    "deep"
+   ],
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNnNwZ2pzOXZmZ18yOTFfMjAyNV9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/291_2025_CCCR-Full-size-JPEG.jpg?sha=1dda6e57daadeb58"
+  },
+  {
+   "museum": "moma",
+   "venue": "MoMA",
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
-   "end": null,
-   "note": "Aug 1, 2026–Summer 2027",
+   "end": "2027-06-30",
+   "note": "Summer 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -655,7 +703,7 @@
    "title": "Mondrian Boogie Woogie",
    "start": "2027-03-21",
    "end": "2027-07-31",
-   "note": "Member Previews, Mar 18–20",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5916",
    "hook": "If you like jazz, city grids and yellow taxis, you'll love this.",
    "moods": [
@@ -686,7 +734,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -702,7 +750,7 @@
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
    "end": "2027-02-21",
-   "note": "Through Feb 21, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -716,7 +764,7 @@
    "title": "Pierre Huyghe: UUmwelt",
    "start": null,
    "end": "2026-11-29",
-   "note": "Through Nov 29",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -731,7 +779,7 @@
    "title": "Sarah Michelson: nowhere",
    "start": null,
    "end": "2026-10-11",
-   "note": "Last chance Through Oct 11",
+   "note": "Through Oct 11",
    "url": "https://www.moma.org/calendar/exhibitions/5928",
    "hook": "Want something you can't explain afterward? Dance that refuses to stay on a stage.",
    "moods": [
@@ -745,7 +793,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": "Through May 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -756,10 +804,26 @@
   {
    "museum": "moma",
    "venue": "MoMA",
+   "title": "The Modern Window: Julien Ceccaldi",
+   "start": null,
+   "end": "2026-10-19",
+   "note": "Through Oct 19",
+   "url": "https://www.moma.org/calendar/exhibitions/5861",
+   "hook": "Want to see art that plays with perception in the museum's street-facing window? Pure visual wit.",
+   "moods": [
+    "quick",
+    "fun",
+    "guests"
+   ],
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMDYvM3pyazQ0djloMF9Nb2Rlcm5fV2luZG93LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/Modern-Window.jpg?sha=a560999cea627574"
+  },
+  {
+   "museum": "moma",
+   "venue": "MoMA",
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": "Through Jan 23, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -768,6 +832,22 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMjEvOHBkOHZmcjdrM19adXJuX09yYWNsZV9hbmRfU3BlY3RhY2xlX0hfU0laRUQuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Zurn_Oracle-and-Spectacle_H_SIZED.jpg?sha=1ab1e9c750e4c5bf"
+  },
+  {
+   "museum": "moma",
+   "venue": "MoMA",
+   "title": "Yoko Ono: IMAGINE PEACE",
+   "start": "2026-09-03",
+   "end": "2027-06-30",
+   "note": "Spring 2027",
+   "url": "https://www.moma.org/calendar/exhibitions/5935",
+   "hook": "If you believe in art as activism, Ono's visionary works still move and inspire decades after their creation.",
+   "moods": [
+    "deep",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTQveHBqMnEzcDh2X1NPMVYwNkNfSU1BR0lORVBFQUNFX01vTUFfNS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/SO1V06C_IMAGINEPEACE-MoMA-5.jpg?sha=785b9f8c721893be"
   },
   {
    "museum": "whit",
