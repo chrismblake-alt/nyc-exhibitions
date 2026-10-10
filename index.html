@@ -16,7 +16,7 @@
    sections are numbered galleries, moods are the map legend, and the light is the pale violet
    of a gas-discharge tube with one gold marker. */
 :root{
-  --night:#14122b; --room:#1b1938; --wall:#6f69b8; --glow:#c3beff; --text:#f1efff; --muted:#aaa6cf;
+  --night:#14122b; --room:#1b1938; --wall:#6f69b8; --glow:#c3beff; --text:#f1efff; --muted:#c4c0e2;
   --gold:#f2c14e; --gold-ink:#1d1603;
   --date:#ff9dbb; --blue:#93bcff; --kids:#a3e495; --fun:#f2c14e; --deep:#cfaeff;
   --quick:#7de3ff; --quiet:#b9c9a6; --guests:#ff8a70;
@@ -43,7 +43,7 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6re
 .panel{display:flex;flex-direction:column;gap:18px;min-width:0}
 #q{width:100%;font:inherit;padding:13px 16px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text)}
 #q::placeholder{color:var(--muted)}
-.pick{display:flex;flex-direction:column;gap:26px}
+.pick{display:flex;flex-direction:column;gap:32px}
 .key{display:flex;flex-direction:column;gap:10px}
 .tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px}
 .tile{display:flex;align-items:center;gap:8px;text-align:left;padding:6px 10px;background:var(--room);box-shadow:0 0 0 1px var(--wall);border:0;border-radius:0;color:var(--text);font:inherit;cursor:pointer;min-width:0}
@@ -69,6 +69,9 @@ h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6re
   #chips .chip{flex:none}
 }
 .key b{font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--text)}
+.sn{font-family:var(--body);font-size:.98rem;color:var(--muted)}
+.clear{font:600 .9rem var(--body);margin-left:8px;padding:5px 12px;border:1px solid var(--gold);border-radius:2px;background:transparent;color:var(--gold);cursor:pointer;vertical-align:middle}
+.clear:hover{background:var(--gold);color:var(--gold-ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{display:inline-flex;align-items:center;gap:8px;font:600 .95rem var(--body);padding:8px 13px;border:1px solid var(--wall);border-radius:2px;background:var(--room);color:var(--text);cursor:pointer;box-shadow:0 2px 0 var(--wall)}
 .chip:hover{border-color:var(--glow);box-shadow:0 2px 0 var(--glow)}
@@ -101,28 +104,35 @@ body[data-mood] .room:hover{background:rgba(40,36,84,.86)}
 .gal{display:flex;flex-direction:column;gap:18px}
 .gal-head{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--wall);padding-bottom:12px}
 .num{font-family:var(--display);font-size:2.6rem;line-height:1;color:var(--glow);min-width:1.6ch;text-shadow:0 0 18px rgba(195,190,255,.5)}
-.gal-head small{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block}
+.gal-head small{font-size:.84rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700;display:block}
 h2{font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1;margin:0}
 .count{margin-left:auto;color:var(--muted);font-size:.95rem;font-variant-numeric:tabular-nums}
 .plan{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1px}
+.plan.n1{grid-template-columns:minmax(0,1fr)}
+.plan.n2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (min-width:900px){.plan.n3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .plan.n2 .room{flex-direction:row}.plan.n2 .pic{width:46%;flex:none;aspect-ratio:auto;min-height:240px}}
+@media (min-width:641px){.plan.n1 .room{flex-direction:row}.plan.n1 .pic{width:46%;flex:none;aspect-ratio:auto;min-height:280px}
+  .plan.n1 .txt{padding:26px 28px 34px;gap:10px}.plan.n1 .t{font-size:1.8rem}.plan.n1 .h{font-size:1.1rem}}
+@media (max-width:640px){.plan,.plan.n2{grid-template-columns:minmax(0,1fr)}}
 .room{position:relative;display:flex;flex-direction:column;background:var(--room);box-shadow:0 0 0 1px var(--wall);color:inherit;text-decoration:none;min-width:0}
 .room:hover{background:#221f47}
 .room::after{content:"";position:absolute;right:0;bottom:0;width:26px;height:26px;border-top:1px solid var(--wall);border-left:1px solid var(--wall);border-top-left-radius:26px;opacity:.8}
-.pic{position:relative;aspect-ratio:16/10;background:#262354;display:grid;place-items:center;color:var(--muted);font-family:var(--display);font-size:1.15rem;text-align:center;padding:10px;overflow:hidden}
-.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
-.txt{display:flex;flex-direction:column;gap:7px;padding:16px 18px 30px;min-width:0}
-.m{font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.pic{position:relative;aspect-ratio:16/10;background:#0f0d22;box-shadow:inset 0 0 0 1px rgba(195,190,255,.2);display:grid;place-items:center;color:var(--muted);font-family:var(--display);font-size:1.15rem;text-align:center;padding:10px;overflow:hidden}
+.pic img{position:absolute;inset:12px;width:calc(100% - 24px);height:calc(100% - 24px);object-fit:contain;display:block}
+.txt{display:flex;flex-direction:column;flex:1;gap:7px;padding:16px 18px 30px;min-width:0}
+.m{font-size:.84rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .t{font-family:var(--display);font-size:1.3rem;line-height:1.2;overflow-wrap:anywhere}
 .room:hover .t{color:var(--glow)}
 .h{font-style:italic;color:var(--glow);line-height:1.4}
-.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:4px;font-size:.92rem;color:var(--muted);font-variant-numeric:tabular-nums}
-.tag{font-weight:700;font-size:.82rem;padding:2px 8px;border-radius:2px}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:auto;padding-top:8px;font-size:1rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.tag{font-weight:700;font-size:.88rem;padding:2px 8px;border-radius:2px}
 .tag.u{background:var(--gold);color:var(--gold-ink)} .tag.s{border:1px solid var(--glow);color:var(--glow)}
 .moods{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:2px}
-.mood{display:inline-flex;align-items:center;gap:6px;font-size:.85rem;color:var(--muted)}
+.mood{display:inline-flex;align-items:center;gap:6px;font-size:.94rem;color:var(--muted)}
 .mood .ico{width:16px;height:16px}
 .empty{margin:0;padding:22px;border:1px solid var(--wall);color:var(--muted)}
-footer{color:var(--muted);font-size:.9rem;border-top:1px solid var(--wall);padding-top:18px}
+footer{color:var(--muted);font-size:1rem;border-top:1px solid var(--wall);padding-top:18px}
 footer p{margin:0 0 6px}
 .coffee{display:inline-block;line-height:0;border-radius:8px}
 .coffee img{height:50px;width:auto;display:block}
@@ -144,7 +154,9 @@ footer .by-bio:last-of-type{margin-bottom:0}
 .place:hover b{color:var(--glow)}
 .place b{font-family:var(--display);font-weight:400;font-size:1.1rem}
 .place span{color:var(--muted);font-size:.9rem}
-.leaflet-tile-pane{filter:invert(1) hue-rotate(205deg) saturate(.55) brightness(.95) contrast(.92)}
+.leaflet-tile-pane{filter:invert(1) hue-rotate(205deg) saturate(.6) brightness(1.3) contrast(1.05)}
+.leaflet-tooltip.pin-label{background:var(--night);color:var(--text);border:1px solid var(--wall);border-radius:2px;box-shadow:none;font-weight:600;font-size:.88rem;padding:2px 7px}
+.leaflet-tooltip.pin-label::before{display:none}
 .leaflet-container{font-family:var(--body);font-size:.95rem}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:var(--room);color:var(--text);box-shadow:0 0 0 1px var(--wall);border-radius:2px}
 .leaflet-popup-content{margin:14px 16px;line-height:1.45}
@@ -182,12 +194,12 @@ footer .by-bio:last-of-type{margin-bottom:0}
   <div class="pick">
     <div class="key"><b>Choose a mood</b><div class="tiles" id="moods"></div></div>
     <div class="key"><b>Choose a museum</b><div class="chips" id="chips"></div></div>
-    <div class="key"><b>Or just go for a scroll…</b></div>
+    <div class="key"><b id="showing">Or just go for a scroll…</b></div>
   </div>
   <div class="dreamline" id="dreamline" hidden></div>
   <div id="out"><p class="empty">Loading listings…</p></div>
   <section class="gal" id="where">
-    <div class="gal-head"><div><small>Map</small><h2>Where They Are</h2></div><span class="count">Tap a museum for directions</span></div>
+    <div class="gal-head"><div><small>Map</small><h2>Where They Are</h2></div><span class="count">Tap a museum for directions. The Cloisters is farther uptown.</span></div>
     <div class="where"><div id="map" role="region" aria-label="Map of the museums"></div><ul class="places" id="places"></ul></div>
   </section>
   <footer>
@@ -209,13 +221,13 @@ footer .by-bio:last-of-type{margin-bottom:0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 const PLACES=[
-  {k:"met",venue:"The Met",name:"The Met Fifth Avenue",addr:"1000 Fifth Avenue",ll:[40.7794,-73.9632]},
-  {k:"met",venue:"The Met Cloisters",name:"The Met Cloisters",addr:"99 Margaret Corbin Drive",ll:[40.8649,-73.9319]},
-  {k:"moma",venue:"MoMA",name:"MoMA",addr:"11 West 53rd Street",ll:[40.7614,-73.9776]},
+  {k:"met",venue:"The Met",name:"The Met Fifth Avenue",s:"The Met",d:"left",addr:"1000 Fifth Avenue",ll:[40.7794,-73.9632]},
+  {k:"met",venue:"The Met Cloisters",name:"The Met Cloisters",s:"Cloisters",addr:"99 Margaret Corbin Drive",ll:[40.8649,-73.9319]},
+  {k:"moma",venue:"MoMA",name:"MoMA",d:"left",addr:"11 West 53rd Street",ll:[40.7614,-73.9776]},
   {k:"gug",venue:"Guggenheim",name:"Guggenheim",addr:"1071 Fifth Avenue",ll:[40.7830,-73.9590]},
   {k:"whit",venue:"Whitney",name:"Whitney",addr:"99 Gansevoort Street",ll:[40.7396,-74.0089]},
-  {k:"frick",venue:"The Frick",name:"The Frick Collection",addr:"1 East 70th Street",ll:[40.7712,-73.9674]},
-  {k:"morgan",venue:"The Morgan",name:"The Morgan Library & Museum",addr:"225 Madison Avenue",ll:[40.7492,-73.9814]}
+  {k:"frick",venue:"The Frick",name:"The Frick Collection",s:"Frick",d:"left",addr:"1 East 70th Street",ll:[40.7712,-73.9674]},
+  {k:"morgan",venue:"The Morgan",name:"The Morgan Library & Museum",s:"Morgan",addr:"225 Madison Avenue",ll:[40.7492,-73.9814]}
 ];
 const DAY=864e5, now=new Date(), today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
 const pd=s=>{if(!s)return null;const[y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
@@ -247,7 +259,7 @@ const ICONS={
 };
 const chips=document.getElementById("chips"),moodsEl=document.getElementById("moods"),out=document.getElementById("out"),q=document.getElementById("q");
 let items=[],museums={},pick="all",mood="";
-try{pick=localStorage.getItem("museum")||"all"}catch(e){}
+try{localStorage.removeItem("museum")}catch(e){} // the museum choice is no longer remembered between visits
 document.getElementById("today").textContent="You are here · "+today.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric"});
 
 function prep(x){
@@ -267,11 +279,16 @@ function draw(){
   const cM=k=>items.filter(x=>(pick==="all"||x.museum===pick)&&x.moods.includes(k)).length;
   const cV=k=>items.filter(x=>(k==="all"||x.museum===k)&&(!mood||x.moods.includes(mood))).length;
   const shows=n=>n===1?"1 show":n+" shows";
-  moodsEl.innerHTML=`<button class="tile" type="button" style="--c:var(--glow)" data-k="" aria-pressed="${mood===""}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="2.500"/><circle cx="17" cy="7" r="2.500"/><circle cx="7" cy="17" r="2.500"/><circle cx="17" cy="17" r="2.500"/></svg><span class="tn">All moods</span><span class="tc">${items.filter(x=>pick==="all"||x.museum===pick).length} →</span></button>`+Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${cM(k)}<span class="w">${cM(k)===1?" show":" shows"}</span> →</span></button>`).join("");
+  moodsEl.innerHTML=`<button class="tile" type="button" style="--c:var(--glow)" data-k="" aria-pressed="${mood===""}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="2.500"/><circle cx="17" cy="7" r="2.500"/><circle cx="7" cy="17" r="2.500"/><circle cx="17" cy="17" r="2.500"/></svg><span class="tn">All moods</span><span class="tc">${items.filter(x=>pick==="all"||x.museum===pick).length}</span></button>`+Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${cM(k)}</span></button>`).join("");
   chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)} <span class="n">${cV(k)}</span></button>`).join("");
   const term=q.value.trim().toLowerCase();
   const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.moods.includes(mood))&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));
   let n=0;
+  const sh=document.getElementById("showing");
+  if(mood||pick!=="all"||term){
+    const what=[mood?MOODS[mood].n:"",pick!=="all"?(mood?"at ":"")+museums[pick]:""].filter(Boolean).join(" ")||"everything";
+    sh.innerHTML=`Showing ${esc(what)}${term?` matching “${esc(q.value.trim())}”`:""} <span class="sn">· ${shows(list.length)}</span> <button class="clear" type="button" id="clear">Clear</button>`;
+  }else sh.textContent="Or just go for a scroll…";
   const dl=document.getElementById("dreamline");
   if(mood){document.body.dataset.mood=mood;document.body.style.setProperty("--mc",`var(--${mood})`);dl.hidden=false;
     dl.innerHTML=`${ico(mood)}<div><b>${MOODS[mood].n}</b><span>${MOODS[mood].line}</span></div><em>${list.length} ${list.length===1?"show":"shows"}</em>`}
@@ -279,17 +296,18 @@ function draw(){
   out.innerHTML=G.map(([k,name,sort])=>{
     const rows=list.filter(x=>x.g===k).sort(sort);
     if(!rows.length)return"";
-    return`<section class="gal"><div class="gal-head"><span class="num" aria-hidden="true">${ROMAN[n++]}</span><div><small>Gallery</small><h2>${name}</h2></div><span class="count">${rows.length} ${rows.length===1?"show":"shows"}</span></div><div class="plan">`+rows.map(x=>{
+    return`<section class="gal"><div class="gal-head"><span class="num" aria-hidden="true">${ROMAN[n++]}</span><div><small>Gallery</small><h2>${name}</h2></div><span class="count">${rows.length} ${rows.length===1?"show":"shows"}</span></div><div class="plan${rows.length<=3?" n"+rows.length:""}">`+rows.map(x=>{
       const m=esc(museums[x.museum]||"");
       return `<a class="room" href="${esc(x.url)}" target="_blank" rel="noopener"><span class="pic">${x.image?`<img src="${esc(x.image)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(this.dataset.n))" data-n="${m}">`:m}</span>`+
       `<span class="txt"><span class="m">${esc(x.venue)}</span><span class="t">${esc(x.title)}</span>${x.hook?`<span class="h">${esc(x.hook)}</span>`:""}`+
       `<span class="meta">${x.tag?`<span class="tag ${x.cls}">${x.tag}</span>`:""}<span>${x.d}</span></span>${x.moods.length?`<span class="moods">${x.moods.map(k=>`<span class="mood">${ico(k)}${MOODS[k].n}</span>`).join("")}</span>`:""}</span></a>`;
     }).join("")+"</div></section>";
-  }).filter(Boolean).join(TIP)||'<p class="empty">No exhibitions match. Clear the search or pick another museum or mood.</p>';
+  }).filter(Boolean).map((sec,i,a)=>sec+(a.length>1&&i===Math.min(1,a.length-2)?TIP:"")).join("")||'<p class="empty">No exhibitions match. Clear the search or pick another museum or mood.</p>';
 }
-chips.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;pick=b.dataset.k;try{localStorage.setItem("museum",pick)}catch(e){}draw()});
+chips.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;pick=b.dataset.k;draw()});
 moodsEl.addEventListener("click",e=>{const b=e.target.closest(".tile");if(!b)return;mood=mood===b.dataset.k?"":b.dataset.k;draw()});
 q.addEventListener("input",draw);
+document.getElementById("showing").addEventListener("click",e=>{if(e.target.closest("#clear")){pick="all";mood="";q.value="";draw()}});
 function showMuseum(k){pick=k;mood="";q.value="";draw();out.scrollIntoView({behavior:"smooth",block:"start"})}
 function drawMap(){
   const live=items.filter(x=>x.g==="end"||x.g==="now");
@@ -303,7 +321,9 @@ function drawMap(){
     attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
   const marks=PLACES.map((p,i)=>L.circleMarker(p.ll,{radius:10,color:"#14122b",weight:2,fillColor:"#f2c14e",fillOpacity:1}).addTo(map)
     .bindPopup(`<b>${esc(p.name)}</b>${esc(p.addr)}<br>${line(p)}<div class="acts"><button type="button" data-show="${i}">See its shows</button><a href="https://www.google.com/maps/dir/?api=1&destination=${p.ll[0]},${p.ll[1]}" target="_blank" rel="noopener">Directions</a></div>`));
-  map.fitBounds(L.latLngBounds(PLACES.map(p=>p.ll)),{padding:[36,36]});
+  // open on the cluster from the Whitney to the Guggenheim; the Cloisters is far uptown and reachable from the list
+  map.fitBounds(L.latLngBounds(PLACES.filter(p=>p.venue!=="The Met Cloisters").map(p=>p.ll)),{padding:[44,44]});
+  PLACES.forEach((p,i)=>marks[i].bindTooltip(p.s||p.name,{permanent:true,direction:p.d||"right",offset:[p.d==="left"?-12:12,0],className:"pin-label"}));
   el.addEventListener("click",e=>{const b=e.target.closest("[data-show]");if(b)showMuseum(PLACES[b.dataset.show].k)});
   list.addEventListener("click",e=>{const b=e.target.closest(".place");if(!b)return;const i=+b.dataset.i;map.setView(PLACES[i].ll,14);marks[i].openPopup();el.scrollIntoView({behavior:"smooth",block:"nearest"})});
 }
