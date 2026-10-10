@@ -135,15 +135,20 @@ Rules:
   "guests" (out-of-town guests: a major show or famous name that visitors would want to see).
 - List each exhibition once. Remove markup such as asterisks from titles.
 
-Reply with the JSON array only.${text === null ? "" : "\n\nPAGE TEXT:\n" + text}`;
+- If the page gives no address for an exhibition, set "url" to null and still list it.
+
+Reply with the JSON array only, even if it is empty. No explanation before or after it.${text === null ? "" : "\n\nPAGE TEXT:\n" + text}`;
 }
 
 function parseItems(reply, v) {
   const a = reply.indexOf("["), b = reply.lastIndexOf("]");
-  if (a < 0 || b < 0) throw new Error("AI reply had no list in it");
+  if (a < 0 || b < 0) throw new Error(`AI reply had no list in it (it said: "${reply.trim().slice(0, 160)}")`);
   const seen = new Set(), out = [];
   for (const x of JSON.parse(reply.slice(a, b + 1))) {
-    if (!x || typeof x.title !== "string" || !/^https?:\/\//.test(x.url || "") || seen.has(x.url)) continue;
+    if (!x || typeof x.title !== "string" || !x.title.trim()) continue;
+    // no address given for the show: link to the museum's listing page, with the title keeping it unique
+    if (!/^https?:\/\//.test(x.url || "")) x.url = v.page + "#" + x.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    if (seen.has(x.url)) continue;
     seen.add(x.url);
     out.push({
       museum: v.key,
@@ -193,7 +198,7 @@ let items = [];
 for (const v of venues) {
   if (only && v.key !== only) { items.push(...(prev.items || []).filter((x) => x.museum === v.key)); continue; }
   try {
-    let found;
+    let found, via = "direct", directError = null;
     try {
       let text;
       if (v.wpApi) text = await guggenheimText(v);
@@ -206,9 +211,10 @@ for (const v of venues) {
     } catch (direct) {
       if (v.wpApi || provider !== "anthropic") throw direct;
       console.log(`${v.name}: direct request failed (${direct.message}). Trying through the AI service.`);
-      blocked.add(v.key);
-      found = parseItems(await askModel(buildPrompt(v, null), 70000), v)
+      blocked.add(v.key); via = "ai service"; directError = String(direct.message || direct).slice(0, 200);
+      try { found = parseItems(await askModel(buildPrompt(v, null), 70000), v)
         .filter((x) => { try { return new URL(x.url).hostname.endsWith(new URL(v.page).hostname.replace(/^www\./, "")); } catch { return false; } });
+      } catch (second) { throw new Error(`${second.message || second} [direct attempt: ${directError}]`); }
     }
     // the Guggenheim feed mixes in old shows and gives no dates for them
     if (v.wpApi) found = found.filter((x) => x.start || x.end || prevByUrl.get(x.url)?.start || prevByUrl.get(x.url)?.end);
@@ -223,7 +229,7 @@ for (const v of venues) {
       }
     }
     items.push(...found);
-    status[v.key] = { ok: true, count: found.length };
+    status[v.key] = { ok: true, count: found.length, via, ...(directError ? { directError } : {}) };
     console.log(`${v.name}: ${found.length} exhibitions`);
   } catch (e) {
     const kept = (prev.items || []).filter((x) => x.museum === v.key);
@@ -235,7 +241,7 @@ for (const v of venues) {
 
 let lookups = 0;
 for (const x of items) {
-  if (!x.image && lookups < MAX_IMAGE_LOOKUPS) {
+  if (!x.image && !x.url.includes("#") && lookups < MAX_IMAGE_LOOKUPS) {
     lookups++;
     x.image = blocked.has(x.museum) ? await ogImageViaModel(x.url) : await ogImage(x.url);
     await new Promise((r) => setTimeout(r, 400));
