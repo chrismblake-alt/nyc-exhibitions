@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10T00:52:47.776Z",
+ "updated": "2026-10-10T15:29:24.856Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,7 +11,7 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 44,
+   "count": 28,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
@@ -33,14 +33,14 @@
   },
   "frick": {
    "ok": true,
-   "count": 4,
+   "count": 5,
    "via": "ai service",
    "directError": "HTTP 418 from https://www.frick.org/exhibitions"
   },
   "morgan": {
-   "ok": false,
+   "ok": true,
    "count": 2,
-   "error": "no exhibitions found (the page may have changed)"
+   "via": "by hand"
   }
  },
  "items": [
@@ -123,7 +123,7 @@
   {
    "museum": "gug",
    "venue": "Guggenheim",
-   "title": "Taryn Simon Father Country I Do Love You",
+   "title": "Taryn Simon | Father Country I Do Love You",
    "start": "2026-09-18",
    "end": "2027-03-14",
    "note": null,
@@ -196,66 +196,6 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "Art of Native America: The Charles and Valerie Diker Collection",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/art-of-native-america-diker-collection",
-   "hook": "If you like art that speaks to resilience and community, Native American traditions inspire wonder.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/cc7db4562568666d922df90241ecb24c726eb1e4-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Arts of Africa",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/arts-of-africa",
-   "hook": "Want to explore art of profound spiritual and political power? African traditions resonate across time.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/fc460c2783c573bd0904b742d433178a4cc8856d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Arts of Oceania",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/arts-of-oceania",
-   "hook": "Want to encounter art that connects ancestors to the sea? Oceanic traditions speak across generations.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/bd19c9299e817c2ffff4e6c01e21cf4e8684a302-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Arts of the Ancient Americas",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/arts-of-the-ancient-americas",
-   "hook": "If you like to witness civilizations through their art, ancient Americas reveal sophisticated vision.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/8085b5b608bffc5be90cd079c676c53790c91762-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": null,
    "end": null,
@@ -266,21 +206,6 @@
     "fun"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/045caefaeb38ff7e5e7f7ace1c8196b0753a7901-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Before Yesterday We Could Fly: An Afrofuturist Period Room",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/afrofuturist-period-room",
-   "hook": "Want to imagine Black futures through color and vision? Afrofuturism meets domestic space here.",
-   "moods": [
-    "deep",
-    "fun"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/eb835a48b4ccc4587344f0703a2972142761d95b-5121x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -375,21 +300,6 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "Cycladic Art",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/cycladic-art",
-   "hook": "Want to see where minimalist beauty began? Ancient Cycladic figures captivate with pure form.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/4236b335571cf73d4d3e70ee11239b06b504b71d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
    "title": "David Hartt: Peripheries",
    "start": null,
    "end": "2027-02-07",
@@ -420,20 +330,6 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "Defensive Display: Shields from The Met Collection",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/defensive-display-shields-from-the-met-collection",
-   "hook": "If you like armor as art, ornate shields reveal how protection itself was a form of beauty.",
-   "moods": [
-    "deep"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/f899defe4207ddc1156694b63af1181963b7dfc2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
    "start": "2026-10-22",
    "end": "2027-02-07",
@@ -460,20 +356,6 @@
     "quiet"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/07815c64b8f371db3a81f7fce7c38c534a82ff59-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Fabergé from the Matilda Geddings Gray Foundation Collection",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/faberge",
-   "hook": "Want to see imperial luxury at its finest? Fabergé eggs are jeweled poetry from Imperial Russia.",
-   "moods": [
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/3ca7e9b85d298dbaeddaa86bea763504eb8a45ec-1920x1080.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -552,51 +434,6 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "Layered Narratives: The Northern Renaissance Gallery",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/layered-narratives-the-northern-renaissance-gallery",
-   "hook": "Want to untangle stories within stories? Northern Renaissance art rewards patient looking.",
-   "moods": [
-    "deep",
-    "quiet"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/5a05bf7c13b551b9e04394849ec345fa3862aa20-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Look Again: European Paintings 1300–1800",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/look-again-european-paintings-1300-1800",
-   "hook": "If you like discovering new details in old paintings, this interactive gallery invites closer looking.",
-   "moods": [
-    "deep",
-    "quiet"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/9d51408cacf6affc8fe1b1fc60a2796d766fdb77-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Michael Lin: Pentachrome",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/michael-lin-pentachrome",
-   "hook": "If you like art that makes the ordinary beautiful, Lin's botanical patterns transform walls into gardens.",
-   "moods": [
-    "quiet",
-    "fun"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/5794d4bb2885d23bcc592b5d4c5cc69c46572dac-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
    "title": "Orientalism: Between Fact and Fantasy",
    "start": null,
    "end": "2027-02-28",
@@ -612,7 +449,7 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "P. S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
+   "title": "P.S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
    "start": null,
    "end": "2026-10-26",
    "note": null,
@@ -641,25 +478,10 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "Renaissance Masterpieces of Judaica: The Mishneh Torah and The Rothschild Mahzor",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/renaissance-masterpieces",
-   "hook": "Want to see sacred text as visual splendor? Illuminated manuscripts transform words into art.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/0962c69139feffd21a6d63e41b84caa12d7674f6-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "Ongoing from March 21, 2027",
+   "note": "Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -668,50 +490,6 @@
     "kids"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/247336cef9dfd60723f3e125e3afaaf46c75c025-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "The American Wing at 100",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/the-american-wing-at-100",
-   "hook": "Want to celebrate a century of American art? This wing honors creativity from coast to coast.",
-   "moods": [
-    "guests",
-    "deep"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/a8cd0feb5aebb6e8231a8299b2f3adfbc64283f2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "The British Galleries",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/british-galleries",
-   "hook": "If you like British style and craftsmanship, these galleries span centuries of wit and innovation.",
-   "moods": [
-    "guests"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/9f47f6bed39c7b0c140ee3f3da424333225a7759-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "The Calculated Curve: Eighteenth-Century American Furniture",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/the-calculated-curve-eighteenth-century-american-furniture",
-   "hook": "If you like design as engineering and art, American furniture makers perfected elegance through geometry.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/a82313025bd634c0d45b155eaedb5f7916f29f75-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -772,20 +550,6 @@
    "image": "https://cdn.sanity.io/images/cctd4ker/production/abf4e5ddf505febcc7fb7ab2a93127ce62d64adb-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
-   "museum": "met",
-   "venue": "The Met",
-   "title": "Wedding Attire: Three Cultures, One Celebration",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.metmuseum.org/exhibitions/wedding-attire-three-cultures-one-celebration",
-   "hook": "If you like beautiful embroidery and the traditions people wear on their most important days, these robes tell love stories.",
-   "moods": [
-    "date"
-   ],
-   "image": "https://cdn.sanity.io/images/cctd4ker/production/0f2e187345d1c9637e4acb53371ace7d662813f8-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
    "museum": "moma",
    "venue": "MoMA",
    "title": "Architects of Liberation: Modernism in Western Africa",
@@ -805,7 +569,7 @@
    "title": "Brancusi: The Artist and His Studio",
    "start": "2026-10-25",
    "end": "2027-02-27",
-   "note": "Member Previews, Oct 22–24",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5910",
    "hook": "Want to impress your partner with something deep? Smooth shapes you'll want to touch (don't).",
    "moods": [
@@ -880,7 +644,7 @@
    "title": "Mondrian Boogie Woogie",
    "start": "2027-03-21",
    "end": "2027-07-31",
-   "note": "Member Previews, Mar 18–20",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5916",
    "hook": "If you like jazz, city grids and yellow taxis, you'll love this.",
    "moods": [
@@ -1247,7 +1011,7 @@
    "title": "Whitney Biennial 2026",
    "start": null,
    "end": "2026-10-12",
-   "note": null,
+   "note": "On Partial view through Oct 12",
    "url": "https://whitney.org/exhibitions/2026-biennial",
    "hook": "If you like arguing about what counts as art, you'll love this.",
    "moods": [
