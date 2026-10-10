@@ -208,6 +208,7 @@ for (const v of venues) {
         text = parts.join("\n\n--- next page ---\n\n");
       }
       found = parseItems(await askModel(buildPrompt(v, text)), v);
+      if (!found.length) throw new Error("the page came back with no exhibitions"); // try the other route before giving up
     } catch (direct) {
       if (v.wpApi || provider !== "anthropic") throw direct;
       console.log(`${v.name}: direct request failed (${direct.message}). Trying through the AI service.`);

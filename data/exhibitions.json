@@ -1206,6 +1206,36 @@
     "guests"
    ],
    "image": "https://whitneymedia.org/assets/image/833620/large_2026_BIENNIAL_065.jpg"
+  },
+  {
+   "museum": "morgan",
+   "venue": "The Morgan",
+   "title": "Hujar: Contact",
+   "start": "2026-05-22",
+   "end": "2026-10-25",
+   "note": null,
+   "url": "https://www.themorgan.org/exhibitions/current#hujar-contact",
+   "hook": "If you like seeing the shots a photographer didn't pick, you'll love this.",
+   "moods": [
+    "deep",
+    "blue"
+   ],
+   "image": null
+  },
+  {
+   "museum": "morgan",
+   "venue": "The Morgan",
+   "title": "Friends Who Came to See Me: Drawings from John Ashbery’s Collection",
+   "start": "2026-05-01",
+   "end": "2026-10-25",
+   "note": null,
+   "url": "https://www.themorgan.org/exhibitions/current#friends-who-came-to-see-me-drawings-from-john-ashbery-s-collection",
+   "hook": "If you like peeking at what a poet hung on his own walls, you'll love this.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": null
   }
  ]
 }
