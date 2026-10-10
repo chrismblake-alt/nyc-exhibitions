@@ -216,7 +216,6 @@ const MOODS={
   kids:{n:"With kids",line:"Dragons first, questions later."},
   fun:{n:"Need a laugh",line:"Nothing in here takes itself too seriously."},
   deep:{n:"Want to think",line:"Bring your biggest questions."},
-  quick:{n:"Short on time",line:"In and out before your coffee gets cold."},
   quiet:{n:"Need some quiet",line:"Soft rooms and slow looking."},
   guests:{n:"Out-of-town guests",line:"The ones they came to New York for."}
 };
@@ -227,7 +226,6 @@ const ICONS={
   kids:'<path d="M12 2.500l6 7-6 9-6-9z"/><path d="M12 18.500c0 2 2 1.500 2 3.500"/>',
   fun:'<path d="M12 12c0-1.500 2-1.500 2 0 0 2.500-4 2.500-4 0 0-4 6.500-4 6.500 0 0 5.500-9.500 5.500-9.500 0 0-7 12.500-7 12.500 0"/>',
   deep:'<path d="M2.500 12S6 6 12 6s9.500 6 9.500 6-3.500 6-9.500 6-9.500-6-9.500-6z"/><circle cx="12" cy="12" r="2.500"/>',
-  quick:'<path d="M3.500 20.500L13 11"/><path d="M8.500 21l3.500-3.500"/><path d="M17 3l1.200 2.800L21 7l-2.800 1.200L17 11l-1.200-2.800L13 7l2.800-1.200z"/>',
   quiet:'<path d="M3 8.500c3-2 6 2 9 0s6-2 9 0"/><path d="M3 13.500c3-2 6 2 9 0s6-2 9 0"/><path d="M6 18.500c2-1.300 4 1.300 6 0s4-1.300 6 0"/>',
   guests:'<path d="M2 20h20"/><path d="M4 20v-8h4v8"/><path d="M10 20V5h5v15"/><path d="M17 20v-6h3v6"/>'
 };
@@ -253,7 +251,7 @@ function draw(){
   const cM=k=>items.filter(x=>(pick==="all"||x.museum===pick)&&x.moods.includes(k)).length;
   const cV=k=>items.filter(x=>(k==="all"||x.museum===k)&&(!mood||x.moods.includes(mood))).length;
   const shows=n=>n===1?"1 show":n+" shows";
-  moodsEl.innerHTML=Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${cM(k)}<span class="w">${cM(k)===1?" show":" shows"}</span> →</span></button>`).join("");
+  moodsEl.innerHTML=`<button class="tile" type="button" style="--c:var(--glow)" data-k="" aria-pressed="${mood===""}"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="7" r="2.500"/><circle cx="17" cy="7" r="2.500"/><circle cx="7" cy="17" r="2.500"/><circle cx="17" cy="17" r="2.500"/></svg><span class="tn">All moods</span><span class="tc">${items.filter(x=>pick==="all"||x.museum===pick).length} →</span></button>`+Object.entries(MOODS).map(([k,m])=>`<button class="tile" type="button" style="--c:var(--${k})" data-k="${k}" aria-pressed="${k===mood}">${ico(k)}<span class="tn">${m.n}</span><span class="tl">${m.line}</span><span class="tc">${cM(k)}<span class="w">${cM(k)===1?" show":" shows"}</span> →</span></button>`).join("");
   chips.innerHTML=[["all","All"],...Object.entries(museums)].map(([k,n])=>`<button class="chip" type="button" data-k="${esc(k)}" aria-pressed="${k===pick}">${esc(n)} <span class="n">${cV(k)}</span></button>`).join("");
   const term=q.value.trim().toLowerCase();
   const list=items.filter(x=>(pick==="all"||x.museum===pick)&&(!mood||x.moods.includes(mood))&&(!term||(x.title+" "+x.venue+" "+(x.hook||"")).toLowerCase().includes(term)));

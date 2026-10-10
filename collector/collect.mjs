@@ -13,7 +13,7 @@ const only = process.argv[2]; // optional: node collect.mjs met
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
 const today = new Date().toISOString().slice(0, 10);
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
-const MOOD_KEYS = ["date", "blue", "kids", "fun", "deep", "quick", "quiet", "guests"];
+const MOOD_KEYS = ["date", "blue", "kids", "fun", "deep", "quiet", "guests"];
 const MAX_IMAGE_LOOKUPS = 30;
 
 let prev = { items: [] };
@@ -130,8 +130,7 @@ Rules:
   Base it only on what the title and page say or on well-known facts about the artist. Don't invent details
   about what is in the show.
 - "moods" lists the one to three that fit best, strongest first, from: "date" (date night), "blue" (feeling
-  melancholy), "kids" (with kids), "fun" (need a laugh), "deep" (want to think), "quick" (short on time: a single
-  work, one room or a small display), "quiet" (need some quiet: calm, contemplative, likely uncrowded),
+  melancholy), "kids" (with kids), "fun" (need a laugh), "deep" (want to think), "quiet" (need some quiet: calm, contemplative, likely uncrowded),
   "guests" (out-of-town guests: a major show or famous name that visitors would want to see).
 - List each exhibition once. Remove markup such as asterisks from titles.
 
