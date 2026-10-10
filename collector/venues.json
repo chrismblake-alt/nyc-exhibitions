@@ -6,5 +6,5 @@
   { "key": "whit",  "name": "Whitney",    "page": "https://whitney.org/exhibitions" },
   { "key": "frick", "name": "The Frick",  "page": "https://www.frick.org/exhibitions" },
   { "key": "morgan", "name": "The Morgan", "page": "https://www.themorgan.org/exhibitions/current",
-    "more": ["https://www.themorgan.org/exhibitions/upcoming"] }
+    "more": ["https://www.themorgan.org/exhibitions/upcoming"], "manual": true }
 ]

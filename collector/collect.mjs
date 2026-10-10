@@ -195,6 +195,13 @@ const status = {};
 let items = [];
 
 for (const v of venues) {
+  if (v.manual) { // kept up by hand: leave its listings alone and don't count it as a failure
+    const kept = (prev.items || []).filter((x) => x.museum === v.key);
+    items.push(...kept);
+    status[v.key] = { ok: true, count: kept.length, via: "by hand" };
+    console.log(`${v.name}: ${kept.length} listings kept by hand`);
+    continue;
+  }
   if (only && v.key !== only) { items.push(...(prev.items || []).filter((x) => x.museum === v.key)); continue; }
   try {
     let found, via = "direct", directError = null;
