@@ -30,7 +30,10 @@ body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);
   padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:40px 72px;display:flex;flex-direction:column;gap:44px}
 
-header{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
+header{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
+.plan-bg{position:absolute;right:0;top:-18px;width:min(66%,780px);height:calc(100% + 36px);z-index:-1;pointer-events:none;
+  fill:none;stroke:var(--glow);stroke-width:1.2;opacity:.17;-webkit-mask-image:linear-gradient(to right,transparent,#000 30%);mask-image:linear-gradient(to right,transparent,#000 30%)}
+@media (max-width:820px){.plan-bg{width:100%;opacity:.1;-webkit-mask-image:none;mask-image:none}}
 .here{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
 .here i{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(242,193,78,.22)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6rem);line-height:1.02;margin:0;text-wrap:balance;
@@ -158,6 +161,15 @@ footer .by-bio:last-of-type{margin-bottom:0}
 <div class="dream" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="wrap">
   <header>
+    <svg class="plan-bg" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+      <path d="M20 20H580V280H20z"/>
+      <path d="M20 120H180M180 20V200M20 200H330M330 200V280M180 80H330M330 20V150M330 150H460M460 20V110M460 150V280M250 80V200"/>
+      <path d="M180 150a30 30 0 0 1 30 30M100 120a28 28 0 0 0 28 28M460 110a40 40 0 0 1-40 40M330 240a30 30 0 0 0-30-30M250 110a26 26 0 0 1-26 26"/>
+      <circle cx="395" cy="215" r="44"/><circle cx="395" cy="215" r="21"/>
+      <path d="M500 180H560V240H500zM500 192H560M500 204H560M500 216H560M500 228H560"/>
+      <path d="M490 40h8v8h-8zM520 40h8v8h-8zM550 40h8v8h-8zM490 90h8v8h-8zM520 90h8v8h-8zM550 90h8v8h-8z"/>
+      <path d="M40 40h60v40H40zM60 230h80v30H60z" stroke-dasharray="4 5"/>
+    </svg>
     <div>
       <p class="here"><i></i><span id="today">You are here</span></p>
       <h1>NYC Museum Exhibitions</h1>
@@ -301,7 +313,7 @@ fetch("data/exhibitions.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw new Er
   if(data.updated)document.getElementById("stamp").textContent="Last updated "+new Date(data.updated).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+".";
   // the search hint names a well-known show that is on or opening soon, and changes each day
   const names=[...new Set(items.filter(x=>x.g!=="later"&&x.moods.includes("guests")).map(x=>x.title.split(":")[0].trim()).filter(n=>n.length>=4&&n.length<=16&&/^[A-Za-zÀ-ÿ .'’-]+$/.test(n)))].sort();
-  if(names.length)q.placeholder="Search artists or shows, like "+names[Math.floor(today/DAY)%names.length];
+  if(names.length)q.placeholder=(innerWidth<520?"Search, like ":"Search artists or shows, like ")+names[Math.floor(today/DAY)%names.length];
   draw();
   drawMap();
 }).catch(()=>{out.innerHTML='<p class="empty">The listings could not be loaded. Reload the page to try again.</p>'});
