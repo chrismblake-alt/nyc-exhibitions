@@ -163,7 +163,7 @@ footer .by-bio{font-size:1.02rem;color:var(--text);margin:0}
       <p class="sub">A floor plan of what's showing across the city. Choose a mood or a museum, then step into a room.</p>
     </div>
     <div class="panel">
-      <input id="q" type="search" placeholder="Search exhibitions" aria-label="Search exhibitions">
+      <input id="q" type="search" placeholder="Search artists or shows" aria-label="Search exhibitions">
     </div>
   </header>
   <div class="pick">
@@ -296,6 +296,9 @@ fetch("data/exhibitions.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw new Er
   museums=data.museums||{};
   items=(data.items||[]).map(prep).filter(Boolean);
   if(data.updated)document.getElementById("stamp").textContent="Last updated "+new Date(data.updated).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})+".";
+  // the search hint names a well-known show that is on or opening soon, and changes each day
+  const names=[...new Set(items.filter(x=>x.g!=="later"&&x.moods.includes("guests")).map(x=>x.title.split(":")[0].trim()).filter(n=>n.length>=4&&n.length<=16&&/^[A-Za-zÀ-ÿ .'’-]+$/.test(n)))].sort();
+  if(names.length)q.placeholder="Search artists or shows, like "+names[Math.floor(today/DAY)%names.length];
   draw();
   drawMap();
 }).catch(()=>{out.innerHTML='<p class="empty">The listings could not be loaded. Reload the page to try again.</p>'});
