@@ -167,6 +167,8 @@ function parseItems(reply, v) {
 
 function tidyImage(u) {
   if (!u) return null;
+  // a Met photo address has a 40-character code; anything else was miscopied and would show as a blank
+  if (u.includes("cdn.sanity.io/") && !/\/[0-9a-f]{40}-\d+x\d+\.\w+/.test(u)) return null;
   if (u.includes("cdn.sanity.io/")) return u.split("?")[0] + "?w=640&q=70&fit=clip&auto=format"; // the Met serves huge originals
   return u;
 }
@@ -231,7 +233,8 @@ for (const v of venues) {
       if (old) { // keep what an earlier run knew when this run came back blank
         if (old.hook) x.hook = old.hook;
         if (old.moods?.length) x.moods = old.moods; // a show keeps the line it was first given
-        x.start ??= old.start; x.end ??= old.end; x.image ??= old.image;
+        x.start ??= old.start; x.end ??= old.end;
+        if (old.image) x.image = old.image; // keep a photo that already works; the AI sometimes miscopies long addresses
         if (!x.start && !x.end) x.note ??= old.note;
       }
     }
