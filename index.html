@@ -31,9 +31,10 @@ body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);
 .wrap{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding-inline:16px;padding-block:40px 72px;display:flex;flex-direction:column;gap:44px}
 
 header{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:28px 48px;align-items:end}
-.plan-bg{position:absolute;right:0;top:-18px;width:min(66%,780px);height:calc(100% + 36px);z-index:-1;pointer-events:none;
-  fill:none;stroke:var(--glow);stroke-width:1.2;opacity:.17;-webkit-mask-image:linear-gradient(to right,transparent,#000 30%);mask-image:linear-gradient(to right,transparent,#000 30%)}
-@media (max-width:820px){.plan-bg{width:100%;opacity:.1;-webkit-mask-image:none;mask-image:none}}
+.plan-bg{position:absolute;right:0;top:-34px;height:calc(100% + 70px);aspect-ratio:1000/560;max-width:72%;z-index:-1;pointer-events:none;
+  fill:none;stroke:var(--glow);stroke-width:1.3;opacity:.2;-webkit-mask-image:linear-gradient(to right,transparent,#000 28%);mask-image:linear-gradient(to right,transparent,#000 28%)}
+.plan-bg .fill{fill:var(--glow);fill-opacity:.28}
+@media (max-width:820px){.plan-bg{top:-10px;left:0;right:auto;width:100%;max-width:none;height:auto;opacity:.12;-webkit-mask-image:none;mask-image:none}}
 .here{display:inline-flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
 .here i{width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 5px rgba(242,193,78,.22)}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,7.5vw,4.6rem);line-height:1.02;margin:0;text-wrap:balance;
@@ -161,14 +162,13 @@ footer .by-bio:last-of-type{margin-bottom:0}
 <div class="dream" aria-hidden="true"><i></i><i></i><i></i></div>
 <div class="wrap">
   <header>
-    <svg class="plan-bg" viewBox="0 0 600 300" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
-      <path d="M20 20H580V280H20z"/>
-      <path d="M20 120H180M180 20V200M20 200H330M330 200V280M180 80H330M330 20V150M330 150H460M460 20V110M460 150V280M250 80V200"/>
-      <path d="M180 150a30 30 0 0 1 30 30M100 120a28 28 0 0 0 28 28M460 110a40 40 0 0 1-40 40M330 240a30 30 0 0 0-30-30M250 110a26 26 0 0 1-26 26"/>
-      <circle cx="395" cy="215" r="44"/><circle cx="395" cy="215" r="21"/>
-      <path d="M500 180H560V240H500zM500 192H560M500 204H560M500 216H560M500 228H560"/>
-      <path d="M490 40h8v8h-8zM520 40h8v8h-8zM550 40h8v8h-8zM490 90h8v8h-8zM520 90h8v8h-8zM550 90h8v8h-8z"/>
-      <path d="M40 40h60v40H40zM60 230h80v30H60z" stroke-dasharray="4 5"/>
+    <svg class="plan-bg" viewBox="0 0 1000 560" preserveAspectRatio="xMaxYMid meet" aria-hidden="true">
+      <path d="M40 200H105V276H40zM40 276H105V340H40zM105 200H150V253H105zM150 200H202V253H150zM105 253H202V340H105zM202 200H301V252H202zM202 252H301V340H202zM301 200H400V254H301zM301 254H343V340H301zM343 254H400V298H343zM343 298H400V340H343zM40 340H102V425H40zM102 340H144V382H102zM102 382H144V425H102zM40 425H82V520H40zM82 425H144V520H82zM144 340H196V384H144zM196 340H240V384H196zM144 384H240V446H144zM144 446H186V520H144zM186 446H240V520H186zM330 340H400V408H330zM330 408H400V520H330zM240 440H283V520H240zM283 440H330V520H283zM600 200H642V244H600zM642 200H684V244H642zM600 244H684V300H600zM684 200H761V251H684zM684 251H761V300H684zM761 200H829V300H761zM829 200H881V242H829zM829 242H881V300H829zM881 200H960V300H881zM600 300H670V351H600zM600 351H670V426H600zM600 426H670V468H600zM600 468H670V520H600zM760 300H840V369H760zM760 369H840V420H760zM760 420H840V478H760zM760 478H840V520H760zM670 300H760V340H670zM670 440H717V520H670zM717 440H760V520H717zM840 440H903V520H840zM903 440H960V520H903zM40 40H91V93H40zM91 40H133V93H91zM40 93H133V135H40zM40 135H90V200H40zM90 135H133V200H90zM133 40H230V100H133zM133 100H230V142H133zM133 142H175V200H133zM175 142H230V200H175zM780 40H868V105H780zM780 105H868V200H780zM868 40H960V132H868zM868 132H960V200H868zM230 120H272V200H230zM272 120H329V200H272zM329 120H383V200H329zM383 120H440V200H383zM560 120H629V200H560zM629 120H673V200H629zM673 120H737V200H673zM737 120H780V200H737zM400 300H470V357H400zM400 357H470V430H400zM530 300H600V362H530zM530 362H600V430H530z"/>
+      <path d="M400 430H600V520H400zM440 200H560V300H440zM470 300H530V430H470zM450 120L430 90L450 45L500 25L550 45L570 90L550 120zM470 120V200M530 120V200M500 48L530 78L500 108L470 78z" stroke-width="2"/>
+      <path class="fill" d="M240 340H330V440H240zM670 340H760V440H670zM840 300H960V440H840z"/>
+      <path d="M40 40H230V120H450M550 120H780V40H960V520H600M400 520H40z" stroke-width="2.6"/>
+      <path d="M430 532H570M440 544H560M476 330H524M476 342H524M476 354H524M476 366H524M476 378H524M476 390H524M476 402H524M860 320H940M860 420H940M860 320V420M940 320V420"/>
+      <path d="M500 520V440M500 300V210M500 250H150V470H380M500 250H800V480H640" stroke-dasharray="2 9" stroke-width="3" stroke-linecap="round"/>
     </svg>
     <div>
       <p class="here"><i></i><span id="today">You are here</span></p>
