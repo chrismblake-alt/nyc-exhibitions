@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14T14:37:26.127Z",
+ "updated": "2026-10-15T14:16:28.291Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -17,7 +17,7 @@
   },
   "moma": {
    "ok": true,
-   "count": 22,
+   "count": 13,
    "via": "ai service",
    "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
@@ -28,12 +28,12 @@
   },
   "whit": {
    "ok": true,
-   "count": 15,
+   "count": 11,
    "via": "direct"
   },
   "frick": {
    "ok": true,
-   "count": 5,
+   "count": 4,
    "via": "ai service",
    "directError": "HTTP 418 from https://www.frick.org/exhibitions"
   },
@@ -258,7 +258,7 @@
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": null,
-   "end": null,
+   "end": "2027-05-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -539,7 +539,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Krasner and Pollock: Past Continuous",
-   "start": "2026-10-14",
+   "start": "2026-10-09",
    "end": "2027-01-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
@@ -661,7 +661,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "March 21, 2027-Ongoing",
+   "note": "Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -807,22 +807,6 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "Art Lab: Imagination",
-   "start": "2026-10-19",
-   "end": null,
-   "note": "Ongoing from Oct 19",
-   "url": "https://www.moma.org/calendar/exhibitions/5942",
-   "hook": "Bringing kids? Art Lab lets them explore recycled materials and create creatures with joy and imagination.",
-   "moods": [
-    "kids",
-    "fun",
-    "quiet"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMDQvNWt2eTFzMzFsOV8xNjNfTUMuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/163_MC.jpg?sha=d8dc8ca14cbe28bd"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "Brancusi: The Artist and His Studio",
    "start": "2026-10-25",
    "end": "2027-02-27",
@@ -835,38 +819,6 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMjkvN2p2OHVscnRnaV9CcmFuY3VzaV9QSF84NTRfbGVhZF9oaWdoX3Jlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Brancusi_PH-854_lead_high-res.jpg?sha=141b7a0d8bb59e00"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Creativity Lab: Art of the Book",
-   "start": "2026-10-14",
-   "end": "2027-03-14",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5943",
-   "hook": "Want to get hands-on with bookmaking and artistic expression? The Creativity Lab invites you to create and explore.",
-   "moods": [
-    "kids",
-    "fun",
-    "quiet"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMTUvN2dtNWcwYzV3bF95dWNoZW5fZm9yX01vTUFfaW5fYV9kcmVhbV9jb3B5X01DLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/yuchen-for-MoMA_in-a-dream-copy_MC.jpg?sha=9b5fbe3c675a2e91"
-  },
-  {
-   "museum": "moma",
-   "venue": "Socrates Sculpture Park",
-   "title": "Ecologies of Care at Socrates Sculpture Park",
-   "start": null,
-   "end": "2026-11-15",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5940",
-   "hook": "Want art that reconnects you with nature and community? Socrates Sculpture Park offers green spaces and big ideas.",
-   "moods": [
-    "quiet",
-    "deep",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMDEvOHd3OGxxcjJuaF9MaXphbmlhQ3J1el9Tb2NyYXRlc01vTUFfVjJfTUMyLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/LizaniaCruz-SocratesMoMA-V2_MC2.jpg?sha=7c5a02ed9f195138"
   },
   {
    "museum": "moma",
@@ -900,42 +852,10 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "Hyundai Card First Look: Joan Snyder",
-   "start": null,
-   "end": "2026-11-08",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5907",
-   "hook": "If you like painting that breathes and blooms with organic materials, Snyder's tactile abstractions enchant.",
-   "moods": [
-    "deep",
-    "quiet",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNWl4OTc4N2N2dF8yMTFfMjAyNF9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/211_2024_CCCR-Full-size-JPEG.jpg?sha=22260ead2a69bf46"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Hyundai Card First Look: Sheree Hovsepian",
-   "start": null,
-   "end": "2026-11-18",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5908",
-   "hook": "Need intimate mixed-media work that whispers more than shouts? Hovsepian's delicate assemblages reward close looking.",
-   "moods": [
-    "quiet",
-    "deep",
-    "blue"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNnNwZ2pzOXZmZ18yOTFfMjAyNV9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/291_2025_CCCR-Full-size-JPEG.jpg?sha=1dda6e57daadeb58"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": "Through Summer 2027",
+   "note": "Summer 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -958,38 +878,6 @@
     "fun"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMjAvNmh6emFzdTJ4N19IaWdocmVzU2NyZWVuc2hvdDAwMTExX1dlYnBhZ2VfSW1hZ2UuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/HighresScreenshot00111_Webpage-Image.jpg?sha=c0cf9c77b290dfae"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA Design Store Soho",
-   "title": "Modern Mural: Nina Chanel Abney's LOVE NYC",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5870",
-   "hook": "Want bold color and celebration of New York spirit? Abney's vibrant mural is a love letter to the city.",
-   "moods": [
-    "fun",
-    "guests",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMTAvMTAvOTRlcjhldHM0el8yNTM0X01vTUFfRGVzaWduU3RvcmVTb2hvXzA1MV9IaVJlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/2534-MoMA_DesignStoreSoho-051-HiRes.jpg?sha=a256c399eecd3c88"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "MoMA Teens In the Making 2026",
-   "start": null,
-   "end": "2026-11-15",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5933",
-   "hook": "Bringing teens? This exhibition celebrates young creative voices and artistic experimentation with energy and joy.",
-   "moods": [
-    "kids",
-    "fun",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTAvNHE1bnhvaWV4NV9Nb01BX1RlZW5zX0F1Z18yMDI1XzEyM18xX19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/MoMA_Teens_Aug_2025_123-%281%29_MC.jpg?sha=e8465cf9eb91e32e"
   },
   {
    "museum": "moma",
@@ -1042,8 +930,8 @@
    "venue": "MoMA",
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
-   "end": "2027-05-31",
-   "note": "Through Spring 2027",
+   "end": "2027-02-21",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -1082,22 +970,6 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "The Modern Window: Julien Ceccaldi",
-   "start": null,
-   "end": "2026-10-19",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5861",
-   "hook": "Want to see contemporary abstraction come alive in unexpected materials and forms? Last chance to catch this.",
-   "moods": [
-    "deep",
-    "quiet",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMDYvM3pyazQ0djloMF9Nb2Rlcm5fV2luZG93LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/Modern-Window.jpg?sha=a560999cea627574"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
@@ -1110,22 +982,6 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMjEvOHBkOHZmcjdrM19adXJuX09yYWNsZV9hbmRfU3BlY3RhY2xlX0hfU0laRUQuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Zurn_Oracle-and-Spectacle_H_SIZED.jpg?sha=1ab1e9c750e4c5bf"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Yoko Ono: IMAGINE PEACE",
-   "start": "2026-09-03",
-   "end": "2027-06-30",
-   "note": "Through Spring 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5935",
-   "hook": "If you believe art can be a force for peace and transformation, Yoko Ono's visionary works will move you.",
-   "moods": [
-    "deep",
-    "guests",
-    "quiet"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTQveHBqMnEzcDh2X1NPMVYwNkNfSU1BR0lORVBFQUNFX01vTUFfNS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/SO1V06C_IMAGINEPEACE-MoMA-5.jpg?sha=785b9f8c721893be"
   },
   {
    "museum": "morgan",
@@ -1232,35 +1088,6 @@
   {
    "museum": "whit",
    "venue": "Whitney",
-   "title": "David Hammons: Day's End",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/david-hammons-days-end",
-   "hook": "Bringing someone who loves how art can reclaim public space? Hammons' legendary intervention speaks to resilience.",
-   "moods": [
-    "deep",
-    "quiet"
-   ],
-   "image": "https://whitneymedia.org/assets/image/826450/large_2021_05_25_Day_s_End_2086.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "Dyani White Hawk: Nourish",
-   "start": null,
-   "end": null,
-   "note": "No closing date listed",
-   "url": "https://whitney.org/exhibitions/nourish",
-   "hook": "If you like a wall of shimmering geometric pattern, you'll love this.",
-   "moods": [
-    "date"
-   ],
-   "image": "https://whitneymedia.org/assets/image/833052/large_WMAA86433_FilipWolak_AnIndigenousPresent_0254_4258.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
    "title": "Farah Al Qasimi: TAILSPIN",
    "start": "2027-01-30",
    "end": null,
@@ -1289,23 +1116,8 @@
   {
    "museum": "whit",
    "venue": "Whitney",
-   "title": "Rashid Johnson: New Poetry",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/rashid-johnson-new-poetry",
-   "hook": "If you like art that blends text, mark-making, and intimate reflection, Johnson's work sings with poetic power.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://whitneymedia.org/assets/image/829633/large_231023_14-34-58_R5_18035-Edit-_1_.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
    "title": "Roy Lichtenstein: 1997",
-   "start": "2027-09-05",
+   "start": "2026-09-05",
    "end": "2027-06-01",
    "note": null,
    "url": "https://whitney.org/exhibitions/lichtenstein-1997",
@@ -1361,20 +1173,6 @@
     "quiet"
    ],
    "image": "https://whitneymedia.org/assets/image/833778/large_EXME072%20Evans.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "Untitled (America)",
-   "start": null,
-   "end": null,
-   "note": "No closing date listed",
-   "url": "https://whitney.org/exhibitions/untitled-america",
-   "hook": "Want an easy date? Big, colorful paintings and a bench to enjoy them from.",
-   "moods": [
-    "date"
-   ],
-   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   }
  ]
 }
