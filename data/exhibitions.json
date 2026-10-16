@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15T14:16:28.291Z",
+ "updated": "2026-10-16T14:05:23.443Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,15 +11,14 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 44,
+   "count": 48,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
-   "ok": true,
+   "ok": false,
    "count": 13,
-   "via": "ai service",
-   "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
+   "error": "Unexpected non-whitespace character after JSON at position 8691 (line 212 column 1) [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
   },
   "gug": {
    "ok": true,
@@ -28,7 +27,7 @@
   },
   "whit": {
    "ok": true,
-   "count": 11,
+   "count": 15,
    "via": "direct"
   },
   "frick": {
@@ -163,6 +162,22 @@
     "quiet"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/231ebed7e026f51713ebfe2c5e20df6eb3842808-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "A Long Shadow: Postwar Japan Through the Lens",
+   "start": "2026-11-12",
+   "end": "2027-05-02",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/a-long-shadow-postwar-japan-through-the-lens",
+   "hook": "Feeling the weight of history? Photographers captured Japan's struggle toward light.",
+   "moods": [
+    "deep",
+    "blue",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/ba92b0f81c0891038dcd649e7b826df6c280e1a7-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -643,6 +658,22 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Rembrandt and the Ancients",
+   "start": "2027-11-07",
+   "end": "2028-02-06",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/rembrandt-and-the-ancients",
+   "hook": "If you love seeing genius in conversation across time, Rembrandt speaks to Rome.",
+   "moods": [
+    "deep",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/325b2fd6d92ebf49fb6c4eb235e9826fec2a199f-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Renaissance Masterpieces of Judaica: The Mishneh Torah and The Rothschild Mahzor",
    "start": null,
    "end": null,
@@ -654,6 +685,22 @@
     "deep"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/0962c69139feffd21a6d63e41b84caa12d7674f6-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Tapa: Art of the Gift in Polynesia",
+   "start": "2026-11-02",
+   "end": "2027-12-12",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/tapa-art-of-the-gift-in-polynesia",
+   "hook": "If you love textiles as acts of love and ceremony, these hand-beaten cloths sing with meaning.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/11ef90b9aade98f11d35091a0403bb6fb3025c39-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -730,6 +777,22 @@
     "quiet"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/83100b590676a73c594316ef9b773588aacd7300-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The Genesis Facade Commission: Danh Vo",
+   "start": "2027-09-16",
+   "end": "2028-06-13",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-danh-vo",
+   "hook": "Bringing someone curious about contemporary boldness? A major artist marks the Met's facade.",
+   "moods": [
+    "guests",
+    "deep",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/a0e9cf6eb6804a2acf04b58035e61054f48162d9-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -1088,6 +1151,36 @@
   {
    "museum": "whit",
    "venue": "Whitney",
+   "title": "David Hammons: Day's End",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/david-hammons-days-end",
+   "hook": "If you like site-specific works that transform the landscape at dusk, this is essential.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://whitneymedia.org/assets/image/826450/large_2021_05_25_Day_s_End_2086.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Dyani White Hawk: Nourish",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/nourish",
+   "hook": "If you like art rooted in community and healing, Nourish offers nourishment for the soul.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833052/WMAA86433_FilipWolak_AnIndigenousPresent_0254_4258.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
    "title": "Farah Al Qasimi: TAILSPIN",
    "start": "2027-01-30",
    "end": null,
@@ -1116,10 +1209,25 @@
   {
    "museum": "whit",
    "venue": "Whitney",
+   "title": "Rashid Johnson: New Poetry",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/rashid-johnson-new-poetry",
+   "hook": "Want to witness how contemporary art finds poetry in language and visual form?",
+   "moods": [
+    "deep",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/829633/large_231023_14-34-58_R5_18035-Edit-_1_.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
    "title": "Roy Lichtenstein: 1997",
    "start": "2026-09-05",
    "end": "2027-06-01",
-   "note": null,
+   "note": "Opens Sept 5",
    "url": "https://whitney.org/exhibitions/lichtenstein-1997",
    "hook": "If you've wondered what Lichtenstein was painting in the last year of his life, you'll love this.",
    "moods": [
@@ -1173,6 +1281,21 @@
     "quiet"
    ],
    "image": "https://whitneymedia.org/assets/image/833778/large_EXME072%20Evans.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Untitled (America)",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/untitled-america",
+   "hook": "Want to explore contemporary perspectives on American identity and culture?",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833052/large_WMAA86433_FilipWolak_AnIndigenousPresent_0254_4258.jpg"
   }
  ]
 }
