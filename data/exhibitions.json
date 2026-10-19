@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18T13:24:53.205Z",
+ "updated": "2026-10-19T16:34:15.517Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,13 +11,13 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 47,
+   "count": 48,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
    "ok": true,
-   "count": 24,
+   "count": 13,
    "via": "ai service",
    "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
@@ -28,14 +28,13 @@
   },
   "whit": {
    "ok": true,
-   "count": 9,
+   "count": 10,
    "via": "direct"
   },
   "frick": {
-   "ok": true,
+   "ok": false,
    "count": 4,
-   "via": "ai service",
-   "directError": "HTTP 418 from https://www.frick.org/exhibitions"
+   "error": "page fetch through the AI service failed (url_not_in_prior_context) [direct attempt: HTTP 418 from https://www.frick.org/exhibitions]"
   },
   "morgan": {
    "ok": true,
@@ -860,28 +859,13 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": "2026-07-05",
    "end": "2027-01-02",
-   "note": null,
+   "note": "Through Jan 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDMvMzEvMTAzd2g4aTNvdF9NaWNoZWxfRmVneXZlcmVzX0NJQ0VTXzEuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Michel-Fegyveres_CICES-1.jpg?sha=28a6678416a62178"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Art Lab: Imagination",
-   "start": "2026-10-19",
-   "end": null,
-   "note": "Ongoing from Oct 19",
-   "url": "https://www.moma.org/calendar/exhibitions/5942",
-   "hook": "Bringing young creators? Recycled materials transform into magical creatures in this playful lab.",
-   "moods": [
-    "fun",
-    "kids"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMDQvNWt2eTFzMzFsOV8xNjNfTUMuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/163_MC.jpg?sha=d8dc8ca14cbe28bd"
   },
   {
    "museum": "moma",
@@ -898,36 +882,6 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMjkvN2p2OHVscnRnaV9CcmFuY3VzaV9QSF84NTRfbGVhZF9oaWdoX3Jlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Brancusi_PH-854_lead_high-res.jpg?sha=141b7a0d8bb59e00"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Creativity Lab: Art of the Book",
-   "start": null,
-   "end": "2027-03-14",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5943",
-   "hook": "Bringing curious kids? Hands-on book-making unleashes imagination in a joyful creative space.",
-   "moods": [
-    "fun",
-    "kids"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMTUvN2dtNWcwYzV3bF95dWNoZW5fZm9yX01vTUFfaW5fYV9kcmVhbV9jb3B5X01DLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/yuchen-for-MoMA_in-a-dream-copy_MC.jpg?sha=9b5fbe3c675a2e91"
-  },
-  {
-   "museum": "moma",
-   "venue": "Socrates Sculpture Park",
-   "title": "Ecologies of Care at Socrates Sculpture Park",
-   "start": null,
-   "end": "2026-11-15",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5940",
-   "hook": "Feeling connected to the earth? Artworks in nature explore how we nurture each other.",
-   "moods": [
-    "quiet",
-    "kids"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMDEvOHd3OGxxcjJuaF9MaXphbmlhQ3J1el9Tb2NyYXRlc01vTUFfVjJfTUMyLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/LizaniaCruz-SocratesMoMA-V2_MC2.jpg?sha=7c5a02ed9f195138"
   },
   {
    "museum": "moma",
@@ -950,7 +904,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -961,55 +915,10 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "Hyundai Card First Look: Joan Snyder",
-   "start": null,
-   "end": "2026-11-08",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5907",
-   "hook": "Want nature rendered with bold emotion? Layered paint, straw, and flowers speak of seasons passing.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNWl4OTc4N2N2dF8yMTFfMjAyNF9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/211_2024_CCCR-Full-size-JPEG.jpg?sha=22260ead2a69bf46"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Hyundai Card First Look: R. Buckminster Fuller",
-   "start": "2026-11-12",
-   "end": "2027-06-30",
-   "note": "Spring 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5956",
-   "hook": "If you love visionary design that imagines utopian futures, Fuller's geodesics inspire wonder.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMTQvODlwMHZycDN0OF8zXzIwMjVfMTFhX2NfUklDUl9GdWxsX3NpemVfSlBFR19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/3_2025_11a-c_RICR-Full-size-JPEG_MC.jpg?sha=6ff4dcf99e7d1d83"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Hyundai Card First Look: Sheree Hovsepian",
-   "start": null,
-   "end": "2026-11-18",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5908",
-   "hook": "Want tactile beauty? Photographs and ceramics interweave to create intimate conversations.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDQvMTAvNnNwZ2pzOXZmZ18yOTFfMjAyNV9DQ0NSX0Z1bGxfc2l6ZV9KUEVHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/291_2025_CCCR-Full-size-JPEG.jpg?sha=1dda6e57daadeb58"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": "Summer 2027",
+   "note": "Through Summer 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -1025,43 +934,13 @@
    "title": "Jakob Kudsk Steensen: Wetland",
    "start": "2026-10-12",
    "end": "2027-03-07",
-   "note": null,
+   "note": "Through Mar 7, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5936",
    "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
    "moods": [
     "fun"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMjAvNmh6emFzdTJ4N19IaWdocmVzU2NyZWVuc2hvdDAwMTExX1dlYnBhZ2VfSW1hZ2UuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/HighresScreenshot00111_Webpage-Image.jpg?sha=c0cf9c77b290dfae"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA Design Store Soho",
-   "title": "Modern Mural: Nina Chanel Abney's LOVE NYC",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5870",
-   "hook": "Want bold, graphic energy? Nina's streetwise mural brings NYC's spirit to the store.",
-   "moods": [
-    "fun",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMTAvMTAvOTRlcjhldHM0el8yNTM0X01vTUFfRGVzaWduU3RvcmVTb2hvXzA1MV9IaVJlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/2534-MoMA_DesignStoreSoho-051-HiRes.jpg?sha=a256c399eecd3c88"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "MoMA Teens In the Making 2026",
-   "start": null,
-   "end": "2026-11-15",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5933",
-   "hook": "Bringing young visitors? Teen artists share their visions for the future.",
-   "moods": [
-    "fun",
-    "kids"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTAvNHE1bnhvaWV4NV9Nb01BX1RlZW5zX0F1Z18yMDI1XzEyM18xX19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/MoMA_Teens_Aug_2025_123-%281%29_MC.jpg?sha=e8465cf9eb91e32e"
   },
   {
    "museum": "moma",
@@ -1099,7 +978,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -1129,7 +1008,7 @@
    "title": "Pierre Huyghe: UUmwelt",
    "start": "2026-08-01",
    "end": "2026-11-29",
-   "note": null,
+   "note": "Through Nov 29",
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -1143,7 +1022,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": null,
+   "note": "Through May 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -1154,41 +1033,10 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "The Modern Window: Julien Ceccaldi",
-   "start": "2025-11-14",
-   "end": "2026-10-19",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5861",
-   "hook": "Feeling adventurous? Bold paint and marker burst through a window-sized canvas.",
-   "moods": [
-    "fun",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMDYvM3pyazQ0djloMF9Nb2Rlcm5fV2luZG93LmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/Modern-Window.jpg?sha=a560999cea627574"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "The Sumptuous Discovery of Gotham a Go-Go",
-   "start": "2025-03-08",
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5797",
-   "hook": "Want public art that radiates joy and community pride? A vibrant mural celebrates Harlem's spirit.",
-   "moods": [
-    "fun",
-    "kids",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMDMvMTEvMjZvYmU5YTN5OF8yNTAzMDlfTXVyYWxfMDEuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/250309_Mural_01.jpg?sha=506b3f2cf4f3083b"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": null,
+   "note": "Through Jan 23, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -1197,21 +1045,6 @@
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMjEvOHBkOHZmcjdrM19adXJuX09yYWNsZV9hbmRfU3BlY3RhY2xlX0hfU0laRUQuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Zurn_Oracle-and-Spectacle_H_SIZED.jpg?sha=1ab1e9c750e4c5bf"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Yoko Ono: IMAGINE PEACE",
-   "start": "2026-09-03",
-   "end": "2027-06-30",
-   "note": "Spring 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5935",
-   "hook": "Want art that speaks to hope? Yoko's vision remains urgently, beautifully relevant.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTQveHBqMnEzcDh2X1NPMVYwNkNfSU1BR0lORVBFQUNFX01vTUFfNS5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/SO1V06C_IMAGINEPEACE-MoMA-5.jpg?sha=785b9f8c721893be"
   },
   {
    "museum": "morgan",
@@ -1327,6 +1160,21 @@
     "deep"
    ],
    "image": "https://whitneymedia.org/assets/image/833841/large_WMAA37759_94_47_cropped_web.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Roy Lichtenstein: 1997",
+   "start": "2026-09-05",
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/lichtenstein-1997",
+   "hook": "If you like examining how artists evolve over time, this focused look at Lichtenstein's late work rewards close attention.",
+   "moods": [
+    "deep",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833779/large_WMAA20998_2019_79_cropped_web.jpg"
   },
   {
    "museum": "whit",
