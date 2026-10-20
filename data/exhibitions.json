@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T16:34:15.517Z",
+ "updated": "2026-10-20T14:25:20.013Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -28,13 +28,14 @@
   },
   "whit": {
    "ok": true,
-   "count": 10,
+   "count": 14,
    "via": "direct"
   },
   "frick": {
-   "ok": false,
+   "ok": true,
    "count": 4,
-   "error": "page fetch through the AI service failed (url_not_in_prior_context) [direct attempt: HTTP 418 from https://www.frick.org/exhibitions]"
+   "via": "ai service",
+   "directError": "HTTP 418 from https://www.frick.org/exhibitions"
   },
   "morgan": {
    "ok": true,
@@ -138,7 +139,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "A King's Carpet: Louis XIV and the Savonnerie",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2028-03-05",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/a-kings-carpet-louis-xiv-and-the-savonnerie",
@@ -198,7 +199,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Afterlives: Contemporary Art in the Byzantine Crypt",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-01-10",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/afterlives-contemporary-art-in-the-byzantine-crypt",
@@ -277,7 +278,7 @@
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": null,
-   "end": "2027-04-30",
+   "end": "2027-03-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -306,7 +307,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Celebrating the Year of the Horse",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-01-26",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/celebrating-the-year-of-the-horse",
@@ -320,7 +321,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Chasing Clouds",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-02-28",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/chasing-clouds",
@@ -336,7 +337,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "City of Memory: Nanjing in the Seventeenth Century",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-01-03",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/city-of-memory-nanjing-in-the-17th-century",
@@ -351,7 +352,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Costume Art",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-01-10",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/costume-art",
@@ -366,7 +367,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Cottage Industry: The Val-Kill Furniture Shop",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-05-09",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/cottage-industry-the-val-kill-furniture-shop",
@@ -397,7 +398,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "David Hartt: Peripheries",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-02-07",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/david-hartt-peripheries",
@@ -458,7 +459,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Ecologies of Painting",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-01-17",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/ecologies-of-painting",
@@ -505,7 +506,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Flip Sides: Seeing Korean Art Anew",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-05-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/flip-sides-seeing-korean-art-anew",
@@ -519,7 +520,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Futurism, Constructivism, and Dada in Georgia, 1917–1928",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2026-10-27",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/futurism-constructivism-and-dada-in-georgia-1917-1928",
@@ -533,7 +534,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Household Gods: Hindu Devotional Prints, 1860–1930",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-06-27",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/household-gods-hindu-devotional-prints-1860-1930",
@@ -547,7 +548,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Krasner and Pollock: Past Continuous",
-   "start": "2026-09-23",
+   "start": "2026-10-20",
    "end": "2027-01-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
@@ -611,7 +612,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Orientalism: Between Fact and Fantasy",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-02-28",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/orientalism-between-fact-and-fantasy",
@@ -625,8 +626,8 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "P. S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
-   "start": null,
+   "title": "P.S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
+   "start": "2026-10-20",
    "end": "2026-10-26",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/p-s-art-2026-celebrating-the-creative-spirit-of-new-york-city-kids",
@@ -640,7 +641,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Rediscovering Della Robbia at The Met",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2028-01-17",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/rediscovering-della-robbia-at-the-met",
@@ -798,7 +799,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "The Genesis Facade Commission: Liu Wei, Speculation",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-06-08",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-liu-wei",
@@ -811,8 +812,23 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "The Great Hall Commission: Sandra Mujinga",
+   "start": "2027-11-04",
+   "end": "2028-04-04",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/the-great-hall-commission-sandra-mujinga",
+   "hook": "Bringing guests? A major emerging artist transforms the Grand Hall into an immersive contemporary experience.",
+   "moods": [
+    "guests",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/b3f49b75512aae13c82d439e39cd7720ebf79a7c-10667x6000.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "The Infinite Artistry of Japanese Ceramics",
-   "start": null,
+   "start": "2026-10-20",
    "end": "2027-08-08",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-infinite-artistry-of-japanese-ceramics",
@@ -827,7 +843,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "There Are No Words: Si Lewen's Parade",
-   "start": "2026-10-14",
+   "start": "2026-10-20",
    "end": "2027-01-05",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/there-are-no-words-si-lewens-parade",
@@ -859,7 +875,7 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": "2026-07-05",
    "end": "2027-01-02",
-   "note": "Through Jan 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
@@ -904,7 +920,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -918,7 +934,7 @@
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": "Through Summer 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -934,7 +950,7 @@
    "title": "Jakob Kudsk Steensen: Wetland",
    "start": "2026-10-12",
    "end": "2027-03-07",
-   "note": "Through Mar 7, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5936",
    "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
    "moods": [
@@ -978,7 +994,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -994,7 +1010,7 @@
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
    "end": "2027-02-21",
-   "note": "Through Feb 21, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -1008,7 +1024,7 @@
    "title": "Pierre Huyghe: UUmwelt",
    "start": "2026-08-01",
    "end": "2026-11-29",
-   "note": "Through Nov 29",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -1022,7 +1038,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": "Through May 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -1036,7 +1052,7 @@
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": "Through Jan 23, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -1136,6 +1152,38 @@
   {
    "museum": "whit",
    "venue": "Whitney",
+   "title": "David Hammons: Day's End",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/david-hammons-days-end",
+   "hook": "Feeling reflective? This haunting public artwork offers quiet contemplation amid urban landscape.",
+   "moods": [
+    "quiet",
+    "blue",
+    "deep"
+   ],
+   "image": "https://whitneymedia.org/assets/image/826450/large_2021_05_25_Day_s_End_2086.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Dyani White Hawk: Nourish",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/nourish",
+   "hook": "Bringing family or friends? This thoughtful exhibition nourishes both mind and spirit with Indigenous perspectives.",
+   "moods": [
+    "deep",
+    "kids",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833052/large_WMAA86433_FilipWolak_AnIndigenousPresent_0254_4258.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
    "title": "Farah Al Qasimi: TAILSPIN",
    "start": "2027-01-30",
    "end": null,
@@ -1160,6 +1208,22 @@
     "deep"
    ],
    "image": "https://whitneymedia.org/assets/image/833841/large_WMAA37759_94_47_cropped_web.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Rashid Johnson: New Poetry",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/rashid-johnson-new-poetry",
+   "hook": "If you seek art that merges language, history, and cultural expression, Johnson's poetic vision resonates.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://whitneymedia.org/assets/image/829633/large_231023_14-34-58_R5_18035-Edit-_1_.jpg"
   },
   {
    "museum": "whit",
@@ -1220,6 +1284,22 @@
     "quiet"
    ],
    "image": "https://whitneymedia.org/assets/image/833778/large_EXME072%20Evans.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Untitled (America)",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/untitled-america",
+   "hook": "Feeling curious about contemporary perspectives on national identity? This exhibition provokes and illuminates.",
+   "moods": [
+    "deep",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   }
  ]
 }
