@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T14:25:20.013Z",
+ "updated": "2026-10-21T14:35:12.280Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -28,7 +28,7 @@
   },
   "whit": {
    "ok": true,
-   "count": 14,
+   "count": 13,
    "via": "direct"
   },
   "frick": {
@@ -278,7 +278,7 @@
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": null,
-   "end": "2027-03-31",
+   "end": "2027-05-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -548,7 +548,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Krasner and Pollock: Past Continuous",
-   "start": "2026-10-20",
+   "start": "2026-10-04",
    "end": "2027-01-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
@@ -626,7 +626,7 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "P.S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
+   "title": "P. S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
    "start": "2026-10-20",
    "end": "2026-10-26",
    "note": null,
@@ -875,7 +875,7 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": "2026-07-05",
    "end": "2027-01-02",
-   "note": null,
+   "note": "Through Jan 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
@@ -920,7 +920,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -934,7 +934,7 @@
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": null,
+   "note": "Aug 1, 2026–Summer 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -950,7 +950,7 @@
    "title": "Jakob Kudsk Steensen: Wetland",
    "start": "2026-10-12",
    "end": "2027-03-07",
-   "note": null,
+   "note": "Through Mar 7, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5936",
    "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
    "moods": [
@@ -994,7 +994,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -1010,7 +1010,7 @@
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
    "end": "2027-02-21",
-   "note": null,
+   "note": "Through Feb 21, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -1024,7 +1024,7 @@
    "title": "Pierre Huyghe: UUmwelt",
    "start": "2026-08-01",
    "end": "2026-11-29",
-   "note": null,
+   "note": "Through Nov 29",
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -1038,7 +1038,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": null,
+   "note": "Through May 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -1052,7 +1052,7 @@
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": null,
+   "note": "Through Jan 23, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -1224,21 +1224,6 @@
     "guests"
    ],
    "image": "https://whitneymedia.org/assets/image/829633/large_231023_14-34-58_R5_18035-Edit-_1_.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "Roy Lichtenstein: 1997",
-   "start": "2026-09-05",
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/lichtenstein-1997",
-   "hook": "If you like examining how artists evolve over time, this focused look at Lichtenstein's late work rewards close attention.",
-   "moods": [
-    "deep",
-    "quiet"
-   ],
-   "image": "https://whitneymedia.org/assets/image/833779/large_WMAA20998_2019_79_cropped_web.jpg"
   },
   {
    "museum": "whit",
