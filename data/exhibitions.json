@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23T14:21:24.943Z",
+ "updated": "2026-10-24T13:27:00.097Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,13 +11,13 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 46,
+   "count": 49,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
    "ok": true,
-   "count": 24,
+   "count": 21,
    "via": "ai service",
    "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
@@ -28,7 +28,7 @@
   },
   "whit": {
    "ok": true,
-   "count": 14,
+   "count": 12,
    "via": "direct"
   },
   "frick": {
@@ -123,7 +123,7 @@
   {
    "museum": "gug",
    "venue": "Guggenheim",
-   "title": "Taryn Simon: Father Country I Do Love You",
+   "title": "Taryn Simon Father Country I Do Love You",
    "start": "2026-09-18",
    "end": "2027-03-14",
    "note": null,
@@ -141,7 +141,7 @@
    "title": "A King's Carpet: Louis XIV and the Savonnerie",
    "start": "2026-10-20",
    "end": "2028-03-05",
-   "note": null,
+   "note": "Through March 5, 2028",
    "url": "https://www.metmuseum.org/exhibitions/a-kings-carpet-louis-xiv-and-the-savonnerie",
    "hook": "If you like rugs so fancy you'd be afraid to walk on them, you'll love this.",
    "moods": [
@@ -201,7 +201,7 @@
    "title": "Afterlives: Contemporary Art in the Byzantine Crypt",
    "start": "2026-10-20",
    "end": "2027-01-10",
-   "note": null,
+   "note": "Through January 10, 2027",
    "url": "https://www.metmuseum.org/exhibitions/afterlives-contemporary-art-in-the-byzantine-crypt",
    "hook": "Want to impress your partner with something deep? New art hiding in an old crypt.",
    "moods": [
@@ -278,7 +278,7 @@
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": null,
-   "end": "2027-03-31",
+   "end": "2027-05-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -309,7 +309,7 @@
    "title": "Celebrating the Year of the Horse",
    "start": "2026-10-20",
    "end": "2027-01-26",
-   "note": null,
+   "note": "Through January 26, 2027",
    "url": "https://www.metmuseum.org/exhibitions/celebrating-the-year-of-the-horse",
    "hook": "Bringing a horse-crazy kid? Horses in every size and century.",
    "moods": [
@@ -323,7 +323,7 @@
    "title": "Chasing Clouds",
    "start": "2026-10-20",
    "end": "2027-02-28",
-   "note": null,
+   "note": "Through February 28, 2027",
    "url": "https://www.metmuseum.org/exhibitions/chasing-clouds",
    "hook": "Feeling melancholy? Spend an hour looking at nothing but sky.",
    "moods": [
@@ -339,7 +339,7 @@
    "title": "City of Memory: Nanjing in the Seventeenth Century",
    "start": "2026-10-20",
    "end": "2027-01-03",
-   "note": null,
+   "note": "Through January 3, 2027",
    "url": "https://www.metmuseum.org/exhibitions/city-of-memory-nanjing-in-the-17th-century",
    "hook": "Feeling melancholy? Lose yourself in misty mountains painted in ink.",
    "moods": [
@@ -354,7 +354,7 @@
    "title": "Costume Art",
    "start": "2026-10-20",
    "end": "2027-01-10",
-   "note": null,
+   "note": "Through January 10, 2027",
    "url": "https://www.metmuseum.org/exhibitions/costume-art",
    "hook": "If you like people-watching purely for the outfits, you'll love this.",
    "moods": [
@@ -369,7 +369,7 @@
    "title": "Cottage Industry: The Val-Kill Furniture Shop",
    "start": "2026-10-20",
    "end": "2027-05-09",
-   "note": null,
+   "note": "Through May 9, 2027",
    "url": "https://www.metmuseum.org/exhibitions/cottage-industry-the-val-kill-furniture-shop",
    "hook": "If you like handmade furniture and Eleanor Roosevelt's side projects, you'll love this.",
    "moods": [
@@ -400,7 +400,7 @@
    "title": "David Hartt: Peripheries",
    "start": "2026-10-20",
    "end": "2027-02-07",
-   "note": null,
+   "note": "Through February 7, 2027",
    "url": "https://www.metmuseum.org/exhibitions/david-hartt-peripheries",
    "hook": "If you like the quiet edge of town where nothing and everything happens, you'll love this.",
    "moods": [
@@ -415,7 +415,7 @@
    "title": "Decorative Arts in China, 1000 to the Present",
    "start": "2026-07-25",
    "end": null,
-   "note": "Ongoing",
+   "note": "July 25, 2026–Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/decorative-arts-in-china-1000-to-the-present",
    "hook": "If you like objects crafted with extraordinary skill, a carved rhinoceros and exquisite vessels span a millennium.",
    "moods": [
@@ -446,7 +446,7 @@
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
    "start": "2026-10-22",
    "end": "2027-02-07",
-   "note": null,
+   "note": "Through February 7, 2027",
    "url": "https://www.metmuseum.org/exhibitions/designing-the-gilded-age-drawings-from-the-studios-of-louis-c-tiffany",
    "hook": "If you like stained-glass lamps and Gilded Age mansions, you'll love this.",
    "moods": [
@@ -461,7 +461,7 @@
    "title": "Ecologies of Painting",
    "start": "2026-10-20",
    "end": "2027-01-17",
-   "note": null,
+   "note": "Through January 17, 2027",
    "url": "https://www.metmuseum.org/exhibitions/ecologies-of-painting",
    "hook": "If you like landscapes where the trees and mountains are the real stars, you'll love this.",
    "moods": [
@@ -508,7 +508,7 @@
    "title": "Flip Sides: Seeing Korean Art Anew",
    "start": "2026-10-20",
    "end": "2027-05-31",
-   "note": null,
+   "note": "Through May 31, 2027",
    "url": "https://www.metmuseum.org/exhibitions/flip-sides-seeing-korean-art-anew",
    "hook": "If you've ever snuck around a sculpture to see what's on the back, this one's for you.",
    "moods": [
@@ -519,10 +519,25 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Futurism, Constructivism, and Dada in Georgia, 1917–1928",
+   "start": null,
+   "end": "2026-10-27",
+   "note": "Through October 27",
+   "url": "https://www.metmuseum.org/exhibitions/futurism-constructivism-and-dada-in-georgia-1917-1928",
+   "hook": "Want avant-garde rebellion and bold experimentation? Georgia's revolutionary artists reinvented modernism.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/c411ffcb03ff7d300b07e26e16b266872ef7b9da-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Household Gods: Hindu Devotional Prints, 1860–1930",
    "start": "2026-10-20",
    "end": "2027-06-27",
-   "note": null,
+   "note": "Through June 27, 2027",
    "url": "https://www.metmuseum.org/exhibitions/household-gods-hindu-devotional-prints-1860-1930",
    "hook": "Need a jolt? These prints have the color turned all the way up.",
    "moods": [
@@ -536,7 +551,7 @@
    "title": "Krasner and Pollock: Past Continuous",
    "start": "2026-09-24",
    "end": "2027-01-31",
-   "note": null,
+   "note": "Through January 31, 2027",
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
    "hook": "Want to impress your partner with something deep? Two painters, one marriage and a lot of splattered paint.",
    "moods": [
@@ -581,6 +596,21 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Marketing the Gilded Age: Advertising Publications from the Studios of Louis C. Tiffany",
+   "start": "2026-10-29",
+   "end": "2027-02-16",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/marketing-the-gilded-age-advertising-publications-from-the-studios-of-louis-c-tiffany",
+   "hook": "Want to see how beauty sold dreams? Tiffany's advertising reveals a gilded age's glamorous vision.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/98473f0820a45b8d566aeedd8ec099e4f4484d83-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Michael Lin: Pentachrome",
    "start": null,
    "end": null,
@@ -600,7 +630,7 @@
    "title": "Orientalism: Between Fact and Fantasy",
    "start": "2026-10-20",
    "end": "2027-02-28",
-   "note": null,
+   "note": "Through February 28, 2027",
    "url": "https://www.metmuseum.org/exhibitions/orientalism-between-fact-and-fantasy",
    "hook": "In the mood to question a good story? These are travel tales that got better with every retelling.",
    "moods": [
@@ -612,10 +642,25 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "P. S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
+   "start": null,
+   "end": "2026-10-26",
+   "note": "Through October 26",
+   "url": "https://www.metmuseum.org/exhibitions/p-s-art-2026-celebrating-the-creative-spirit-of-new-york-city-kids",
+   "hook": "Bringing kids? Celebrate young artists' vibrant voices and imaginative visions of their city.",
+   "moods": [
+    "kids",
+    "fun"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/5f1166f560eedf7957467f6d3346b460d48c4a6a-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Rediscovering Della Robbia at The Met",
    "start": "2026-10-20",
    "end": "2028-01-17",
-   "note": null,
+   "note": "Through January 17, 2028",
    "url": "https://www.metmuseum.org/exhibitions/rediscovering-della-robbia-at-the-met",
    "hook": "If you like glossy blue-and-white ceramics that have stayed bright for 500 years, you'll love this.",
    "moods": [
@@ -678,7 +723,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "March 21, 2027–Ongoing",
+   "note": "March 21, 2027-Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -773,7 +818,7 @@
    "title": "The Genesis Facade Commission: Liu Wei, Speculation",
    "start": "2026-10-20",
    "end": "2027-06-08",
-   "note": null,
+   "note": "Through June 8, 2027",
    "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-liu-wei",
    "hook": "Short on time? This is art you can see before you even buy a ticket.",
    "moods": [
@@ -802,7 +847,7 @@
    "title": "The Infinite Artistry of Japanese Ceramics",
    "start": "2026-10-20",
    "end": "2027-08-08",
-   "note": null,
+   "note": "Through August 8, 2027",
    "url": "https://www.metmuseum.org/exhibitions/the-infinite-artistry-of-japanese-ceramics",
    "hook": "Want a quiet date? Tea bowls so perfect you'd never dare drink from them.",
    "moods": [
@@ -817,7 +862,7 @@
    "title": "There Are No Words: Si Lewen's Parade",
    "start": "2026-10-20",
    "end": "2027-01-05",
-   "note": null,
+   "note": "Through January 5, 2027",
    "url": "https://www.metmuseum.org/exhibitions/there-are-no-words-si-lewens-parade",
    "hook": "Feeling melancholy? Here's a story told without a single word.",
    "moods": [
@@ -847,28 +892,13 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": "2026-07-05",
    "end": "2027-01-02",
-   "note": "Through Jan 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
     "deep"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDMvMzEvMTAzd2g4aTNvdF9NaWNoZWxfRmVneXZlcmVzX0NJQ0VTXzEuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Michel-Fegyveres_CICES-1.jpg?sha=28a6678416a62178"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Art Lab: Imagination",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5942",
-   "hook": "Bringing young children? Create freely with recycled materials in this hands-on space.",
-   "moods": [
-    "kids",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMDQvNWt2eTFzMzFsOV8xNjNfTUMuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/163_MC.jpg?sha=d8dc8ca14cbe28bd"
   },
   {
    "museum": "moma",
@@ -892,7 +922,7 @@
    "title": "Creativity Lab: Art of the Book",
    "start": null,
    "end": "2027-03-14",
-   "note": "Through Mar 14, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5943",
    "hook": "Bringing kids who love making? Hands-on exploration of books as art objects.",
    "moods": [
@@ -907,7 +937,7 @@
    "title": "Ecologies of Care",
    "start": null,
    "end": "2026-11-15",
-   "note": "Last chance Through Nov 15",
+   "note": "Last chance",
    "url": "https://www.moma.org/calendar/exhibitions/5940",
    "hook": "Want art in nature that heals? Outdoor installations nurture community and environment.",
    "moods": [
@@ -937,7 +967,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -951,7 +981,7 @@
    "title": "Hyundai Card First Look: Joan Snyder",
    "start": null,
    "end": "2026-11-08",
-   "note": "Last chance Through Nov 8",
+   "note": "Last chance",
    "url": "https://www.moma.org/calendar/exhibitions/5907",
    "hook": "Feeling connected to nature? Snyder's mixed-media paintings celebrate organic materials.",
    "moods": [
@@ -965,8 +995,8 @@
    "venue": "MoMA",
    "title": "Hyundai Card First Look: R. Buckminster Fuller",
    "start": "2026-11-12",
-   "end": null,
-   "note": "Nov 12, 2026–Spring 2027",
+   "end": "2027-03-31",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5956",
    "hook": "Want futuristic design that changed everything? Fuller's geodesic visions inspire wonder.",
    "moods": [
@@ -981,7 +1011,7 @@
    "title": "Hyundai Card First Look: Sheree Hovsepian",
    "start": null,
    "end": "2026-11-18",
-   "note": "Last chance Through Nov 18",
+   "note": "Last chance",
    "url": "https://www.moma.org/calendar/exhibitions/5908",
    "hook": "If you love tactile mixed media, discover ceramics and textiles in unexpected conversation.",
    "moods": [
@@ -996,7 +1026,7 @@
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": "Aug 1, 2026–Summer 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -1012,7 +1042,7 @@
    "title": "Jakob Kudsk Steensen: Wetland",
    "start": "2026-10-12",
    "end": "2027-03-07",
-   "note": "Through Mar 7, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5936",
    "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
    "moods": [
@@ -1022,26 +1052,11 @@
   },
   {
    "museum": "moma",
-   "venue": "MoMA Design Store Soho",
-   "title": "Modern Mural: Nina Chanel Abney's LOVE NYC",
-   "start": null,
-   "end": null,
-   "note": "Ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5870",
-   "hook": "Want bold public art celebrating the city? Vibrant murals spread love through NYC.",
-   "moods": [
-    "fun",
-    "guests"
-   ],
-   "image": null
-  },
-  {
-   "museum": "moma",
    "venue": "MoMA",
    "title": "MoMA Teens In the Making 2026",
    "start": null,
    "end": "2026-11-15",
-   "note": "Last chance Through Nov 15",
+   "note": "Last chance",
    "url": "https://www.moma.org/calendar/exhibitions/5933",
    "hook": "Bringing teens who create? See emerging artists explore their visions fearlessly.",
    "moods": [
@@ -1086,7 +1101,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": "Through Jun 13, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -1101,8 +1116,8 @@
    "venue": "MoMA",
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
-   "end": "2027-02-21",
-   "note": "Through Feb 21, 2027",
+   "end": "2027-04-30",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -1112,11 +1127,11 @@
   },
   {
    "museum": "moma",
-   "venue": "MoMA",
+   "venue": "The Abby Aldrich Rockefeller Sculpture Garden",
    "title": "Pierre Huyghe: UUmwelt",
-   "start": "2026-08-01",
+   "start": "2026-07-01",
    "end": "2026-11-29",
-   "note": "Through Nov 29",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -1130,7 +1145,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": "Through May 2, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -1143,8 +1158,8 @@
    "venue": "MoMA",
    "title": "The Modern Window: Sofía Sinibaldi",
    "start": "2026-11-06",
-   "end": null,
-   "note": "Nov 6, 2026–October 2027",
+   "end": "2027-10-31",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5954",
    "hook": "Needing quiet contemplation? Sinibaldi's layered works invite slow, meditative looking.",
    "moods": [
@@ -1156,25 +1171,10 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "The Sumptuous Discovery of Gotham a Go-Go",
-   "start": "2025-03-08",
-   "end": null,
-   "note": "Mar 8, 2025–ongoing",
-   "url": "https://www.moma.org/calendar/exhibitions/5797",
-   "hook": "Want community art that celebrates Harlem? Bold murals bring joy to city streets.",
-   "moods": [
-    "fun",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMDMvMTEvMjZvYmU5YTN5OF8yNTAzMDlfTXVyYWxfMDEuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/250309_Mural_01.jpg?sha=506b3f2cf4f3083b"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": "Through Jan 23, 2027",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -1189,8 +1189,8 @@
    "venue": "MoMA",
    "title": "Yoko Ono: IMAGINE PEACE",
    "start": "2026-09-03",
-   "end": null,
-   "note": "Sep 3, 2026—Spring 2027",
+   "end": "2027-03-31",
+   "note": null,
    "url": "https://www.moma.org/calendar/exhibitions/5935",
    "hook": "If you believe in art for peace, immerse in Yoko's visionary call for unity.",
    "moods": [
@@ -1249,7 +1249,7 @@
    "title": "artport: A History of Internet Art",
    "start": "2026-11-21",
    "end": null,
-   "note": null,
+   "note": "Opens Nov 21",
    "url": "https://whitney.org/exhibitions/artport-25",
    "hook": "If you miss the early internet, dial-up tone and all, you'll love this.",
    "moods": [
@@ -1285,22 +1285,6 @@
     "deep"
    ],
    "image": "https://whitneymedia.org/assets/image/834023/large_COUMBA%20SAMBA_05A_PS_FULL.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "David Hammons: Day's End",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/david-hammons-days-end",
-   "hook": "Feeling reflective? This haunting public artwork offers quiet contemplation amid urban landscape.",
-   "moods": [
-    "quiet",
-    "blue",
-    "deep"
-   ],
-   "image": "https://whitneymedia.org/assets/image/826450/large_2021_05_25_Day_s_End_2086.jpg"
   },
   {
    "museum": "whit",
@@ -1345,22 +1329,6 @@
     "deep"
    ],
    "image": "https://whitneymedia.org/assets/image/833841/large_WMAA37759_94_47_cropped_web.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "Rashid Johnson: New Poetry",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/rashid-johnson-new-poetry",
-   "hook": "If you seek art that merges language, history, and cultural expression, Johnson's poetic vision resonates.",
-   "moods": [
-    "deep",
-    "quiet",
-    "guests"
-   ],
-   "image": "https://whitneymedia.org/assets/image/829633/large_231023_14-34-58_R5_18035-Edit-_1_.jpg"
   },
   {
    "museum": "whit",
