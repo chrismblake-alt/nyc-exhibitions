@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25T13:48:15.497Z",
+ "updated": "2026-10-26T16:14:56.376Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,13 +11,13 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 34,
+   "count": 49,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
    "ok": true,
-   "count": 21,
+   "count": 20,
    "via": "ai service",
    "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
@@ -212,9 +212,69 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Art of Native America: The Charles and Valerie Diker Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/art-of-native-america-diker-collection",
+   "hook": "Want to witness the enduring power of Native American creativity? These works span continents and carry profound cultural wisdom.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/cc7db4562568666d922df90241ecb24c726eb1e4-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of Africa",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-africa",
+   "hook": "Want to see art that moves, inspires, and challenges your perspective? African masterpieces span centuries and infinite traditions.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/fc460c2783c573bd0904b742d433178a4cc8856d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of Oceania",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-oceania",
+   "hook": "Want to encounter sacred art on a monumental scale? These ancestor poles command respect and reveal deep spiritual traditions.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/bd19c9299e817c2ffff4e6c01e21cf4e8684a302-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of the Ancient Americas",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-the-ancient-americas",
+   "hook": "If you love untangling mysteries, these artifacts from vanished civilizations invite endless questions and wonder.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/8085b5b608bffc5be90cd079c676c53790c91762-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
    "start": "2026-10-25",
-   "end": "2027-05-31",
+   "end": "2027-04-30",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -222,6 +282,21 @@
     "fun"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/045caefaeb38ff7e5e7f7ace1c8196b0753a7901-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Before Yesterday We Could Fly: An Afrofuturist Period Room",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/afrofuturist-period-room",
+   "hook": "Need a joyful vision of freedom and possibility? This immersive room celebrates Black imagination and boundless potential.",
+   "moods": [
+    "fun",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/eb835a48b4ccc4587344f0703a2972142761d95b-5121x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -301,6 +376,21 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Cycladic Art",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/cycladic-art",
+   "hook": "Want to stand before art so ancient and mysterious it still captivates? These marble figures feel timeless and profound.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/4236b335571cf73d4d3e70ee11239b06b504b71d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "David Hartt: Peripheries",
    "start": "2026-10-20",
    "end": "2027-02-07",
@@ -331,6 +421,21 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Defensive Display: Shields from The Met Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/defensive-display-shields-from-the-met-collection",
+   "hook": "If you love the intersection of art and warfare, these ornate shields show how beauty and protection merged in medieval hands.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/f899defe4207ddc1156694b63af1181963b7dfc2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
    "start": "2026-10-22",
    "end": "2027-02-07",
@@ -357,6 +462,21 @@
     "quiet"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/07815c64b8f371db3a81f7fce7c38c534a82ff59-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Fabergé from the Matilda Geddings Gray Foundation Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/faberge",
+   "hook": "Want to see jeweled eggs that whisper imperial secrets? Fabergé's creations are pure enchantment and masterful craft.",
+   "moods": [
+    "guests",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/3ca7e9b85d298dbaeddaa86bea763504eb8a45ec-1920x1080.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -436,6 +556,36 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Layered Narratives: The Northern Renaissance Gallery",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/layered-narratives-the-northern-renaissance-gallery",
+   "hook": "Feeling enchanted by Northern European magic and detail? This gallery wraps you in the mysteries of the Renaissance.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/5a05bf7c13b551b9e04394849ec345fa3862aa20-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Look Again: European Paintings 1300–1800",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/look-again-european-paintings-1300-1800",
+   "hook": "If you love discovering hidden details, these paintings reward slow looking with centuries of artistic brilliance.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/9d51408cacf6affc8fe1b1fc60a2796d766fdb77-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Marketing the Gilded Age: Advertising Publications from the Studios of Louis C. Tiffany",
    "start": "2026-10-29",
    "end": "2027-02-16",
@@ -447,6 +597,21 @@
     "guests"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/98473f0820a45b8d566aeedd8ec099e4f4484d83-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Michael Lin: Pentachrome",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/michael-lin-pentachrome",
+   "hook": "Want to be surrounded by living botanical beauty transformed into art? This contemporary installation breathes with color.",
+   "moods": [
+    "quiet",
+    "fun"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/5794d4bb2885d23bcc592b5d4c5cc69c46572dac-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -466,7 +631,7 @@
   {
    "museum": "met",
    "venue": "The Met",
-   "title": "P.S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
+   "title": "P. S. Art 2026: Celebrating the Creative Spirit of New York City Kids",
    "start": null,
    "end": "2026-10-26",
    "note": "Through October 26",
@@ -512,6 +677,21 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Renaissance Masterpieces of Judaica: The Mishneh Torah and The Rothschild Mahzor",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/renaissance-masterpieces",
+   "hook": "If you're moved by illuminated manuscripts and spiritual devotion, these pages glow with centuries of cultural reverence.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/0962c69139feffd21a6d63e41b84caa12d7674f6-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Tapa: Art of the Gift in Polynesia",
    "start": "2026-11-02",
    "end": "2027-12-12",
@@ -540,6 +720,51 @@
     "kids"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/247336cef9dfd60723f3e125e3afaaf46c75c025-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The American Wing at 100",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/the-american-wing-at-100",
+   "hook": "Want to explore America's artistic roots? A century of collecting reveals the nation's diverse creative spirit.",
+   "moods": [
+    "guests",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/a8cd0feb5aebb6e8231a8299b2f3adfbc64283f2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The British Galleries",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/british-galleries",
+   "hook": "If you love British elegance and centuries of artistic tradition, explore treasures from across the island's creative history.",
+   "moods": [
+    "guests",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/9f47f6bed39c7b0c140ee3f3da424333225a7759-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The Calculated Curve: Eighteenth-Century American Furniture",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/the-calculated-curve-eighteenth-century-american-furniture",
+   "hook": "If you appreciate furniture as sculpture, these elegant American pieces show precision and grace in every curve.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/a82313025bd634c0d45b155eaedb5f7916f29f75-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -652,7 +877,7 @@
    "title": "Architects of Liberation: Modernism in Western Africa",
    "start": "2026-07-05",
    "end": "2027-01-02",
-   "note": null,
+   "note": "Through Jan 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5906",
    "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
    "moods": [
@@ -666,7 +891,7 @@
    "title": "Brancusi: The Artist and His Studio",
    "start": "2026-10-25",
    "end": "2027-02-27",
-   "note": null,
+   "note": "Through Feb 27, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5910",
    "hook": "Want to impress your partner with something deep? Smooth shapes you'll want to touch (don't).",
    "moods": [
@@ -682,7 +907,7 @@
    "title": "Creativity Lab: Art of the Book",
    "start": null,
    "end": "2027-03-14",
-   "note": null,
+   "note": "Through Mar 14, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5943",
    "hook": "Bringing kids who love making? Hands-on exploration of books as art objects.",
    "moods": [
@@ -697,7 +922,7 @@
    "title": "Ecologies of Care",
    "start": null,
    "end": "2026-11-15",
-   "note": "Last chance",
+   "note": "Last chance Through Nov 15",
    "url": "https://www.moma.org/calendar/exhibitions/5940",
    "hook": "Want art in nature that heals? Outdoor installations nurture community and environment.",
    "moods": [
@@ -727,7 +952,7 @@
    "title": "Full Disclosure: The Edge of Information Design",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5926",
    "hook": "If you like a really, really good chart, you'll love this.",
    "moods": [
@@ -741,7 +966,7 @@
    "title": "Hyundai Card First Look: Joan Snyder",
    "start": null,
    "end": "2026-11-08",
-   "note": "Last chance",
+   "note": "Last chance Through Nov 8",
    "url": "https://www.moma.org/calendar/exhibitions/5907",
    "hook": "Feeling connected to nature? Snyder's mixed-media paintings celebrate organic materials.",
    "moods": [
@@ -755,15 +980,15 @@
    "venue": "MoMA",
    "title": "Hyundai Card First Look: R. Buckminster Fuller",
    "start": "2026-11-12",
-   "end": "2027-05-31",
-   "note": "Through Spring 2027",
+   "end": "2027-06-30",
+   "note": "Nov 12, 2026–Spring 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5956",
    "hook": "Want futuristic design that changed everything? Fuller's geodesic visions inspire wonder.",
    "moods": [
     "deep",
     "guests"
    ],
-   "image": null
+   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMTQvODlwMHZycDN0OF8zXzIwMjVfMTFhX2NfUklDUl9GdWxsX3NpemVfSlBFR19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/3_2025_11a-c_RICR-Full-size-JPEG_MC.jpg?sha=6ff4dcf99e7d1d83"
   },
   {
    "museum": "moma",
@@ -771,7 +996,7 @@
    "title": "Hyundai Card First Look: Sheree Hovsepian",
    "start": null,
    "end": "2026-11-18",
-   "note": "Last chance",
+   "note": "Last chance Through Nov 18",
    "url": "https://www.moma.org/calendar/exhibitions/5908",
    "hook": "If you love tactile mixed media, discover ceramics and textiles in unexpected conversation.",
    "moods": [
@@ -786,7 +1011,7 @@
    "title": "It's Alive! A Century of Animation from the Collection",
    "start": "2026-08-01",
    "end": "2027-06-30",
-   "note": "Through Summer 2027",
+   "note": "Aug 1, 2026–Summer 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5920",
    "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
    "moods": [
@@ -802,7 +1027,7 @@
    "title": "Jakob Kudsk Steensen: Wetland",
    "start": "2026-10-12",
    "end": "2027-03-07",
-   "note": null,
+   "note": "Through Mar 7, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5936",
    "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
    "moods": [
@@ -813,25 +1038,10 @@
   {
    "museum": "moma",
    "venue": "MoMA",
-   "title": "MoMA Teens In the Making 2026",
-   "start": null,
-   "end": "2026-11-15",
-   "note": "Last chance",
-   "url": "https://www.moma.org/calendar/exhibitions/5933",
-   "hook": "Bringing teens who create? See emerging artists explore their visions fearlessly.",
-   "moods": [
-    "kids",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTAvNHE1bnhvaWV4NV9Nb01BX1RlZW5zX0F1Z18yMDI1XzEyM18xX19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/MoMA_Teens_Aug_2025_123-%281%29_MC.jpg?sha=e8465cf9eb91e32e"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
    "title": "Mondrian Boogie Woogie",
    "start": "2027-03-21",
    "end": "2027-07-31",
-   "note": null,
+   "note": "Mar 21–Jul 31, 2027 (Member Previews Mar 18–20)",
    "url": "https://www.moma.org/calendar/exhibitions/5916",
    "hook": "If you like jazz, city grids and yellow taxis, you'll love this.",
    "moods": [
@@ -861,7 +1071,7 @@
    "title": "Nilima Sheikh: Fractured Skies",
    "start": null,
    "end": "2027-06-13",
-   "note": null,
+   "note": "Through Jun 13, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5932",
    "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
    "moods": [
@@ -876,8 +1086,8 @@
    "venue": "MoMA",
    "title": "Odili Donald Odita: Songs from Life",
    "start": "2025-04-08",
-   "end": "2027-05-31",
-   "note": "Through Spring 2027",
+   "end": "2027-02-21",
+   "note": "Through Feb 21, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5794",
    "hook": "Need a lift? Walls covered in zigzags of pure color.",
    "moods": [
@@ -891,7 +1101,7 @@
    "title": "Pierre Huyghe: UUmwelt",
    "start": "2026-07-01",
    "end": "2026-11-29",
-   "note": null,
+   "note": "Through Nov 29",
    "url": "https://www.moma.org/calendar/exhibitions/5912",
    "hook": "Want to think? Watch a machine try to picture a thought.",
    "moods": [
@@ -905,7 +1115,7 @@
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": null,
    "end": "2027-05-02",
-   "note": null,
+   "note": "Through May 2, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5678",
    "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
    "moods": [
@@ -915,11 +1125,11 @@
   },
   {
    "museum": "moma",
-   "venue": "MoMA",
+   "venue": "MoMA Design Store Soho",
    "title": "The Modern Window: Sofía Sinibaldi",
    "start": "2026-11-06",
    "end": "2027-10-31",
-   "note": null,
+   "note": "Nov 6, 2026–October 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5954",
    "hook": "Needing quiet contemplation? Sinibaldi's layered works invite slow, meditative looking.",
    "moods": [
@@ -934,7 +1144,7 @@
    "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
    "start": null,
    "end": "2027-01-23",
-   "note": null,
+   "note": "Through Jan 23, 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5918",
    "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
    "moods": [
@@ -949,8 +1159,8 @@
    "venue": "MoMA",
    "title": "Yoko Ono: IMAGINE PEACE",
    "start": "2026-09-03",
-   "end": "2027-05-31",
-   "note": "Through Spring 2027",
+   "end": "2027-06-30",
+   "note": "Sep 3, 2026—Spring 2027",
    "url": "https://www.moma.org/calendar/exhibitions/5935",
    "hook": "If you believe in art for peace, immerse in Yoko's visionary call for unity.",
    "moods": [
@@ -958,36 +1168,6 @@
     "guests"
    ],
    "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMjEvODR3cWRwcG91c19JTjI2MjVBXzAwMV9DQ0NSX0Z1bGxfc2l6ZV9KUEVHX01DLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/IN2625A_001_CCCR-Full-size-JPEG_MC.jpg?sha=8cbc131e9e385ed2"
-  },
-  {
-   "museum": "morgan",
-   "venue": "The Morgan",
-   "title": "Friends Who Came to See Me: Drawings from John Ashbery’s Collection",
-   "start": "2026-05-01",
-   "end": "2026-10-25",
-   "note": null,
-   "url": "https://www.themorgan.org/exhibitions/current#friends-who-came-to-see-me-drawings-from-john-ashbery-s-collection",
-   "hook": "If you like peeking at what a poet hung on his own walls, you'll love this.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": "img/morgan-ashbery.jpg"
-  },
-  {
-   "museum": "morgan",
-   "venue": "The Morgan",
-   "title": "Hujar: Contact",
-   "start": "2026-05-22",
-   "end": "2026-10-25",
-   "note": null,
-   "url": "https://www.themorgan.org/exhibitions/current#hujar-contact",
-   "hook": "If you like seeing the shots a photographer didn't pick, you'll love this.",
-   "moods": [
-    "deep",
-    "blue"
-   ],
-   "image": "img/morgan-hujar.jpg"
   },
   {
    "museum": "whit",
