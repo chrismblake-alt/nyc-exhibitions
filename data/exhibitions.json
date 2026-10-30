@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29T16:17:25.498Z",
+ "updated": "2026-10-30T16:02:13.080Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -16,9 +16,10 @@
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
-   "ok": false,
-   "count": 16,
-   "error": "page fetch through the AI service failed (url_not_in_prior_context) [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
+   "ok": true,
+   "count": 2,
+   "via": "ai service",
+   "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
   "gug": {
    "ok": true,
@@ -33,8 +34,7 @@
   "frick": {
    "ok": true,
    "count": 4,
-   "via": "ai service",
-   "directError": "HTTP 418 from https://www.frick.org/exhibitions"
+   "via": "direct"
   },
   "morgan": {
    "ok": true,
@@ -138,7 +138,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "A King's Carpet: Louis XIV and the Savonnerie",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2028-03-05",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/a-kings-carpet-louis-xiv-and-the-savonnerie",
@@ -198,7 +198,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Afterlives: Contemporary Art in the Byzantine Crypt",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-10",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/afterlives-contemporary-art-in-the-byzantine-crypt",
@@ -272,7 +272,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
-   "start": "2026-10-25",
+   "start": "2026-10-30",
    "end": "2027-05-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
@@ -301,7 +301,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Celebrating the Year of the Horse",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-26",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/celebrating-the-year-of-the-horse",
@@ -315,7 +315,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Chasing Clouds",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-02-28",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/chasing-clouds",
@@ -331,7 +331,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "City of Memory: Nanjing in the Seventeenth Century",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-03",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/city-of-memory-nanjing-in-the-17th-century",
@@ -346,7 +346,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Costume Art",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-10",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/costume-art",
@@ -361,7 +361,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Cottage Industry: The Val-Kill Furniture Shop",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-05-09",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/cottage-industry-the-val-kill-furniture-shop",
@@ -391,7 +391,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "David Hartt: Peripheries",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-02-07",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/david-hartt-peripheries",
@@ -436,7 +436,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-02-07",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/designing-the-gilded-age-drawings-from-the-studios-of-louis-c-tiffany",
@@ -451,7 +451,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Ecologies of Painting",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-17",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/ecologies-of-painting",
@@ -497,7 +497,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Flip Sides: Seeing Korean Art Anew",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-05-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/flip-sides-seeing-korean-art-anew",
@@ -511,7 +511,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Household Gods: Hindu Devotional Prints, 1860–1930",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-06-27",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/household-gods-hindu-devotional-prints-1860-1930",
@@ -525,7 +525,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Krasner and Pollock: Past Continuous",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-31",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
@@ -571,7 +571,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Marketing the Gilded Age: Advertising Publications from the Studios of Louis C. Tiffany",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-02-16",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/marketing-the-gilded-age-advertising-publications-from-the-studios-of-louis-c-tiffany",
@@ -601,7 +601,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Orientalism: Between Fact and Fantasy",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-02-28",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/orientalism-between-fact-and-fantasy",
@@ -616,7 +616,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Rediscovering Della Robbia at The Met",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2028-01-17",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/rediscovering-della-robbia-at-the-met",
@@ -770,7 +770,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "The Genesis Facade Commission: Liu Wei, Speculation",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-06-08",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-liu-wei",
@@ -799,7 +799,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "The Infinite Artistry of Japanese Ceramics",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-08-08",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-infinite-artistry-of-japanese-ceramics",
@@ -814,7 +814,7 @@
    "museum": "met",
    "venue": "The Met",
    "title": "There Are No Words: Si Lewen's Parade",
-   "start": "2026-10-29",
+   "start": "2026-10-30",
    "end": "2027-01-05",
    "note": null,
    "url": "https://www.metmuseum.org/exhibitions/there-are-no-words-si-lewens-parade",
@@ -839,244 +839,6 @@
     "fun"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/0f2e187345d1c9637e4acb53371ace7d662813f8-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Architects of Liberation: Modernism in Western Africa",
-   "start": "2026-07-05",
-   "end": "2027-01-02",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5906",
-   "hook": "If you like bold concrete buildings under a bright sun, you'll love this.",
-   "moods": [
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDMvMzEvMTAzd2g4aTNvdF9NaWNoZWxfRmVneXZlcmVzX0NJQ0VTXzEuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Michel-Fegyveres_CICES-1.jpg?sha=28a6678416a62178"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Brancusi: The Artist and His Studio",
-   "start": "2026-10-25",
-   "end": "2027-02-27",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5910",
-   "hook": "Want to impress your partner with something deep? Smooth shapes you'll want to touch (don't).",
-   "moods": [
-    "date",
-    "guests",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMjkvN2p2OHVscnRnaV9CcmFuY3VzaV9QSF84NTRfbGVhZF9oaWdoX3Jlcy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Brancusi_PH-854_lead_high-res.jpg?sha=141b7a0d8bb59e00"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Eva Hesse: Wild Space, 1957–1970",
-   "start": "2027-05-30",
-   "end": "2027-09-25",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5951",
-   "hook": "If you like odd materials that somehow feel alive, you'll love this.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMDIvNjFybWJjNzFlb19EXzU2NF9IRVNTRTQ1Njk0X05vX3RpdGxlLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/D-564-HESSE45694-No-title.jpg?sha=1d7ccee30ce78cb9"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Full Disclosure: The Edge of Information Design",
-   "start": null,
-   "end": "2027-06-13",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5926",
-   "hook": "If you like a really, really good chart, you'll love this.",
-   "moods": [
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDcvMjQvM3dpY2UyMG55N19DRV9Dcm9wX01PTUFfQklHLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/CE-Crop-MOMA-BIG.jpg?sha=5a7ba957650a28d6"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Hyundai Card First Look: R. Buckminster Fuller",
-   "start": "2026-11-12",
-   "end": "2027-06-30",
-   "note": "Spring 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5956",
-   "hook": "Want futuristic design that changed everything? Fuller's geodesic visions inspire wonder.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMTQvODlwMHZycDN0OF8zXzIwMjVfMTFhX2NfUklDUl9GdWxsX3NpemVfSlBFR19NQy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/3_2025_11a-c_RICR-Full-size-JPEG_MC.jpg?sha=6ff4dcf99e7d1d83"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "It's Alive! A Century of Animation from the Collection",
-   "start": "2026-08-01",
-   "end": "2027-06-30",
-   "note": "Summer 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5920",
-   "hook": "Bringing kids? It's Saturday morning cartoons, museum edition.",
-   "moods": [
-    "kids",
-    "guests",
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDYvMDEvN3U3dGRvN3A4eF9GMjAyNi40My4xanBnLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/F2026.43.1jpg.jpg?sha=9096c64f326c19e9"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Jakob Kudsk Steensen: Wetland",
-   "start": "2026-10-12",
-   "end": "2027-03-07",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5936",
-   "hook": "If you like wandering through a swamp without getting your feet wet, you'll love this.",
-   "moods": [
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMjAvNmh6emFzdTJ4N19IaWdocmVzU2NyZWVuc2hvdDAwMTExX1dlYnBhZ2VfSW1hZ2UuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/HighresScreenshot00111_Webpage-Image.jpg?sha=c0cf9c77b290dfae"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Mondrian Boogie Woogie",
-   "start": "2027-03-21",
-   "end": "2027-07-31",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5916",
-   "hook": "If you like jazz, city grids and yellow taxis, you'll love this.",
-   "moods": [
-    "fun",
-    "guests",
-    "date"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMjYvN2g4aDVqbTl0ZF9Cb29naWVfV29vZ2llX2hlcm9fMy5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Boogie-Woogie-hero-3.jpg?sha=126c16befe30e056"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Na Mira: NO SMOKING",
-   "start": "2026-11-14",
-   "end": "2027-02-15",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5869",
-   "hook": "Want a moody date? Video glowing in a dark room.",
-   "moods": [
-    "date"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMTAvMDgvOTdrbXF5Nmh2dV9OYV9NaXJhLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/Na-Mira.jpg?sha=0afb4151a7c6193d"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Nilima Sheikh: Fractured Skies",
-   "start": null,
-   "end": "2027-06-13",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5932",
-   "hook": "Feeling melancholy? Delicate paintings that tell big stories.",
-   "moods": [
-    "blue",
-    "quiet",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDgvMTgvOTN0NmtwM2g2aF9Ib21lX0xhbmRfNC5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/Home,-Land-4.jpg?sha=d7167913276d290e"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Odili Donald Odita: Songs from Life",
-   "start": "2025-04-08",
-   "end": "2027-02-21",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5794",
-   "hook": "Need a lift? Walls covered in zigzags of pure color.",
-   "moods": [
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjUvMDMvMTAvMTdxcTZtc2hhcF9Tb25nc19mcm9tX0xpZmVfQlRTXzIuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Songs-from-Life_BTS-2.jpg?sha=6c4ddf6beca53e97"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Pierre Huyghe: UUmwelt",
-   "start": "2026-07-01",
-   "end": "2026-11-29",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5912",
-   "hook": "Want to think? Watch a machine try to picture a thought.",
-   "moods": [
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDkvMTQvNXQzb2MxZnJlb18yLl9QaWVycmVfSHV5Z2hlX19VVW13ZWx0X18yMDE4X29uZ29pbmdfRGVlcF9pbWFnZV9yZWNvbnN0cnVjdGlvbnNfc2NyZWVuc19zZW5zb3JzX3NvdW5kX0V4aGliaXRpb25fdmlld3NfTW9NQV9TY3VscHR1cmVfZ2FyZGVuX05ld19Zb3JrXzIwMjZfQ291cnRlc3lfdGhlX2FydGlzdF9QaG90b19BbGV4X1l1ZHpvbi5qcGciXSxbInAiLCJjb252ZXJ0IiwiLXF1YWxpdHkgOTAgLXJlc2l6ZSAyMDAweDIwMDBcdTAwM2UiXV0/2.-Pierre-Huyghe--_UUmwelt_--2018%E2%80%93ongoing_Deep-image-reconstructions--screens--sensors--sound_Exhibition-views--MoMA-Sculpture-garden--New-York--2026_Courtesy-the-artist_Photo-Alex-Yudzon.jpg?sha=c25687ff656c99aa"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Taking Back Our Space: Photographic Perspectives",
-   "start": null,
-   "end": "2027-05-02",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5678",
-   "hook": "If you've ever noticed how people sit on the subway, you'll love this.",
-   "moods": [
-    "fun"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjQvMDEvMzEvM3BtM3F6d2gxdF8xMTE2XzIwMThfMTc5X0NDQ1JfRnVsbF9zaXplX0pQRUcuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/1116_2018_179_CCCR-Full-size-JPEG.jpg?sha=6bd2c23b7711dbac"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "The Modern Window: Sofía Sinibaldi",
-   "start": "2026-11-06",
-   "end": "2027-10-31",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5954",
-   "hook": "Needing quiet contemplation? Sinibaldi's layered works invite slow, meditative looking.",
-   "moods": [
-    "quiet",
-    "deep"
-   ],
-   "image": null
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "The Surrealist Book: Tomorrow Lives in Mirrors",
-   "start": null,
-   "end": "2027-01-23",
-   "note": null,
-   "url": "https://www.moma.org/calendar/exhibitions/5918",
-   "hook": "Want to impress your partner with something deep? Dreams that make no sense, bound into books.",
-   "moods": [
-    "date",
-    "quiet",
-    "deep"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMDUvMjEvOHBkOHZmcjdrM19adXJuX09yYWNsZV9hbmRfU3BlY3RhY2xlX0hfU0laRUQuanBnIl0sWyJwIiwiY29udmVydCIsIi1xdWFsaXR5IDkwIC1yZXNpemUgMjAwMHgyMDAwXHUwMDNlIl1d/Zurn_Oracle-and-Spectacle_H_SIZED.jpg?sha=1ab1e9c750e4c5bf"
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Yoko Ono: IMAGINE PEACE",
-   "start": "2026-09-03",
-   "end": "2027-06-30",
-   "note": "Spring 2027",
-   "url": "https://www.moma.org/calendar/exhibitions/5935",
-   "hook": "If you believe in art for peace, immerse in Yoko's visionary call for unity.",
-   "moods": [
-    "deep",
-    "guests"
-   ],
-   "image": "https://www.moma.org/d/assets/W1siZiIsIjIwMjYvMTAvMjEvODR3cWRwcG91c19JTjI2MjVBXzAwMV9DQ0NSX0Z1bGxfc2l6ZV9KUEVHX01DLmpwZyJdLFsicCIsImNvbnZlcnQiLCItcXVhbGl0eSA5MCAtcmVzaXplIDIwMDB4MjAwMFx1MDAzZSJdXQ/IN2625A_001_CCCR-Full-size-JPEG_MC.jpg?sha=8cbc131e9e385ed2"
   },
   {
    "museum": "whit",
