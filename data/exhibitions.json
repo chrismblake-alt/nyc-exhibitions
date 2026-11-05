@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:23:23.615Z",
+ "updated": "2026-11-05T17:30:59.339Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,15 +11,14 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 47,
+   "count": 48,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
-   "ok": true,
-   "count": 14,
-   "via": "ai service",
-   "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
+   "ok": false,
+   "count": 1,
+   "error": "no exhibitions found (the page may have changed)"
   },
   "gug": {
    "ok": true,
@@ -141,7 +140,7 @@
    "title": "A King's Carpet: Louis XIV and the Savonnerie",
    "start": "2026-11-04",
    "end": "2028-03-05",
-   "note": null,
+   "note": "Through March 5, 2028",
    "url": "https://www.metmuseum.org/exhibitions/a-kings-carpet-louis-xiv-and-the-savonnerie",
    "hook": "If you like rugs so fancy you'd be afraid to walk on them, you'll love this.",
    "moods": [
@@ -201,7 +200,7 @@
    "title": "Afterlives: Contemporary Art in the Byzantine Crypt",
    "start": "2026-11-04",
    "end": "2027-01-10",
-   "note": null,
+   "note": "Through January 10, 2027",
    "url": "https://www.metmuseum.org/exhibitions/afterlives-contemporary-art-in-the-byzantine-crypt",
    "hook": "Want to impress your partner with something deep? New art hiding in an old crypt.",
    "moods": [
@@ -309,7 +308,7 @@
    "title": "Celebrating the Year of the Horse",
    "start": "2026-11-04",
    "end": "2027-01-26",
-   "note": null,
+   "note": "Through January 26, 2027",
    "url": "https://www.metmuseum.org/exhibitions/celebrating-the-year-of-the-horse",
    "hook": "Bringing a horse-crazy kid? Horses in every size and century.",
    "moods": [
@@ -323,7 +322,7 @@
    "title": "Chasing Clouds",
    "start": "2026-11-04",
    "end": "2027-02-28",
-   "note": null,
+   "note": "Through February 28, 2027",
    "url": "https://www.metmuseum.org/exhibitions/chasing-clouds",
    "hook": "Feeling melancholy? Spend an hour looking at nothing but sky.",
    "moods": [
@@ -336,10 +335,26 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Christmas Tree and Neapolitan Baroque Crèche",
+   "start": "2026-11-24",
+   "end": "2027-01-06",
+   "note": null,
+   "url": "https://www.metmuseum.org/exhibitions/christmas-tree-and-neapolitan-baroque-creche-2026",
+   "hook": "Feeling festive? Experience holiday magic through towering trees and intricate nativity scenes.",
+   "moods": [
+    "fun",
+    "kids",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/9e3f762bdb43d80d05933634edaefcae87aaa9af-3840x1966.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "City of Memory: Nanjing in the Seventeenth Century",
    "start": "2026-11-04",
    "end": "2027-01-03",
-   "note": null,
+   "note": "Through January 3, 2027",
    "url": "https://www.metmuseum.org/exhibitions/city-of-memory-nanjing-in-the-17th-century",
    "hook": "Feeling melancholy? Lose yourself in misty mountains painted in ink.",
    "moods": [
@@ -354,7 +369,7 @@
    "title": "Costume Art",
    "start": "2026-11-04",
    "end": "2027-01-10",
-   "note": null,
+   "note": "Through January 10, 2027",
    "url": "https://www.metmuseum.org/exhibitions/costume-art",
    "hook": "If you like people-watching purely for the outfits, you'll love this.",
    "moods": [
@@ -369,7 +384,7 @@
    "title": "Cottage Industry: The Val-Kill Furniture Shop",
    "start": "2026-11-04",
    "end": "2027-05-09",
-   "note": null,
+   "note": "Through May 9, 2027",
    "url": "https://www.metmuseum.org/exhibitions/cottage-industry-the-val-kill-furniture-shop",
    "hook": "If you like handmade furniture and Eleanor Roosevelt's side projects, you'll love this.",
    "moods": [
@@ -400,7 +415,7 @@
    "title": "David Hartt: Peripheries",
    "start": "2026-11-04",
    "end": "2027-02-07",
-   "note": null,
+   "note": "Through February 7, 2027",
    "url": "https://www.metmuseum.org/exhibitions/david-hartt-peripheries",
    "hook": "If you like the quiet edge of town where nothing and everything happens, you'll love this.",
    "moods": [
@@ -415,7 +430,7 @@
    "title": "Decorative Arts in China, 1000 to the Present",
    "start": "2026-07-25",
    "end": null,
-   "note": "Ongoing",
+   "note": "July 25, 2026–Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/decorative-arts-in-china-1000-to-the-present",
    "hook": "If you like objects crafted with extraordinary skill, a carved rhinoceros and exquisite vessels span a millennium.",
    "moods": [
@@ -446,7 +461,7 @@
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
    "start": "2026-11-04",
    "end": "2027-02-07",
-   "note": null,
+   "note": "Through February 7, 2027",
    "url": "https://www.metmuseum.org/exhibitions/designing-the-gilded-age-drawings-from-the-studios-of-louis-c-tiffany",
    "hook": "If you like stained-glass lamps and Gilded Age mansions, you'll love this.",
    "moods": [
@@ -461,7 +476,7 @@
    "title": "Ecologies of Painting",
    "start": "2026-11-04",
    "end": "2027-01-17",
-   "note": null,
+   "note": "Through January 17, 2027",
    "url": "https://www.metmuseum.org/exhibitions/ecologies-of-painting",
    "hook": "If you like landscapes where the trees and mountains are the real stars, you'll love this.",
    "moods": [
@@ -508,7 +523,7 @@
    "title": "Flip Sides: Seeing Korean Art Anew",
    "start": "2026-11-04",
    "end": "2027-05-31",
-   "note": null,
+   "note": "Through May 31, 2027",
    "url": "https://www.metmuseum.org/exhibitions/flip-sides-seeing-korean-art-anew",
    "hook": "If you've ever snuck around a sculpture to see what's on the back, this one's for you.",
    "moods": [
@@ -522,7 +537,7 @@
    "title": "Household Gods: Hindu Devotional Prints, 1860–1930",
    "start": "2026-11-04",
    "end": "2027-06-27",
-   "note": null,
+   "note": "Through June 27, 2027",
    "url": "https://www.metmuseum.org/exhibitions/household-gods-hindu-devotional-prints-1860-1930",
    "hook": "Need a jolt? These prints have the color turned all the way up.",
    "moods": [
@@ -536,7 +551,7 @@
    "title": "Krasner and Pollock: Past Continuous",
    "start": "2026-11-04",
    "end": "2027-01-31",
-   "note": null,
+   "note": "Through January 31, 2027",
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
    "hook": "Want to impress your partner with something deep? Two painters, one marriage and a lot of splattered paint.",
    "moods": [
@@ -584,7 +599,7 @@
    "title": "Marketing the Gilded Age: Advertising Publications from the Studios of Louis C. Tiffany",
    "start": "2026-11-04",
    "end": "2027-02-16",
-   "note": null,
+   "note": "Through February 16, 2027",
    "url": "https://www.metmuseum.org/exhibitions/marketing-the-gilded-age-advertising-publications-from-the-studios-of-louis-c-tiffany",
    "hook": "Want to see how beauty sold dreams? Tiffany's advertising reveals a gilded age's glamorous vision.",
    "moods": [
@@ -615,7 +630,7 @@
    "title": "Orientalism: Between Fact and Fantasy",
    "start": "2026-11-04",
    "end": "2027-02-28",
-   "note": null,
+   "note": "Through February 28, 2027",
    "url": "https://www.metmuseum.org/exhibitions/orientalism-between-fact-and-fantasy",
    "hook": "In the mood to question a good story? These are travel tales that got better with every retelling.",
    "moods": [
@@ -630,7 +645,7 @@
    "title": "Rediscovering Della Robbia at The Met",
    "start": "2026-11-04",
    "end": "2028-01-17",
-   "note": null,
+   "note": "Through January 17, 2028",
    "url": "https://www.metmuseum.org/exhibitions/rediscovering-della-robbia-at-the-met",
    "hook": "If you like glossy blue-and-white ceramics that have stayed bright for 500 years, you'll love this.",
    "moods": [
@@ -677,7 +692,7 @@
    "title": "Tapa: Art of the Gift in Polynesia",
    "start": "2026-11-04",
    "end": "2027-12-12",
-   "note": null,
+   "note": "Through December 12, 2027",
    "url": "https://www.metmuseum.org/exhibitions/tapa-art-of-the-gift-in-polynesia",
    "hook": "If you love textiles as acts of love and ceremony, these hand-beaten cloths sing with meaning.",
    "moods": [
@@ -693,7 +708,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "Ongoing",
+   "note": "March 21, 2027-Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -788,7 +803,7 @@
    "title": "The Genesis Facade Commission: Liu Wei, Speculation",
    "start": "2026-11-04",
    "end": "2027-06-08",
-   "note": null,
+   "note": "Through June 8, 2027",
    "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-liu-wei",
    "hook": "Short on time? This is art you can see before you even buy a ticket.",
    "moods": [
@@ -817,7 +832,7 @@
    "title": "The Infinite Artistry of Japanese Ceramics",
    "start": "2026-11-04",
    "end": "2027-08-08",
-   "note": null,
+   "note": "Through August 8, 2027",
    "url": "https://www.metmuseum.org/exhibitions/the-infinite-artistry-of-japanese-ceramics",
    "hook": "Want a quiet date? Tea bowls so perfect you'd never dare drink from them.",
    "moods": [
@@ -832,7 +847,7 @@
    "title": "There Are No Words: Si Lewen's Parade",
    "start": "2026-11-04",
    "end": "2027-01-05",
-   "note": null,
+   "note": "Through January 5, 2027",
    "url": "https://www.metmuseum.org/exhibitions/there-are-no-words-si-lewens-parade",
    "hook": "Feeling melancholy? Here's a story told without a single word.",
    "moods": [
