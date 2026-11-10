@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09T19:53:58.277Z",
+ "updated": "2026-11-10T17:07:51.492Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -12,27 +12,27 @@
   "met": {
    "ok": false,
    "count": 49,
-   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswTz9UMC6698D4WNmJZ\"} [direct attempt: HTTP 429 from https://www.metmuseum.org/exhibitions]"
+   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CguccAgFucGHPqvfeJGyU\"} [direct attempt: HTTP 429 from https://www.metmuseum.org/exhibitions]"
   },
   "moma": {
    "ok": false,
    "count": 5,
-   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswTzjTGujbmBFuXHUbu\"} [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
+   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CguccBQuqkpCXaqn9DcoD\"} [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
   },
   "gug": {
    "ok": false,
    "count": 2,
-   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswUXwAfMSVY8FeEjwoS\"}"
+   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgucckvXpS3G8PcWjJbGL\"}"
   },
   "whit": {
    "ok": false,
    "count": 14,
-   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswUZzCjd4Dy1tXyZ9Gp\"} [direct attempt: AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswUZe83ghhT4Nfb8Km4\"}]"
+   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CguccoGBq3GFnTft4GkQt\"} [direct attempt: AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011Cguccns7xToS5eggmDShW\"}]"
   },
   "frick": {
    "ok": false,
    "count": 4,
-   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CgswUbdgHbS25oNEjMGHi\"} [direct attempt: HTTP 418 from https://www.frick.org/exhibitions]"
+   "error": "AI request failed: HTTP 401 {\"type\":\"error\",\"error\":{\"type\":\"authentication_error\",\"message\":\"invalid x-api-key\"},\"request_id\":\"req_011CguccpRdVereoKwnF2kHn\"} [direct attempt: HTTP 418 from https://www.frick.org/exhibitions]"
   },
   "morgan": {
    "ok": true,
