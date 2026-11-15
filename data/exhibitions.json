@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T15:54:40.633Z",
+ "updated": "2026-11-15T16:28:52.151Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -18,7 +18,7 @@
   "moma": {
    "ok": false,
    "count": 1,
-   "error": "no exhibitions found (the page may have changed)"
+   "error": "page fetch through the AI service failed (url_not_in_prior_context) [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
   },
   "gug": {
    "ok": true,
