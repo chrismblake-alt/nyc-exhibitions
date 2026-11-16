@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15T16:28:52.151Z",
+ "updated": "2026-11-16T19:43:22.721Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -122,7 +122,7 @@
   {
    "museum": "gug",
    "venue": "Guggenheim",
-   "title": "Taryn Simon | Father Country I Do Love You",
+   "title": "TARYN SIMON FATHER COUNTRY I DO LOVE YOU",
    "start": "2026-09-18",
    "end": "2027-03-14",
    "note": null,
@@ -276,8 +276,8 @@
    "museum": "met",
    "venue": "The Met",
    "title": "Baseball Cards from the Collection of Jefferson R. Burdick",
-   "start": "2027-04-01",
-   "end": "2027-06-30",
+   "start": "2027-01-01",
+   "end": "2027-05-31",
    "note": "Reopens–Spring 2027",
    "url": "https://www.metmuseum.org/exhibitions/baseball-cards-from-the-collection-of-jefferson-r-burdick-2025",
    "hook": "Bringing a baseball-loving friend or family member? Vintage cards capture the wit and charisma of American pastime heroes.",
@@ -738,7 +738,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "March 21, 2027-Ongoing",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -916,6 +916,22 @@
     "quiet"
    ],
    "image": null
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "\"Untitled\" (America)",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/untitled-america",
+   "hook": "Feeling curious about contemporary perspectives on national identity? This exhibition provokes and illuminates.",
+   "moods": [
+    "deep",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   },
   {
    "museum": "whit",
@@ -1107,22 +1123,6 @@
     "quiet"
    ],
    "image": "https://whitneymedia.org/assets/image/833778/large_EXME072%20Evans.jpg"
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "Untitled (America)",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/untitled-america",
-   "hook": "Feeling curious about contemporary perspectives on national identity? This exhibition provokes and illuminates.",
-   "moods": [
-    "deep",
-    "guests",
-    "quiet"
-   ],
-   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   }
  ]
 }
