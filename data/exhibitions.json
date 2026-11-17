@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16T19:43:22.721Z",
+ "updated": "2026-11-17T18:40:54.359Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -18,7 +18,7 @@
   "moma": {
    "ok": false,
    "count": 1,
-   "error": "page fetch through the AI service failed (url_not_in_prior_context) [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
+   "error": "no exhibitions found (the page may have changed)"
   },
   "gug": {
    "ok": true,
@@ -122,7 +122,7 @@
   {
    "museum": "gug",
    "venue": "Guggenheim",
-   "title": "TARYN SIMON FATHER COUNTRY I DO LOVE YOU",
+   "title": "Taryn Simon | Father Country I Do Love You",
    "start": "2026-09-18",
    "end": "2027-03-14",
    "note": null,
@@ -738,7 +738,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": null,
+   "note": "March 21, 2027-Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -916,22 +916,6 @@
     "quiet"
    ],
    "image": null
-  },
-  {
-   "museum": "whit",
-   "venue": "Whitney",
-   "title": "\"Untitled\" (America)",
-   "start": null,
-   "end": null,
-   "note": null,
-   "url": "https://whitney.org/exhibitions/untitled-america",
-   "hook": "Feeling curious about contemporary perspectives on national identity? This exhibition provokes and illuminates.",
-   "moods": [
-    "deep",
-    "guests",
-    "quiet"
-   ],
-   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   },
   {
    "museum": "whit",
@@ -1123,6 +1107,22 @@
     "quiet"
    ],
    "image": "https://whitneymedia.org/assets/image/833778/large_EXME072%20Evans.jpg"
+  },
+  {
+   "museum": "whit",
+   "venue": "Whitney",
+   "title": "Untitled (America)",
+   "start": null,
+   "end": null,
+   "note": null,
+   "url": "https://whitney.org/exhibitions/untitled-america",
+   "hook": "Feeling curious about contemporary perspectives on national identity? This exhibition provokes and illuminates.",
+   "moods": [
+    "deep",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://whitneymedia.org/assets/image/833049/large_WMAA97701_02_251016_GPowell_Whitney_1409_v2_3x2_web.jpg"
   }
  ]
 }
