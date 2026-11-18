@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T18:40:54.359Z",
+ "updated": "2026-11-18T18:13:11.782Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -16,9 +16,10 @@
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
-   "ok": false,
-   "count": 1,
-   "error": "no exhibitions found (the page may have changed)"
+   "ok": true,
+   "count": 15,
+   "via": "ai service",
+   "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
   "gug": {
    "ok": true,
@@ -738,7 +739,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "March 21, 2027-Ongoing",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -906,8 +907,8 @@
    "venue": "MoMA",
    "title": "Taking Back Our Space: Photographic Perspectives",
    "start": "2026-09-20",
-   "end": "2027-06-01",
-   "note": "Through Spring 2027",
+   "end": "2027-05-31",
+   "note": "Spring 2027",
    "url": "https://www.moma.org/calendar/exhibitions#taking-back-our-space-photographic-perspectives",
    "hook": "If you believe art can reclaim voices and spaces, witness powerful documentary photography.",
    "moods": [
@@ -920,7 +921,7 @@
   {
    "museum": "whit",
    "venue": "Whitney",
-   "title": "Alex Da Corte: Hot Dog With Ketchup",
+   "title": "Alex Da Corte: Hot Dog with Ketchup",
    "start": null,
    "end": "2027-05-10",
    "note": null,
