@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20T17:55:32.117Z",
+ "updated": "2026-11-21T16:53:36.945Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -18,7 +18,7 @@
   "moma": {
    "ok": false,
    "count": 5,
-   "error": "AI reply had no list in it (it said: \"Let me fetch the page again to get the complete information including URLs, images, and venue details:I've fetched the MoMA exhibitions page, but the fetched co\") [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
+   "error": "no exhibitions found (the page may have changed)"
   },
   "gug": {
    "ok": true,
@@ -122,7 +122,7 @@
   {
    "museum": "gug",
    "venue": "Guggenheim",
-   "title": "Taryn Simon Father Country I Do Love You",
+   "title": "Taryn Simon | Father Country I Do Love You",
    "start": "2026-09-18",
    "end": "2027-03-14",
    "note": null,
@@ -753,7 +753,7 @@
    "title": "The American Guitar: A Twentieth-Century Icon",
    "start": "2027-03-21",
    "end": null,
-   "note": "Ongoing",
+   "note": "March 21, 2027-Ongoing",
    "url": "https://www.metmuseum.org/exhibitions/the-american-guitar-a-twentieth-century-icon",
    "hook": "If you like a guitar solo that goes on a little too long, you'll love this.",
    "moods": [
@@ -1011,7 +1011,7 @@
    "venue": "Whitney",
    "title": "artport: A History of Internet Art",
    "start": "2026-11-20",
-   "end": null,
+   "end": "2027-03-28",
    "note": null,
    "url": "https://whitney.org/exhibitions/artport-25",
    "hook": "If you miss the early internet, dial-up tone and all, you'll love this.",
