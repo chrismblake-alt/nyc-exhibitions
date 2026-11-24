@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23T21:33:32.464Z",
+ "updated": "2026-11-24T20:16:38.753Z",
  "museums": {
   "met": "The Met",
   "moma": "MoMA",
@@ -11,14 +11,15 @@
  "status": {
   "met": {
    "ok": true,
-   "count": 33,
+   "count": 51,
    "via": "ai service",
    "directError": "HTTP 429 from https://www.metmuseum.org/exhibitions"
   },
   "moma": {
-   "ok": false,
-   "count": 5,
-   "error": "AI reply had no list in it (it said: \"I need to fetch the actual exhibition pages to get the URLs, images, and more detailed information. Let me search for more details on this page.I apologize, but\") [direct attempt: HTTP 403 from https://www.moma.org/calendar/exhibitions]"
+   "ok": true,
+   "count": 17,
+   "via": "ai service",
+   "directError": "HTTP 403 from https://www.moma.org/calendar/exhibitions"
   },
   "gug": {
    "ok": true,
@@ -140,7 +141,7 @@
    "title": "A King's Carpet: Louis XIV and the Savonnerie",
    "start": "2026-11-22",
    "end": "2028-03-05",
-   "note": "Through March 5, 2028",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/a-kings-carpet-louis-xiv-and-the-savonnerie",
    "hook": "If you like rugs so fancy you'd be afraid to walk on them, you'll love this.",
    "moods": [
@@ -151,10 +152,25 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "A Lasting Legacy: Chinese Jades from New York Collections",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/a-lasting-legacy-chinese-jades-from-new-york-collections",
+   "hook": "If you appreciate stone carved with reverence and skill, jade artifacts embody thousand-year journeys.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/231ebed7e026f51713ebfe2c5e20df6eb3ba6f1c-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "A Long Shadow: Postwar Japan Through the Lens",
    "start": "2026-11-22",
    "end": "2027-05-02",
-   "note": "Through May 2, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/a-long-shadow-postwar-japan-through-the-lens",
    "hook": "Feeling the weight of history? Photographers captured Japan's struggle toward light.",
    "moods": [
@@ -181,17 +197,78 @@
   },
   {
    "museum": "met",
-   "venue": "The Met",
+   "venue": "The Met Cloisters",
    "title": "Afterlives: Contemporary Art in the Byzantine Crypt",
    "start": "2026-11-22",
    "end": "2027-01-10",
-   "note": "Through January 10, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/afterlives-contemporary-art-in-the-byzantine-crypt",
    "hook": "Want to impress your partner with something deep? New art hiding in an old crypt.",
    "moods": [
     "date"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/f262eccdf5ecff8a0cf82f3318e6748c97cc0d1f-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Art of Native America: The Charles and Valerie Diker Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/art-of-native-america-diker-collection",
+   "hook": "Want to honor Indigenous traditions? This collection centers Native American art on its own terms.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/cc7db4562568666d922df90241ecb24c726eb1e4-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of Africa",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-africa",
+   "hook": "Want to experience the diversity and power of African creativity? Centuries of vision are on these walls.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/fc460c2783c573bd0904b742d433178a4cc8856d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of Oceania",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-oceania",
+   "hook": "Want to encounter ancestral voices and island traditions? Oceania's arts speak across vast waters of connection.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/bd19c9299e817c2ffff4e6c01e21cf4e8684a302-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Arts of the Ancient Americas",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/arts-of-the-ancient-americas",
+   "hook": "If you're drawn to ancient ingenuity and ceremonial beauty, pre-Columbian cultures reveal mind-bending mastery.",
+   "moods": [
+    "deep",
+    "guests",
+    "kids"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/8085b5b608bffc5be90cd079c676c53790c91762-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -210,10 +287,26 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Before Yesterday We Could Fly: An Afrofuturist Period Room",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/afrofuturist-period-room",
+   "hook": "Want to imagine bold futures? This room celebrates Black creativity, joy, and visionary power.",
+   "moods": [
+    "fun",
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/eb835a48b4ccc4587344f0703a2972142761d95b-5121x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Celebrating the Year of the Horse",
    "start": "2026-11-22",
    "end": "2027-01-26",
-   "note": "Through January 26, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/celebrating-the-year-of-the-horse",
    "hook": "Bringing a horse-crazy kid? Horses in every size and century.",
    "moods": [
@@ -227,7 +320,7 @@
    "title": "Chasing Clouds",
    "start": "2026-11-22",
    "end": "2027-02-28",
-   "note": "Through February 28, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/chasing-clouds",
    "hook": "Feeling melancholy? Spend an hour looking at nothing but sky.",
    "moods": [
@@ -259,7 +352,7 @@
    "title": "City of Memory: Nanjing in the Seventeenth Century",
    "start": "2026-11-22",
    "end": "2027-01-03",
-   "note": "Through January 3, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/city-of-memory-nanjing-in-the-17th-century",
    "hook": "Feeling melancholy? Lose yourself in misty mountains painted in ink.",
    "moods": [
@@ -274,7 +367,7 @@
    "title": "Costume Art",
    "start": "2026-11-22",
    "end": "2027-01-10",
-   "note": "Through January 10, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/costume-art",
    "hook": "If you like people-watching purely for the outfits, you'll love this.",
    "moods": [
@@ -289,7 +382,7 @@
    "title": "Cottage Industry: The Val-Kill Furniture Shop",
    "start": "2026-11-22",
    "end": "2027-05-09",
-   "note": "Through May 9, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/cottage-industry-the-val-kill-furniture-shop",
    "hook": "If you like handmade furniture and Eleanor Roosevelt's side projects, you'll love this.",
    "moods": [
@@ -301,10 +394,25 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Cycladic Art",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/cycladic-art",
+   "hook": "If simplicity and mystery draw you in, Cycladic marble figures whisper secrets from three thousand years ago.",
+   "moods": [
+    "quiet",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/4236b335571cf73d4d3e70ee11239b06b504b71d-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "David Hartt: Peripheries",
    "start": "2026-11-22",
    "end": "2027-02-07",
-   "note": "Through February 7, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/david-hartt-peripheries",
    "hook": "If you like the quiet edge of town where nothing and everything happens, you'll love this.",
    "moods": [
@@ -316,10 +424,42 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Decorative Arts in China, 1000 to the Present",
+   "start": "2026-07-25",
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/decorative-arts-in-china-1000-to-the-present",
+   "hook": "If you're enchanted by functional beauty, discover how Chinese artisans elevated daily objects to fine art.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/c28bec4939243d5407531286289275aa9689028c-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Defensive Display: Shields from The Met Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/defensive-display-shields-from-the-met-collection",
+   "hook": "If you love metalwork and martial history, shields transform protection into ornamental art.",
+   "moods": [
+    "deep",
+    "guests",
+    "fun"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/f899defe4207ddc1156694b63af1181963b7dfc2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Designing the Gilded Age: Drawings from the Studios of Louis C. Tiffany",
    "start": "2026-11-22",
    "end": "2027-02-07",
-   "note": "Through February 7, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/designing-the-gilded-age-drawings-from-the-studios-of-louis-c-tiffany",
    "hook": "If you like stained-glass lamps and Gilded Age mansions, you'll love this.",
    "moods": [
@@ -334,7 +474,7 @@
    "title": "Ecologies of Painting",
    "start": "2026-11-22",
    "end": "2027-01-17",
-   "note": "Through January 17, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/ecologies-of-painting",
    "hook": "If you like landscapes where the trees and mountains are the real stars, you'll love this.",
    "moods": [
@@ -361,6 +501,22 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Fabergé from the Matilda Geddings Gray Foundation Collection",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/faberge",
+   "hook": "Want to see imperial luxury transformed into tiny wonders? Fabergé eggs are jeweled dreams made real.",
+   "moods": [
+    "fun",
+    "guests",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/3ca7e9b85d298dbaeddaa86bea763504eb8a45ec-1920x1080.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Felix Gonzalez-Torres: The Spaces Between",
    "start": "2027-06-10",
    "end": "2027-10-18",
@@ -380,7 +536,7 @@
    "title": "Flip Sides: Seeing Korean Art Anew",
    "start": "2026-11-22",
    "end": "2027-05-31",
-   "note": "Through May 31, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/flip-sides-seeing-korean-art-anew",
    "hook": "If you've ever snuck around a sculpture to see what's on the back, this one's for you.",
    "moods": [
@@ -409,7 +565,7 @@
    "title": "Household Gods: Hindu Devotional Prints, 1860–1930",
    "start": "2026-11-22",
    "end": "2027-06-27",
-   "note": "Through June 27, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/household-gods-hindu-devotional-prints-1860-1930",
    "hook": "Need a jolt? These prints have the color turned all the way up.",
    "moods": [
@@ -423,7 +579,7 @@
    "title": "Krasner and Pollock: Past Continuous",
    "start": "2026-11-22",
    "end": "2027-01-31",
-   "note": "Through January 31, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/krasner-and-pollock-past-continuous",
    "hook": "Want to impress your partner with something deep? Two painters, one marriage and a lot of splattered paint.",
    "moods": [
@@ -436,10 +592,41 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Layered Narratives: The Northern Renaissance Gallery",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/layered-narratives-the-northern-renaissance-gallery",
+   "hook": "If you're captivated by detail and devotion, Northern Renaissance art rewards patient, close looking.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/5a05bf7c13b551b9e04394849ec345fa3862aa20-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Look Again: European Paintings 1300–1800",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/look-again-european-paintings-1300-1800",
+   "hook": "Want a fresh lens on old masters? This show illuminates the eyes in paintings that have watched centuries pass.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/9d51408cacf6affc8fe1b1fc60a2796d766fdb77-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Marketing the Gilded Age: Advertising Publications from the Studios of Louis C. Tiffany",
    "start": "2026-11-22",
    "end": "2027-02-16",
-   "note": "Through February 16, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/marketing-the-gilded-age-advertising-publications-from-the-studios-of-louis-c-tiffany",
    "hook": "Want to see how beauty sold dreams? Tiffany's advertising reveals a gilded age's glamorous vision.",
    "moods": [
@@ -451,10 +638,25 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Michael Lin: Pentachrome",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/michael-lin-pentachrome",
+   "hook": "If botanical patterns and living color calm your mind, this wall painting breathes quiet beauty into space.",
+   "moods": [
+    "quiet",
+    "fun"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/5794d4bb2885d23bcc592b5d4c5cc69c46572dac-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Orientalism: Between Fact and Fantasy",
    "start": "2026-11-22",
    "end": "2027-02-28",
-   "note": "Through February 28, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/orientalism-between-fact-and-fantasy",
    "hook": "In the mood to question a good story? These are travel tales that got better with every retelling.",
    "moods": [
@@ -484,7 +686,7 @@
    "title": "Rediscovering Della Robbia at The Met",
    "start": "2026-11-22",
    "end": "2028-01-17",
-   "note": "Through January 17, 2028",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/rediscovering-della-robbia-at-the-met",
    "hook": "If you like glossy blue-and-white ceramics that have stayed bright for 500 years, you'll love this.",
    "moods": [
@@ -512,10 +714,26 @@
   {
    "museum": "met",
    "venue": "The Met",
+   "title": "Renaissance Masterpieces of Judaica: The Mishneh Torah and The Rothschild Mahzor",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/renaissance-masterpieces",
+   "hook": "If you love illuminated manuscripts and spiritual heritage, these pages glow with faith and artistry.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/0962c69139feffd21a6d63e41b84caa12d7674f6-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
    "title": "Tapa: Art of the Gift in Polynesia",
    "start": "2026-11-22",
    "end": "2027-12-12",
-   "note": "Through December 12, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/tapa-art-of-the-gift-in-polynesia",
    "hook": "If you love textiles as acts of love and ceremony, these hand-beaten cloths sing with meaning.",
    "moods": [
@@ -540,6 +758,52 @@
     "kids"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/247336cef9dfd60723f3e125e3afaaf46c75c025-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The American Wing at 100",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/the-american-wing-at-100",
+   "hook": "Want to know America through its art? A century of stories unfolds from colonial times to the twentieth century.",
+   "moods": [
+    "deep",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/a8cd0feb5aebb6e8231a8299b2f3adfbc64283f2-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The British Galleries",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/british-galleries",
+   "hook": "If you love porcelain, portraiture, and imperial grandeur, British decorative arts tell elegant stories.",
+   "moods": [
+    "deep",
+    "quiet",
+    "guests"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/9f47f6bed39c7b0c140ee3f3da424333225a7759-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "The Calculated Curve: Eighteenth-Century American Furniture",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/the-calculated-curve-eighteenth-century-american-furniture",
+   "hook": "If you appreciate furniture as sculpture, these chairs and dressers reveal geometry as art.",
+   "moods": [
+    "deep",
+    "quiet"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/a82313025bd634c0d45b155eaedb5f7916f29f75-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "met",
@@ -578,7 +842,7 @@
    "title": "The Genesis Facade Commission: Liu Wei, Speculation",
    "start": "2026-11-22",
    "end": "2027-06-08",
-   "note": "Through June 8, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-genesis-facade-commission-liu-wei",
    "hook": "Short on time? This is art you can see before you even buy a ticket.",
    "moods": [
@@ -607,7 +871,7 @@
    "title": "The Infinite Artistry of Japanese Ceramics",
    "start": "2026-11-22",
    "end": "2027-08-08",
-   "note": "Through August 8, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/the-infinite-artistry-of-japanese-ceramics",
    "hook": "Want a quiet date? Tea bowls so perfect you'd never dare drink from them.",
    "moods": [
@@ -622,13 +886,29 @@
    "title": "There Are No Words: Si Lewen's Parade",
    "start": "2026-11-22",
    "end": "2027-01-05",
-   "note": "Through January 5, 2027",
+   "note": null,
    "url": "https://www.metmuseum.org/exhibitions/there-are-no-words-si-lewens-parade",
    "hook": "Feeling melancholy? Here's a story told without a single word.",
    "moods": [
     "blue"
    ],
    "image": "https://cdn.sanity.io/images/cctd4ker/production/abf4e5ddf505febcc7fb7ab2a93127ce62d64adb-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
+  },
+  {
+   "museum": "met",
+   "venue": "The Met",
+   "title": "Wedding Attire: Three Cultures, One Celebration",
+   "start": null,
+   "end": null,
+   "note": "Ongoing",
+   "url": "https://www.metmuseum.org/exhibitions/wedding-attire-three-cultures-one-celebration",
+   "hook": "If you love fashion and cultural traditions, see how three paths to marriage are stitched in silk and gold.",
+   "moods": [
+    "guests",
+    "fun",
+    "deep"
+   ],
+   "image": "https://cdn.sanity.io/images/cctd4ker/production/0f2e187345d1c9637e4acb53371ace7d662813f8-5120x2880.jpg?w=640&q=70&fit=clip&auto=format"
   },
   {
    "museum": "moma",
@@ -654,21 +934,6 @@
    "note": "Through Spring 2026",
    "url": "https://www.moma.org/calendar/exhibitions#odili-donald-odita-songs-from-life",
    "hook": "If you've ever felt the power of color and abstraction, Odita's vibrant works sing with emotional depth.",
-   "moods": [
-    "deep",
-    "quiet"
-   ],
-   "image": null
-  },
-  {
-   "museum": "moma",
-   "venue": "MoMA",
-   "title": "Sasha Stiles: A LIVING POEM",
-   "start": "2025-09-10",
-   "end": null,
-   "note": "Through Spring 2026",
-   "url": "https://www.moma.org/calendar/exhibitions#sasha-stiles-a-living-poem",
-   "hook": "Wanting to experience poetry as visual art? Stiles blends language and image into something transcendent.",
    "moods": [
     "deep",
     "quiet"
@@ -739,7 +1004,7 @@
    "venue": "Whitney",
    "title": "Charles Burchfield: Elemental",
    "start": "2026-10-22",
-   "end": "2027-01-31",
+   "end": "2027-05-31",
    "note": "Through Spring 2027",
    "url": "https://whitney.org/exhibitions/charles-burchfield-elemental",
    "hook": "Feeling melancholy? Thunderstorms rolling in over open fields.",
